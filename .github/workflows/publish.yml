@@ -1,0 +1,90 @@
+name: Publish to GitHub Pages
+
+# Rebuild on every push to main. (No paths filter — if the previous version
+# had one and your commits didn't touch those exact paths, the workflow
+# wouldn't run, which looks identical to it not existing.)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Belt-and-braces: even when deploying via Actions, a .nojekyll file in
+      # the artifact guarantees Pages never runs Jekyll over it. Cheap safety.
+      - name: Disable Jekyll on the artifact
+        run: touch docs/.nojekyll
+
+      # Fail loudly if the build didn't produce what we expect, instead of
+      # silently deploying an empty or partial site. This check is
+      # content-agnostic — it doesn't hardcode page names, so reorganizing or
+      # renaming content in content/ won't break it.
+      - name: Verify build output
+        run: |
+          echo "Built pages:"
+          find docs -name index.html | sort
+
+          # 1. At least one page must have been produced.
+          PAGE_COUNT=$(find docs -name index.html | wc -l)
+          if [ "$PAGE_COUNT" -lt 1 ]; then
+            echo "::error::No pages were built (no docs/**/index.html found)."
+            exit 1
+          fi
+          echo "$PAGE_COUNT page(s) built."
+
+          # 2. No page may contain an un-substituted {{PLACEHOLDER}} token.
+          if grep -rlE '\{\{[A-Z_]+\}\}' docs --include=index.html; then
+            echo "::error::A page contains an un-substituted {{PLACEHOLDER}} — see files above."
+            exit 1
+          fi
+
+          # 3. If an SDLC timeline page exists, it must contain the timeline
+          #    markup (guards against a silent template/data failure).
+          SDLC=$(grep -rl 'Template: sdlc' content 2>/dev/null | head -1 || true)
+          if [ -n "$SDLC" ]; then
+            SDLC_OUT="docs/$(basename "$SDLC" .md)/index.html"
+            if [ -f "$SDLC_OUT" ] && ! grep -q 'class="track"' "$SDLC_OUT"; then
+              echo "::error::$SDLC_OUT built but has no timeline markup."
+              exit 1
+            fi
+          fi
+
+          echo "Build output looks good."
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,40 @@
+<!--
+  PASTE THIS INTO A CLASSIC SHAREPOINT CONTENT EDITOR (or SCRIPT EDITOR) WEB PART.
+
+  Before pasting, edit the two marked values:
+    1. GITHUB_PAGES_ORIGIN  – the origin your content is served from. Must EXACTLY
+                              match window.location.origin of the GitHub Pages site
+                              (scheme + host, no trailing slash, no path).
+    2. the iframe `src`     – the full URL of the specific page to embed.
+
+  How it works: the embedded page posts its rendered height to this page; the
+  listener below (a) ignores messages from any other origin, then (b) resizes the
+  iframe to fit — so there is no inner scrollbar and no clipped content.
+-->
+
+<iframe
+  id="embedFrame"
+  src="https://maryland-gov.github.io/test-pad/stage-1/"
+  title="MITDP Launchpad: Stage 1"
+  style="width: 100%; border: none; display: block;"
+  scrolling="no"
+  allowfullscreen="true">
+</iframe>
+
+<script type="text/javascript">
+  (function () {
+    // 1. EDIT: the origin that is allowed to set this iframe's height.
+    var GITHUB_PAGES_ORIGIN = "https://maryland-gov.github.io";
+
+    window.addEventListener("message", function (event) {
+      // 2. Security: only trust height messages from your own content.
+      if (event.origin !== GITHUB_PAGES_ORIGIN) return;
+      if (!event.data || event.data.type !== "setHeight") return;
+
+      var iframe = document.getElementById("embedFrame");
+      if (iframe && typeof event.data.height === "number") {
+        iframe.style.height = event.data.height + "px";
+      }
+    });
+  })();
+</script>

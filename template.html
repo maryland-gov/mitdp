@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="{{MDWDS_CSS}}" />
+    <style>
+      /* The page is rendered inside a SharePoint iframe, so keep the body
+         transparent and let SharePoint provide the outer chrome/margins. */
+      html,
+      body { margin: 0; padding: 0; background: transparent; }
+      .usa-prose { padding: 1rem 1.5rem; max-width: 72rem; margin: 0 auto; }
+
+      /* Table of contents block (`## Heading {.toc}` + list). Two-column
+         on desktop, single column on narrow screens. Modelled on the
+         Sections list at digital.maryland.gov. */
+      .section-toc {
+        border-top: 2px solid #1b1b1b;
+        border-bottom: 1px solid #dfe1e2;
+        padding: 1.25rem 0 2.5rem;
+        margin: 2.5rem 0;
+      }
+      .section-toc__title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+        color: #1b1b1b;
+      }
+      .section-toc__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        columns: 2;
+        column-gap: 2.5rem;
+      }
+      .section-toc__list li {
+        padding-left: 1.25rem;
+        position: relative;
+        margin: 0 0 0.75rem 0;
+        break-inside: avoid;
+        line-height: 1.4;
+      }
+      .section-toc__list li::before {
+        content: "•";
+        color: #b50909;         /* Maryland red */
+        position: absolute;
+        left: 0.25rem;
+        top: -0.15rem;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+      .section-toc__list a {
+        color: #005ea2;         /* USWDS primary blue */
+        text-decoration: underline;
+      }
+      .section-toc__list a:hover { text-decoration-thickness: 2px; }
+      @media (max-width: 640px) { .section-toc__list { columns: 1; } }
+
+      /* Multi-column TOC (`### … {.toc-column}` groups). Each column has a
+         bold heading, then a stack of linked rows separated by thin rules,
+         with a right-pointing arrow per row. Modelled on the section grids
+         at digital.maryland.gov. */
+      .section-toc-columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem 4rem;
+        margin: 2rem 0;
+      }
+      .section-toc-column__title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin: 0 0 1rem 0;
+        color: #1b1b1b;
+      }
+      .section-toc-column__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #dfe1e2;
+      }
+      .section-toc-column__list li {
+        border-bottom: 1px solid #dfe1e2;
+        margin: 0;
+      }
+      .section-toc-column__list a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 0;
+        color: #1b1b1b;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+      .section-toc-column__list a::after {
+        content: "→";
+        color: #1b1b1b;
+        font-size: 1.15rem;
+        flex-shrink: 0;
+      }
+      .section-toc-column__list a:hover {
+        text-decoration: underline;
+        color: #005ea2;
+      }
+      .section-toc-column__list a:hover::after { color: #005ea2; }
+
+      /* Content-left + image-right section (`## Heading {.image-right}`).
+         Two-column at desktop widths, stacks on narrow screens. */
+      .section-image-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 3rem;
+        align-items: start;
+        margin: 2rem 0;
+      }
+      .section-image-right__content > *:first-child { margin-top: 0; }
+      .section-image-right__image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @media (max-width: 640px) {
+        .section-image-right { grid-template-columns: 1fr; }
+      }
+
+      /* Card grid (`## Heading {.card-grid}` + table). Each table cell
+         becomes a linked card with a bold title, an arrow, and a description
+         underneath. Rules separate cards vertically. */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 0 3rem;
+        margin: 2rem 0;
+      }
+      .card-grid__card {
+        display: block;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #dfe1e2;
+        color: #1b1b1b;
+        text-decoration: none;
+      }
+      .card-grid__title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .card-grid__title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .card-grid__arrow {
+        color: #1b1b1b;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .card-grid__desc {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #565c65;
+      }
+      .card-grid__card:hover .card-grid__title,
+      .card-grid__card:hover .card-grid__arrow { color: #005ea2; }
+      .card-grid__card:hover .card-grid__title { text-decoration: underline; }
+
+      .usa-button { 
+        padding: .9rem 1.25rem; margin-right: .5rem;
+      }
+
+      .usa-prose table td {
+        line-height: 1.4rem;
+      }
+      
+      .usa-prose ol {
+        margin-top: 1rem;
+      }
+
+      .usa-summary-box__heading {
+        font-size: 1.16rem;
+      }
+
+      .usa-prose p, 
+      .usa-prose li,
+      .usa-prose ol li,
+      .usa-prose ul li,
+      .usa-prose h1, 
+      .usa-prose h2, 
+      .usa-prose h3, 
+      .usa-prose h4 {
+        max-width: 920px;
+      }
+
+
+
+      .usa-prose h1, 
+      .usa-prose h2, 
+      .usa-prose h3, 
+      .usa-prose h4 {
+        margin-top: 2rem;   
+      }
+
+      .usa-prose .usa-summary-box__heading {
+        margin-top: .5rem;           
+      }
+
+      .usa-prose hr {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+      }
+
+       .usa-prose p {
+        margin-top: 1rem;   
+
+       }
+    </style>
+  </head>
+  <body>
+    <!-- All content is a DIRECT child of .usa-prose so the MDWDS
+         `.usa-prose > *` typography and table styles apply. -->
+    <div class="usa-prose">
+      {{CONTENT}}
+    </div>
+
+    <!-- Auto-height reporter: tells the SharePoint parent how tall this
+         content is, so the iframe can resize to fit (no inner scrollbar,
+         no clipping). Posts ONLY to the configured parent origin. -->
+    <script>
+      (function () {
+        var PARENT_ORIGIN = "{{PARENT_ORIGIN}}";
+        function reportHeight() {
+          var h = document.documentElement.scrollHeight;
+          window.parent.postMessage({ type: "setHeight", height: h }, PARENT_ORIGIN);
+        }
+        window.addEventListener("load", reportHeight);
+        window.addEventListener("resize", reportHeight);
+        if (window.ResizeObserver) {
+          new ResizeObserver(reportHeight).observe(document.body);
+        }
+      })();
+    </script>
+  </body>
+</html>

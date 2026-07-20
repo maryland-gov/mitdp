@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Development Life Cycle (SDLC)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap');
+
+  :root{
+    /* ---- lifecycle stage palette (Maryland Web Design System / USWDS) ---- */
+    --c-discovery:#FFC233;   /* MD gold            (ink text) */
+    --c-alpha:#97D4EA;       /* dashboard light-blue(ink text) */
+    --c-prep:#E0E1E3;        /* USWDS gray-cool-20  (ink text) */
+    --c-build:#1A5A92;       /* darkened for 7:1 white (AAA)      */
+    --c-delivery:#00599A;    /* darkened for 7:1 white (AAA)      */
+    --c-transition:#1A4480;  /* dashboard navy      (white text) */
+    --c-post:#162E51;        /* USWDS blue-warm-80  (white text) */
+
+    /* ---- Maryland / USWDS design tokens ---- */
+    --font-family:'Source Sans 3','Source Sans Pro Web','Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;
+    --primary-blue:#00599A;
+    --md-red:#C40E3E;
+    --text-dark:#1b1b1b;
+    --text-meta:#3d4551;
+    --grey-bar:#A9AEB1;
+    --bg-color:#ffffff;
+    --radius:4px;
+    --gap:4px;
+    --maxw:1360px;
+    --font-serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --step-line:#6E96A4;
+    --stem:#1b1b1b;
+    --banner-bg:#1A4480;
+    --summary-border:#2D8FA3;
+    --chip-border:#2D8FA3;
+    --chip-text:#1A4480;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    font-family:var(--font-family);
+    color:var(--text-dark);
+    background:var(--bg-color);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:32px 24px 48px;}
+
+  /* =================================================================
+     stage cards
+     ================================================================= */
+  .track{list-style:none;margin:0;padding:0;}
+
+  .stage{
+    position:relative;background:var(--col);border-radius:14px;
+    padding:18px 18px;color:var(--text-dark);
+    transition:transform .18s ease, box-shadow .18s ease;
+    opacity:0;animation:rise .5s cubic-bezier(.2,.7,.3,1) forwards;animation-delay:var(--delay);
+  }
+  .stage.is-dark{color:#fff;}
+  .stage:hover{transform:translateY(-2px);box-shadow:0 6px 18px -10px rgba(27,27,27,.55);}
+
+  .stage h2{font-size:1.08rem;font-weight:700;line-height:1.18;margin:0 0 6px;}
+  .stage h2 .opt{font-weight:400;font-style:italic;}
+  .stage p{font-size:.95rem;line-height:1.5;margin:0;}
+  .stage p.italic{font-style:italic;}
+  .milestone{font-weight:700;line-height:1.2;color:var(--text-dark);}
+
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+
+  /* ---------- MOBILE / NARROW: left rail with left-aligned chips ---------- */
+  .track{display:flex;flex-direction:column;gap:78px;position:relative;}
+  /* continuous left rail: a segment in each gap, threading the phases */
+  .stage.has-chip::after{
+    content:"";position:absolute;left:13px;transform:translateX(-50%);
+    bottom:100%;height:78px;width:2px;background:var(--chip-border);z-index:0;
+  }
+  /* milestone chip: white pillbox, left-aligned on the rail, in the gap above its phase */
+  .milestone{
+    position:absolute;left:0;
+    bottom:calc(100% + 14px);
+    width:max-content;max-width:88%;
+    background:#fff;color:var(--chip-text);
+    border:1.5px solid var(--chip-border);
+    font-size:.86rem;font-weight:600;line-height:1.28;text-align:left;
+    padding:8px 14px;border-radius:8px;z-index:3;
+  }
+  .stage.is-dark .milestone{color:var(--chip-text);background:#fff;}
+  .endcap{display:none;}
+
+  /* ---------- DESKTOP / WIDE: separate rounded bars + floating label chips ---------- */
+  @media (min-width:950px){
+    .track{flex-direction:row;align-items:stretch;gap:8px;padding-left:0;padding-top:88px;}
+    .track::before,.track::after{display:none;}
+
+    .stage{
+      flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;
+      padding:26px 18px;text-align:center;min-height:200px;
+      background:var(--col);border-radius:14px;
+    }
+    .stage::before{display:none;}              /* hide the mobile spine node */
+    .stage h2{font-size:1.06rem;}
+    .stage p{font-size:.9rem;}
+
+    /* milestone chip: white box, light-blue border, floating above the seam (no stem) */
+    .milestone{
+      position:absolute;left:-4px;transform:translateX(-50%);
+      bottom:calc(100% + 16px);
+      width:100px;
+      background:#fff;color:var(--chip-text);
+      border:1.5px solid var(--chip-border);
+      font-size:.73rem;font-weight:600;line-height:1.26;letter-spacing:.005em;
+      text-align:center;
+      padding:7px 11px;border-radius:7px;
+      z-index:3;
+    }
+    .stage.is-dark .milestone{color:var(--chip-text);background:#fff;}
+    /* notch: white strip hides the chip's straight bottom border across the notch region */
+    .milestone::after{
+      content:"";position:absolute;left:50%;top:100%;
+      width:30px;height:4px;background:#fff;
+      transform:translate(-50%,-1px);z-index:4;
+    }
+    /* the bottom border line + V drawn as ONE continuous SVG path (endpoints sit on the line, no corner whiskers) */
+    .milestone::before{
+      content:"";position:absolute;left:50%;top:100%;
+      width:30px;height:12px;
+      transform:translate(-50%,-1.25px);
+      background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2730%27%20height%3D%2712%27%20viewBox%3D%270%200%2030%2012%27%3E%3Cpath%20d%3D%27M0%202%20H10%20L15%209%20L20%202%20H30%27%20fill%3D%27none%27%20stroke%3D%27%232D8FA3%27%20stroke-width%3D%271.5%27%20stroke-linejoin%3D%27round%27%20stroke-linecap%3D%27butt%27/%3E%3C/svg%3E") no-repeat center top;z-index:5;
+    }
+    /* vertical line down the seam: starts at the notch apex and flows down through the bars */
+    .stage.has-chip::after{
+      content:"";position:absolute;left:-4px;transform:translateX(-50%);
+      top:-9px;bottom:0;height:auto;width:2px;background:var(--chip-border);z-index:1;
+    }
+
+    .endcap{display:none;}
+  }
+  @media (min-width:1046px){ .milestone{width:110px;} }
+  @media (min-width:1146px){ .milestone{width:124px;font-size:.75rem;} }
+  @media (min-width:1266px){ .milestone{width:134px;font-size:.77rem;} }
+
+  /* ---- footer meta ---- */
+  .meta{
+    max-width:var(--maxw);margin:0 auto;padding:0 24px 48px;
+    font-size:.88rem;color:var(--text-meta);border-top:1px solid #e6e8ea;padding-top:18px;
+  }
+  .meta a{color:var(--primary-blue);text-decoration:underline;}
+
+  /* ---- clickable stages ---- */
+  .stage{cursor:pointer;}
+  .stage-body{color:inherit;text-decoration:none;display:block;}
+  .stage-body::after{content:"";position:absolute;inset:0;z-index:2;}
+  .stage-body:hover h2{text-decoration:underline;text-underline-offset:3px;}
+  .stage-body:focus-visible::after{outline:3px solid #1b1b1b;outline-offset:3px;border-radius:5px;box-shadow:0 0 0 3px #fff;}
+
+  /* ---- phase details: Maryland Web Design System "step-list" ---- */
+  .details{border-top:1px solid #e6e8ea;margin-top:10px;}
+  .details-inner{max-width:var(--maxw);margin:0 auto;padding:34px 24px 8px;}
+
+  .maryland-step-list__header{margin:0 0 30px;}
+  .maryland-step-list__title{font-family:var(--font-serif);font-weight:400;font-size:2rem;line-height:1.15;color:var(--text-dark);margin:0 0 8px;letter-spacing:-.01em;}
+  .maryland-step-list__description{font-size:1.06rem;line-height:1.55;color:var(--text-meta);margin:0;max-width:68ch;}
+
+  .maryland-step-list__steps{list-style:none;margin:0;padding:0;position:relative;}
+  .maryland-step{position:relative;padding:0 0 16px 64px;scroll-margin-top:18px;}
+  .maryland-step:last-child{padding-bottom:4px;}
+  .maryland-step::before{content:"";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--md-red);z-index:1;}
+  .maryland-step:not(:last-child)::after{content:"";position:absolute;left:8px;top:33px;bottom:0;width:4px;border-radius:0;background:var(--step-line);}
+
+  /* gate interstitial: sits between steps on the spine */
+  .maryland-gate{position:relative;padding:10px 0 14px 64px;list-style:none;}
+  .maryland-gate::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--step-line);border-radius:0;}
+  .maryland-gate .maryland-summary-box{margin:0;max-width:68ch;}
+
+  .maryland-step__title{font-family:var(--font-serif);font-weight:400;font-size:1.8rem;line-height:1.2;color:var(--text-dark);margin:0 0 .5rem;}
+  .maryland-step__title .tag{font-family:var(--font-family);font-size:1.05rem;font-style:italic;color:var(--text-meta);}
+
+  .maryland-step__body{font-size:1.06rem;line-height:1.6;color:var(--text-dark);max-width:68ch;}
+  .maryland-step__body p{margin:0 0 1em;}
+  .maryland-step__body a{color:var(--primary-blue);}
+  .maryland-step__body strong{font-weight:700;}
+  .maryland-step__body > ul{list-style:none;margin:.25em 0 1.25em;padding-left:1.6em;}
+  .maryland-step__body > ul > li{position:relative;margin:.45em 0;}
+  .maryland-step__body > ul > li::before{content:"";position:absolute;left:-1.2em;top:.5em;width:8px;height:8px;border-radius:50%;border:2px solid var(--md-red);}
+
+  /* gate callout: Maryland Web Design System "summary box" */
+  .maryland-summary-box{background:#d9eef5;border:1px solid #2d8fa3;border-radius:6px;}
+  .maryland-summary-box__inner{padding:20px 24px;}
+  .maryland-summary-box__heading{font-family:var(--font-family);font-weight:700;font-size:1.04rem;color:var(--text-dark);margin:0 0 8px;}
+  .maryland-summary-box__text{font-size:1rem;line-height:1.55;color:var(--text-dark);}
+  .maryland-summary-box__text p{margin:0 0 .5em;}
+  .maryland-summary-box__text p:last-child{margin-bottom:0;}
+  .maryland-summary-box__text a{color:var(--primary-blue);}
+  .maryland-summary-box__list{list-style:disc;padding-left:1.5em;margin:0;}
+  .maryland-summary-box__list li{margin:.4em 0;}
+
+  .back{display:inline-flex;align-items:center;min-height:44px;padding:4px 2px;font-size:.9rem;color:var(--primary-blue);text-decoration:underline;text-underline-offset:2px;font-weight:600;}
+  .back:hover{text-decoration:underline;}
+
+  .maryland-step:target{animation:detailflash 1.8s ease-out;border-radius:6px;}
+  @keyframes detailflash{0%{box-shadow:0 0 0 3px var(--accent);}100%{box-shadow:0 0 0 0 rgba(0,0,0,0);}}
+
+  /* ---- accessibility helpers (WCAG AAA) ---- */
+  .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  a:focus-visible{outline:3px solid #1b1b1b;outline-offset:2px;border-radius:2px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none!important;transition:none!important;}
+    .stage{opacity:1!important;transform:none!important;}
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <h1 class="sr-only">System Development Life Cycle (SDLC)</h1>
+      <ol class="track" id="track" aria-label="MITDP product lifecycle, seven phases in order"></ol>
+    </div>
+
+    <section class="details" aria-labelledby="phase-details-title">
+    <div class="details-inner">
+      <div class="maryland-step-list maryland-step-list--bullet">
+        <div class="maryland-step-list__header">
+          <h2 class="maryland-step-list__title" id="phase-details-title">Phase Details</h2>
+          <p class="maryland-step-list__description">Each phase below corresponds to a stage in the timeline above, shown with the gate that must be cleared to advance to the next phase.</p>
+        </div>
+        <ul class="maryland-step-list__steps" id="detail-list"></ul>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="meta">
+    Styled to match the <a href="https://mitdp.maryland.gov/">Maryland MITDP Dashboard</a>. Type, color, and chrome follow the Maryland Web Design System and the U.S. Web Design System (USWDS).
+  </footer>
+
+<script>
+  const stages = [
+ {
+  "key": "discovery",
+  "title": "Discovery",
+  "opt": "",
+  "text": "Research and planning to understand your users & define the Core Problems that need to be solved",
+  "detail": "Your Discovery phase includes research and planning to understand your users and define the Core Problems that need to be solved. Most of the questions in your Launchpad are directly related to what you should be able to learn in Discovery. This phase is formally completed upon the submission and approval of your MITDP Launchpad.",
+  "milestone": null,
+  "weight": 1.15,
+  "gate": {
+   "name": "Approval of Launchpad",
+   "desc": "Review your Launchpad and approve your project as an MITDP. At this point, the project proceeds to an optional Alpha phase, or directly to Prep and 90-Day Build."
+  },
+  "n": 1,
+  "color": "#FFC233",
+  "dark": false,
+  "italic": false
+ },
+ {
+  "key": "alpha",
+  "title": "Alpha",
+  "opt": "(optional)",
+  "text": "Test and evaluate different technology options to see what might be best",
+  "detail": "This is an optional phase to test and evaluate different technology options to see what might be best. The Alpha phase is recommended when you're not confident which technology might be best. As an MITDP, you'll have access to budget and oversight support to test possible options with real-world use cases and determine what solutions might be the best fit.",
+  "milestone": "MITDP approved for Alpha phase",
+  "weight": 1,
+  "gate": {
+   "name": "Approval of updated Launchpad",
+   "desc": "If your project conducted an Alpha phase, this gate reviews your updated Launchpad so the project can proceed to Prep and 90-Day Build."
+  },
+  "n": 2,
+  "color": "#97D4EA",
+  "dark": false,
+  "italic": true
+ },
+ {
+  "key": "prep",
+  "title": "Prep",
+  "opt": "",
+  "text": "Prepare contracts, staffing, & operational needs to be ready for your 90-Day Build",
+  "detail": "In the Prep phase, you'll have time to prepare contracts, staffing, and operational needs to be ready to begin delivering software. The duration of this phase is based on the requirements you listed in your Definition of Ready, which is part of the Implementation Strategy worksheet. When all of the items in your Definition of Ready are addressed, the clock will start for your 90-Day Build.",
+  "milestone": "MITDP approved for Prep phase",
+  "weight": 1.1,
+  "gate": {
+   "name": "Completion of Prep — 90-Day clock starts",
+   "desc": "Confirm that all items in your Definition of Ready are addressed, and begin the clock for your 90-Day Build."
+  },
+  "n": 3,
+  "color": "#E0E1E3",
+  "dark": false,
+  "italic": false
+ },
+ {
+  "key": "90-day-build",
+  "title": "90-Day Build",
+  "opt": "",
+  "text": "Build a small slice of functionality in a demonstration environment",
+  "detail": "In this phase, your team will build a small slice of functionality to demonstrate its ability to produce working software within 90 days, and develop a prioritized backlog of features to address during the Delivery phase. This requirement helps ensure that all MITDP teams have the skills and resources to succeed, provides early indicators where there are challenges to address, and encourages teams to start small and work iteratively. It should NOT include the full scope of your MITDP. You'll define the scope of your 90-Day Build in the Implementation Strategy worksheet, which also includes space to define how you will host the working software so that both the user experience and the quality of the underlying code can be evaluated. (For example, you could share a password for a development environment to view the working software and a link to a code repository such as GitHub to see the underlying code.)",
+  "milestone": "Countdown starts for 90-Day Build",
+  "weight": 1,
+  "gate": {
+   "name": "Approval of 90-Day Build",
+   "desc": "Confirm that the team is able to build working software within its first 90 days. If the team was not able to, specific adjustments to the team or its working processes may be recommended, with an opportunity for another 90-Day Build once those are met. The team's backlog of features for the Delivery phase is also reviewed here."
+  },
+  "n": 4,
+  "color": "#1A5A92",
+  "dark": true,
+  "italic": false
+ },
+ {
+  "key": "delivery",
+  "title": "Delivery",
+  "opt": "",
+  "text": "Build out functionality to meet success metrics for all Core Problems",
+  "detail": "This is the core phase of your MITDP. It continues until you've completed functionality to meet success metrics for all of your project's Core Problems.",
+  "milestone": "Gate Review of 90-Day Build",
+  "weight": 2,
+  "gate": {
+   "name": "Success metrics met for all Core Problems",
+   "desc": "Confirm that the project has launched and tested functionality to meet success metrics for all of its Core Problems. Following this confirmation, the project has one more year as an MITDP to transition to agency funding and oversight."
+  },
+  "n": 5,
+  "color": "#00599A",
+  "dark": true,
+  "italic": false
+ },
+ {
+  "key": "transition-year",
+  "title": "Transition Year",
+  "opt": "",
+  "text": "Adjust team, contracts, & budget to support ongoing continuous improvement after MITDP closeout",
+  "detail": "Space to adjust team staffing, contracts, and budgets to support continuous improvement following MITDP closeout.",
+  "milestone": "Success metrics met for all Core Problems",
+  "weight": 1.05,
+  "gate": {
+   "name": "MITDP Closeout",
+   "desc": "Close out the project as an MITDP."
+  },
+  "n": 6,
+  "color": "#1A4480",
+  "dark": true,
+  "italic": false
+ },
+ {
+  "key": "post-mitdp-continuous-improvement",
+  "title": "Post-MITDP Continuous Improvement",
+  "opt": "",
+  "text": "Continue to improve the product for as long as it has users",
+  "detail": "Continued iteration and improvement based on user needs. A dedicated team should continue to be assigned to oversee and improve the product for as long as it continues to have users.",
+  "milestone": "MITDP closeout",
+  "weight": 1.75,
+  "gate": null,
+  "n": 7,
+  "color": "#162E51",
+  "dark": true,
+  "italic": false
+ }
+];
+
+  const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  // ---- timeline ----
+  const track = document.getElementById('track');
+  stages.forEach((s, i) => {
+    const li = document.createElement('li');
+    li.className = 'stage' + (s.dark ? ' is-dark' : '') + (s.milestone ? ' has-chip' : '');
+    li.style.setProperty('--col', s.color);
+    li.style.setProperty('--weight', s.weight);
+    li.style.setProperty('--delay', (i * 0.07) + 's');
+    const ms  = s.milestone ? `<span class="milestone">${s.milestone}</span>` : '';
+    const opt = s.opt ? ` <span class="opt">${s.opt}</span>` : '';
+    li.innerHTML = ms +
+      `<a class="stage-body" href="#d-${s.key}" aria-label="View details for ${esc(s.title)}">` +
+        `<h2>${s.title}${opt}</h2>` +
+        `<p class="${s.italic ? 'italic' : ''}">${s.text}</p>` +
+      `</a>`;
+    track.appendChild(li);
+  });
+
+  // ---- phase detail cards: Maryland step-list + gate interstitials ----
+  const list = document.getElementById('detail-list');
+  stages.forEach(s => {
+    // phase step
+    const li = document.createElement('li');
+    li.className = 'maryland-step';
+    li.id = 'd-' + s.key;
+    li.tabIndex = -1;
+    li.style.setProperty('--accent', s.color);
+    const tag = s.opt ? ` <span class="tag">${s.opt}</span>` : '';
+    li.innerHTML =
+      `<h3 class="maryland-step__title">${s.title}${tag}</h3>` +
+      `<div class="maryland-step__body usa-prose">` +
+        `<p>${s.detail}</p>` +
+        `<a class="back" href="#track">&uarr; Back to timeline</a>` +
+      `</div>`;
+    list.appendChild(li);
+
+    // gate interstitial — between this phase and the next
+    if (s.gate) {
+      const gate = document.createElement('li');
+      gate.className = 'maryland-gate';
+      gate.innerHTML =
+        `<div class="maryland-summary-box">` +
+          `<div class="maryland-summary-box__inner">` +
+            `<h4 class="maryland-summary-box__heading" id="g-${s.key}-h">Gate: ${s.gate.name}</h4>` +
+            `<div class="maryland-summary-box__text">` +
+              `<p>${s.gate.desc}</p>` +
+            `</div>` +
+          `</div>` +
+        `</div>`;
+      list.appendChild(gate);
+    }
+  });
+</script>
+<script>
+  (function () {
+    var PARENT_ORIGIN = "https://doit.maryland.gov";
+    function reportHeight() {
+      window.parent.postMessage({ type: "setHeight", height: document.documentElement.scrollHeight }, PARENT_ORIGIN);
+    }
+    window.addEventListener("load", reportHeight);
+    window.addEventListener("resize", reportHeight);
+    if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
+  })();
+</script>
+</body>
+</html>
