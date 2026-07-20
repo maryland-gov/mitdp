@@ -1,6 +1,6 @@
 # Major IT Development Project Oversight
 
-This repository hosts content related to the State of Maryland's oversight of Major IT Development Projects (MITDPs), which is available for access by State of Maryland employees, vendors, members of the public, and other states interested in building on our work.
+This repository hosts content related to the State of Maryland's oversight of Major IT Development Projects (MITDPs), which is available for access by State of Maryland employees, vendors, members of the public, and other states interested in building on this work.
 
 Some areas to check out:
 - Our [overview](https://maryland-gov.github.io/mitdp/overview) of the MITDP program.
