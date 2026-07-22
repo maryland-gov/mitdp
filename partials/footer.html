@@ -1,0 +1,20 @@
+<!--
+  Official Maryland site chrome — footer.
+
+  Two parts:
+  1. <section class="site-footer"> — this site's own attribution block
+     (dark blue band). Edit its text and links via CONFIG.footer in build.js.
+  2. <maryland-statewide-footer> — Maryland's OFFICIAL statewide footer,
+     loaded as a web component from the state CDN. It self-renders and stays
+     current automatically; do not hand-edit its contents.
+-->
+<section class="site-footer">
+  <div class="site-footer__content">
+    <div class="site-footer__title">{{FOOTER_TITLE}}</div>
+    <p class="site-footer__text">{{FOOTER_TEXT}}</p>
+    <div class="site-footer__links">{{FOOTER_LINKS}}</div>
+  </div>
+</section>
+
+<script type="module" src="https://cdn.maryland.gov/mdwds/latest/components/maryland-statewide-footer.js"></script>
+<maryland-statewide-footer></maryland-statewide-footer>

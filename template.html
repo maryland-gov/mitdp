@@ -18,7 +18,7 @@
       .section-toc {
         border-top: 2px solid #1b1b1b;
         border-bottom: 1px solid #dfe1e2;
-        padding: 1.25rem 0 2.5rem;
+        padding: 1.25rem 0 0.75rem;
         margin: 2.5rem 0;
       }
       .section-toc__title {
@@ -167,64 +167,96 @@
       .card-grid__card:hover .card-grid__title,
       .card-grid__card:hover .card-grid__arrow { color: #005ea2; }
       .card-grid__card:hover .card-grid__title { text-decoration: underline; }
+      /* --- Official Maryland site chrome (header + footer) --------------- */
+      /* Hidden when the page is embedded in a SharePoint iframe, because
+         the host page already has Maryland's header and footer. */
+      html.is-embedded .site-chrome { display: none !important; }
 
-      .usa-button { 
-        padding: .9rem 1.25rem; margin-right: .5rem;
+      .usa-skipnav {
+        position: absolute;
+        left: -999em;
+        background: #fff;
+        padding: 0.5rem 1rem;
+        z-index: 100;
+      }
+      .usa-skipnav:focus { left: 0; top: 0; position: fixed; }
+
+      .maryland-header__dashboard {
+        max-width: 87.5rem;
+        margin: 0 auto;
+        padding: 1rem 1.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .maryland-header__logo { height: 3.25rem; width: auto; display: block; }
+      .site-header__title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #1b1b1b;
+      }
+      .maryland-header__divider {
+        max-width: 87.5rem;
+        margin: 1rem auto 0;
+        border: 0;
+        border-top: 1px solid #dfe1e2;
       }
 
-      .usa-prose table td {
-        line-height: 1.4rem;
+      .site-footer {
+        background-color: #1a4480;   /* MDWDS primary-darker */
+        color: #fff;
+        padding: 30px 0;
+        margin-top: 36px;
       }
-      
-      .usa-prose ol {
-        margin-top: 1rem;
+      .site-footer__content {
+        max-width: 87.5rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
       }
-
-      .usa-summary-box__heading {
-        font-size: 1.16rem;
+      .site-footer__title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+        max-width: 800px;
       }
-
-      .usa-prose p, 
-      .usa-prose li,
-      .usa-prose ol li,
-      .usa-prose ul li,
-      .usa-prose h1, 
-      .usa-prose h2, 
-      .usa-prose h3, 
-      .usa-prose h4 {
-        max-width: 920px;
+      .site-footer__text {
+        margin: 0 0 15px;
+        line-height: 1.2rem;
+        opacity: 0.9;
+        max-width: 800px;
+        font-size: 1rem;
       }
-
-
-
-      .usa-prose h1, 
-      .usa-prose h2, 
-      .usa-prose h3, 
-      .usa-prose h4 {
-        margin-top: 2rem;   
-      }
-
-      .usa-prose .usa-summary-box__heading {
-        margin-top: .5rem;           
-      }
-
-      .usa-prose hr {
-        margin-top: 4rem;
-        margin-bottom: 6rem;
-      }
-
-       .usa-prose p {
-        margin-top: 1rem;   
-
-       }
+      .site-footer__links { display: flex; gap: 15px; flex-wrap: wrap; }
+      .site-footer__link { color: #fff; text-decoration: underline; font-size: 1rem; }
+      .site-footer__link:visited { color: #fff; }
+      .site-footer__link:hover { color: #dfe1e2; }
     </style>
   </head>
   <body>
+    <div class="site-chrome site-chrome--header">{{SITE_HEADER}}</div>
+
     <!-- All content is a DIRECT child of .usa-prose so the MDWDS
          `.usa-prose > *` typography and table styles apply. -->
-    <div class="usa-prose">
+    <main id="main-content" class="usa-prose">
       {{CONTENT}}
-    </div>
+    </main>
+
+    <div class="site-chrome site-chrome--footer">{{SITE_FOOTER}}</div>
+
+    <script>
+      /* These pages are viewed two ways: standalone on GitHub Pages, and
+         embedded in a SharePoint iframe on a doit.maryland.gov page that
+         ALREADY has Maryland's header and footer. Showing our own chrome
+         inside that iframe would duplicate it, so hide it when framed. */
+      (function () {
+        if (window.parent !== window) {
+          document.documentElement.classList.add("is-embedded");
+        }
+      })();
+    </script>
 
     <!-- Auto-height reporter: tells the SharePoint parent how tall this
          content is, so the iframe can resize to fit (no inner scrollbar,
@@ -233,6 +265,7 @@
       (function () {
         var PARENT_ORIGIN = "{{PARENT_ORIGIN}}";
         function reportHeight() {
+          if (window.parent === window) return;
           var h = document.documentElement.scrollHeight;
           window.parent.postMessage({ type: "setHeight", height: h }, PARENT_ORIGIN);
         }

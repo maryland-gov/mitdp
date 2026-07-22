@@ -271,6 +271,47 @@ Google export can't express that intent, the rule is prefix-driven — add
 `Alert:` (or `Note:`, etc.) to the start of a callout cell in the Markdown to
 render it as an Alert; leave it unprefixed to get a Summary Box.
 
+## Official Maryland header and footer
+
+Pages are built with the official Maryland site chrome, copied from
+mitdp.maryland.gov:
+
+- **Statewide banner** (top) and **statewide footer** (bottom) are Maryland's
+  own web components, loaded from the state CDN
+  (`cdn.maryland.gov/mdwds/latest/components/…`). They self-render and stay
+  current automatically — don't hand-edit them.
+- **Site header** — the Maryland logo plus this site's title. Uses the
+  `.maryland-header` classes from MDWDS.
+- **Site footer** — a dark blue attribution band above the statewide footer.
+
+### Configuring it
+
+All editable text lives in `CONFIG` at the top of `build.js`:
+
+```js
+siteChrome: true,                    // set false to build with no chrome
+siteName: "Major IT Development Project (MITDP) Oversight",
+footer: {
+  title: "This content is published by …",
+  text:  "For questions about MITDP oversight, …",
+  links: [ { text: "MITDP Dashboard", href: "https://mitdp.maryland.gov" } ],
+},
+```
+
+The markup itself is in `partials/header.html` and `partials/footer.html`.
+
+### Chrome is hidden inside the SharePoint iframe
+
+The SharePoint page that embeds these pages **already has Maryland's header
+and footer**. Rendering ours inside the iframe too would show them twice,
+nested. So each page detects whether it's framed (`window.parent !== window`)
+and, if so, adds `is-embedded` to `<html>`, which hides `.site-chrome` via
+CSS.
+
+The practical effect: standalone on GitHub Pages you get the full official
+Maryland page; embedded in SharePoint you get just the content, exactly as
+before. No configuration needed — it switches automatically.
+
 ## URL structure
 
 Pages are published as clean URLs — no `.html` extension. Each Markdown file
@@ -341,6 +382,9 @@ generated). Use this as a completeness check:
 mitdp-pipeline/
 ├── build.js                        # converter (required)
 ├── template.html                   # standalone prose-page template (required)
+├── partials/
+│   ├── header.html                 # official MD banner + site header (required)
+│   └── footer.html                 # site footer + official MD statewide footer (required)
 ├── sdlc-template.html              # interactive SDLC timeline template (required)
 ├── package.json                    # dependencies + build script (required)
 ├── package-lock.json               # exact dep versions for `npm ci` (required)

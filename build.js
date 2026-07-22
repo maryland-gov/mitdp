@@ -26,11 +26,60 @@ const CONFIG = {
   // The MDWDS stylesheet, pinned to the version digital.maryland.gov serves so
   // components render identically. Bump this when Maryland ships a new release.
   mdwdsCss: "https://cdn.maryland.gov/mdwds/0.47.4/css/mdwds.min.css",
+
+  // --- Official Maryland site header/footer ("site chrome") ---------------
+  // Set to false to build pages with no header/footer at all.
+  siteChrome: true,
+
+  // Title shown next to the state logo in the header.
+  siteName: "Major IT Development Project (MITDP) Oversight",
+
+  // Attribution block above the official statewide footer.
+  footer: {
+    title:
+      "This content is published by the State of Maryland Department of Information Technology (DoIT), in partnership with State agencies",
+    text: "For questions about MITDP oversight, contact the MITDP Oversight team.",
+    links: [
+      { text: "MITDP Dashboard", href: "https://mitdp.maryland.gov" },
+      {
+        text: "MITDP Oversight",
+        href: "https://doit.maryland.gov/MITDP-Oversight/Pages/MITDP-oversight.aspx",
+      },
+    ],
+  },
 };
 
 const CONTENT_DIR = path.join(__dirname, "content");
 const OUT_DIR = path.join(__dirname, "docs");
 const TEMPLATE = fs.readFileSync(path.join(__dirname, "template.html"), "utf8");
+
+/**
+ * Build the site header/footer HTML from the partials in `partials/`,
+ * filling in the configurable text from CONFIG. Returns empty strings when
+ * CONFIG.siteChrome is false.
+ */
+function buildChrome() {
+  if (!CONFIG.siteChrome) return { header: "", footer: "" };
+
+  const header = fs
+    .readFileSync(path.join(__dirname, "partials", "header.html"), "utf8")
+    .replace(/\{\{SITE_NAME\}\}/g, () => escapeHtml(CONFIG.siteName));
+
+  const links = (CONFIG.footer.links || [])
+    .map(
+      (l) =>
+        `<a class="site-footer__link" href="${escapeHtml(l.href)}">${escapeHtml(l.text)}</a>`
+    )
+    .join("");
+
+  const footer = fs
+    .readFileSync(path.join(__dirname, "partials", "footer.html"), "utf8")
+    .replace(/\{\{FOOTER_TITLE\}\}/g, () => escapeHtml(CONFIG.footer.title))
+    .replace(/\{\{FOOTER_TEXT\}\}/g, () => escapeHtml(CONFIG.footer.text))
+    .replace(/\{\{FOOTER_LINKS\}\}/g, () => links);
+
+  return { header, footer };
+}
 
 // ---------------------------------------------------------------------------
 // Markdown engine. Tables are on by default in markdown-it; `attrs` turns
@@ -676,10 +725,13 @@ function parseSdlc(src) {
 function buildSdlcPage(src, name) {
   const { meta, stages } = parseSdlc(src);
   if (stages.length === 0) throw new Error(`${name}: no phases found — check the '### **Title**' headings`);
+  const chrome = buildChrome();
   return interpolate(SDLC_TEMPLATE, {
     TITLE: escapeHtml(meta.title),
     INTRO: escapeHtml(meta.intro),
     PARENT_ORIGIN: CONFIG.parentOrigin,
+    SITE_HEADER: chrome.header,
+    SITE_FOOTER: chrome.footer,
     STAGES_JSON: JSON.stringify(stages, null, 1).replace(/</g, "\\u003c"),
   });
 }
@@ -745,10 +797,13 @@ function build() {
     const body = decorate(md.render(src), { sourceDir, pageUrl });
     const title = titleFrom(body, name);
 
+    const chrome = buildChrome();
     const page = interpolate(TEMPLATE, {
       TITLE: escapeHtml(title),
       MDWDS_CSS: CONFIG.mdwdsCss,
       PARENT_ORIGIN: CONFIG.parentOrigin,
+      SITE_HEADER: chrome.header,
+      SITE_FOOTER: chrome.footer,
       CONTENT: body,
     });
 

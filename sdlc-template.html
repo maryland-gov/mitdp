@@ -99,8 +99,8 @@
     .track::before,.track::after{display:none;}
 
     .stage{
-      flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:normal;
-      padding:26px 8px;text-align:center;min-height:186px;
+      flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;
+      padding:26px 18px;text-align:center;min-height:200px;
       background:var(--col);border-radius:14px;
     }
     .stage::before{display:none;}              /* hide the mobile spine node */
@@ -176,13 +176,13 @@
   /* gate interstitial: sits between steps on the spine */
   .maryland-gate{position:relative;padding:10px 0 14px 64px;list-style:none;}
   .maryland-gate::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--step-line);border-radius:0;}
-  .maryland-gate .maryland-summary-box{margin:0;max-width:68ch;margin-bottom: 4rem;}
+  .maryland-gate .maryland-summary-box{margin:0;max-width:68ch;}
 
   .maryland-step__title{font-family:var(--font-serif);font-weight:400;font-size:1.8rem;line-height:1.2;color:var(--text-dark);margin:0 0 .5rem;}
   .maryland-step__title .tag{font-family:var(--font-family);font-size:1.05rem;font-style:italic;color:var(--text-meta);}
 
   .maryland-step__body{font-size:1.06rem;line-height:1.6;color:var(--text-dark);max-width:68ch;}
-  .maryland-step__body p{margin:0 0;}
+  .maryland-step__body p{margin:0 0 1em;}
   .maryland-step__body a{color:var(--primary-blue);}
   .maryland-step__body strong{font-weight:700;}
   .maryland-step__body > ul{list-style:none;margin:.25em 0 1.25em;padding-left:1.6em;}
@@ -214,11 +214,30 @@
     *,*::before,*::after{animation:none!important;transition:none!important;}
     .stage{opacity:1!important;transform:none!important;}
   }
+
+  /* --- Official Maryland site chrome (header + footer) --------------- */
+  html.is-embedded .site-chrome{display:none !important;}
+  .usa-skipnav{position:absolute;left:-999em;background:#fff;padding:.5rem 1rem;z-index:100;}
+  .usa-skipnav:focus{left:0;top:0;position:fixed;}
+  .maryland-header__dashboard{max-width:87.5rem;margin:0 auto;padding:1rem 24px 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+  .maryland-header__logo{height:3.25rem;width:auto;display:block;}
+  .site-header__title{font-size:1.15rem;font-weight:700;line-height:1.3;color:#1b1b1b;}
+  .maryland-header__divider{max-width:87.5rem;margin:1rem auto 0;border:0;border-top:1px solid #dfe1e2;}
+  .site-footer{background-color:#1a4480;color:#fff;padding:30px 0;margin-top:36px;}
+  .site-footer__content{max-width:87.5rem;margin:0 auto;padding:0 24px;}
+  .site-footer__title{font-weight:700;font-size:1rem;line-height:1.2rem;margin-bottom:10px;max-width:800px;}
+  .site-footer__text{margin:0 0 15px;line-height:1.2rem;opacity:.9;max-width:800px;font-size:1rem;}
+  .site-footer__links{display:flex;gap:15px;flex-wrap:wrap;}
+  .site-footer__link{color:#fff;text-decoration:underline;font-size:1rem;}
+  .site-footer__link:visited{color:#fff;}
+  .site-footer__link:hover{color:#dfe1e2;}
 </style>
 </head>
 <body>
+<div class="site-chrome site-chrome--header">{{SITE_HEADER}}</div>
+
   <main>
-    <div class="wrap">
+    <div class="wrap" id="main-content">
       <h1 class="sr-only">{{TITLE}}</h1>
       <ol class="track" id="track" aria-label="MITDP product lifecycle, seven phases in order"></ol>
     </div>
@@ -237,7 +256,7 @@
   </main>
 
   <footer class="meta">
-    <!-- Space for footer text -->
+    Styled to match the <a href="https://mitdp.maryland.gov/">Maryland MITDP Dashboard</a>. Type, color, and chrome follow the Maryland Web Design System and the U.S. Web Design System (USWDS).
   </footer>
 
 <script>
@@ -256,7 +275,7 @@
     const ms  = s.milestone ? `<span class="milestone">${s.milestone}</span>` : '';
     const opt = s.opt ? ` <span class="opt">${s.opt}</span>` : '';
     li.innerHTML = ms +
-      `<a class="stage-body" href="#phase-${s.key}" aria-label="View details for ${esc(s.title)}">` +
+      `<a class="stage-body" href="#d-${s.key}" aria-label="View details for ${esc(s.title)}">` +
         `<h2>${s.title}${opt}</h2>` +
         `<p class="${s.italic ? 'italic' : ''}">${s.text}</p>` +
       `</a>`;
@@ -269,7 +288,7 @@
     // phase step
     const li = document.createElement('li');
     li.className = 'maryland-step';
-    li.id = 'phase-' + s.key;
+    li.id = 'd-' + s.key;
     li.tabIndex = -1;
     li.style.setProperty('--accent', s.color);
     const tag = s.opt ? ` <span class="tag">${s.opt}</span>` : '';
@@ -311,6 +330,12 @@
     window.addEventListener("resize", reportHeight);
     if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
   })();
+</script>
+<div class="site-chrome site-chrome--footer">{{SITE_FOOTER}}</div>
+<script>
+  /* Hide our chrome when embedded in SharePoint, which already has
+     Maryland's header and footer. */
+  (function(){ if (window.parent !== window) document.documentElement.classList.add("is-embedded"); })();
 </script>
 </body>
 </html>
