@@ -74,6 +74,159 @@ const TEMPLATE = fs.readFileSync(path.join(__dirname, "template.html"), "utf8");
  * filling in the configurable text from CONFIG. Returns empty strings when
  * CONFIG.siteChrome is false.
  */
+/**
+ * Extract per-page directive lines from a Markdown source:
+ *   Sidebar: <name>       — render with the sidebar defined in
+ *                            content/_sidebars/<name>.md
+ *   Breadcrumb: [A](x) > [B](y)
+ *                          — breadcrumb trail; current page title is
+ *                            appended automatically.
+ * Returns { sidebar, breadcrumb, cleaned } where `cleaned` is the source
+ * with the directive lines removed (so they don't render as text).
+ */
+function parseDirectives(src) {
+  let sidebar = null;
+  let breadcrumb = null;
+  const cleaned = src
+    .split(/\r?\n/)
+    .filter((line) => {
+      let m;
+      if ((m = line.match(/^Sidebar:\s*(.+)\s*$/i))) { sidebar = m[1].trim(); return false; }
+      if ((m = line.match(/^Breadcrumb:\s*(.+)\s*$/i))) { breadcrumb = m[1].trim(); return false; }
+      return true;
+    })
+    .join("\n");
+  return { sidebar, breadcrumb, cleaned };
+}
+
+/**
+ * Build the section-nav sidebar HTML from content/_sidebars/<name>.md.
+ * Definition format:
+ *
+ *   Back: [MITDP Oversight](mitdp-overview.md)
+ *
+ *   - [Launchpad](launchpad.md)
+ *     - [Why do I need a Launchpad?](launchpad.md#why-do-i-need-a-launchpad)
+ *   - [Stage 1](stage-1.md)
+ *
+ * All links are written relative to the content root (regardless of where
+ * the *page* using the sidebar lives) and are resolved per page. The item
+ * whose target (without fragment) is the current page is marked current.
+ *
+ * Markup follows maryland.gov/services/* : a <details> element renders as
+ * the black "Section Menu" accordion on mobile and as an always-open rail
+ * on desktop.
+ */
+function buildSidebarNav(name, pageUrl) {
+  const file = path.join(CONTENT_DIR, "_sidebars", `${name}.md`);
+  if (!fs.existsSync(file)) {
+    throw new Error(
+      `Sidebar "${name}" not found — expected ${path.relative(__dirname, file)}`
+    );
+  }
+  const src = fs.readFileSync(file, "utf8");
+
+  const LINK = /\[([^\]]+)\]\(([^)]+)\)/;
+  let backHtml = "";
+  const items = []; // { text, href, current, children: [...] }
+
+  for (const raw of src.split(/\r?\n/)) {
+    const line = raw.replace(/\s+$/, "");
+    if (!line.trim()) continue;
+
+    let m;
+    if ((m = line.match(/^Back:\s*(.+)$/i))) {
+      const lm = m[1].match(LINK);
+      if (lm) {
+        backHtml =
+          `<a class="section-nav__back" href="${relativizeUrl(pageUrl, lm[2], "")}">` +
+          `<span aria-hidden="true">&lsaquo;</span> ${escapeHtml(lm[1])}</a>`;
+      }
+      continue;
+    }
+
+    const im = line.match(/^(\s*)-\s+(.*)$/);
+    if (!im) continue;
+    const lm = im[2].match(LINK);
+    if (!lm) continue;
+
+    const isSub = im[1].length >= 2;
+    const [_, text, href] = lm;
+
+    // Current-page detection: target path (fragment stripped, .md/.html
+    // normalised to clean-URL form) equals this page's URL, and the link
+    // has no fragment (anchor links on the current page aren't "current").
+    const pathOnly = href.split("#")[0];
+    const hasFragment = href.includes("#");
+    const target = path.posix
+      .join(".", pathOnly)
+      .replace(/([^\/]+)\.(html?|md)$/i, "$1/");
+    const current = !hasFragment && target === pageUrl;
+
+    const node = {
+      text,
+      href: relativizeUrl(pageUrl, href, ""),
+      current,
+      children: [],
+    };
+    if (isSub && items.length) items[items.length - 1].children.push(node);
+    else items.push(node);
+  }
+
+  const li = (n, sub) =>
+    `<li class="section-nav__item${sub ? " section-nav__item--sub" : ""}">` +
+    `<a class="section-nav__link${n.current ? " is-current" : ""}"` +
+    (n.current ? ` aria-current="page"` : "") +
+    ` href="${n.href}">${escapeHtml(n.text)}</a>` +
+    (n.children.length
+      ? `<ul class="section-nav__sublist">${n.children.map((c) => li(c, true)).join("")}</ul>`
+      : "") +
+    `</li>`;
+
+  return (
+    `<nav class="section-nav" aria-label="Section menu">` +
+    `<details class="section-nav__details" open>` +
+    `<summary class="section-nav__toggle">Section Menu</summary>` +
+    `<div class="section-nav__body">` +
+    backHtml +
+    `<ul class="section-nav__list">${items.map((n) => li(n, false)).join("")}</ul>` +
+    `</div></details></nav>`
+  );
+}
+
+/**
+ * Build a USWDS breadcrumb from a "Breadcrumb:" directive value like
+ * `[Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)`.
+ * The current page's title is appended automatically as the final,
+ * non-linked crumb.
+ */
+function buildBreadcrumbNav(line, pageTitle, pageUrl) {
+  const LINK = /^\[([^\]]+)\]\(([^)]+)\)$/;
+  const crumbs = line
+    .split(/\s*>\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => {
+      const m = part.match(LINK);
+      return m
+        ? `<li class="usa-breadcrumb__list-item">` +
+            `<a href="${relativizeUrl(pageUrl, m[2], "")}" class="usa-breadcrumb__link">` +
+            `<span>${escapeHtml(m[1])}</span></a></li>`
+        : `<li class="usa-breadcrumb__list-item"><span>${escapeHtml(part)}</span></li>`;
+    });
+
+  crumbs.push(
+    `<li class="usa-breadcrumb__list-item usa-current" aria-current="page">` +
+      `<span>${escapeHtml(pageTitle)}</span></li>`
+  );
+
+  return (
+    `<div class="breadcrumb-wrap"><nav class="usa-breadcrumb" aria-label="Breadcrumbs">` +
+    `<ol class="usa-breadcrumb__list">${crumbs.join("")}</ol>` +
+    `</nav></div>`
+  );
+}
+
 function buildChrome() {
   if (!CONFIG.siteChrome) return { header: "", footer: "" };
 
@@ -162,6 +315,25 @@ function decorate(html, pageContext = { sourceDir: "", pageUrl: "" }) {
   // 1. Drop empty headings (the export leaves stray "# " lines behind).
   $("h1, h2, h3, h4, h5, h6").each((_, el) => {
     if ($(el).text().trim() === "") $(el).remove();
+  });
+
+  // 1b. Auto-generate ids for headings that don't have one, so in-page and
+  //     sidebar anchor links (#some-heading) always have a target. Explicit
+  //     `{#custom-id}` attributes are preserved untouched.
+  const seenIds = new Set();
+  $("h1, h2, h3, h4, h5, h6").each((_, el) => {
+    const $el = $(el);
+    const existing = $el.attr("id");
+    if (existing) { seenIds.add(existing); return; }
+    let id = $el.text().trim().toLowerCase()
+      .replace(/[^a-z0-9&\s-]/g, "")
+      .replace(/&/g, "&")
+      .replace(/\s+/g, "-");
+    if (!id) return;
+    let unique = id, n = 1;
+    while (seenIds.has(unique)) unique = `${id}-${n++}`;
+    seenIds.add(unique);
+    $el.attr("id", unique);
   });
 
   // 2. Card grid: a `.card-grid` heading followed by a table where each cell
@@ -771,15 +943,19 @@ function parseSdlc(src) {
   return { meta, stages };
 }
 
-function buildSdlcPage(src, name) {
+function buildSdlcPage(src, name, extras = {}) {
   const { meta, stages } = parseSdlc(src);
   if (stages.length === 0) throw new Error(`${name}: no phases found — check the '### **Title**' headings`);
+  const { sidebarHtml = "", breadcrumb = null, pageUrl = name + "/" } = extras;
   const chrome = buildChrome();
   return interpolate(SDLC_TEMPLATE, {
     TITLE: escapeHtml(meta.title),
     INTRO: escapeHtml(meta.intro),
     SITE_HEADER: chrome.header,
     SITE_FOOTER: chrome.footer,
+    BREADCRUMB: breadcrumb ? buildBreadcrumbNav(breadcrumb, meta.title, pageUrl) : "",
+    SIDEBAR: sidebarHtml,
+    SIDEBAR_MOD: sidebarHtml ? " has-sidebar" : "",
     STAGES_JSON: JSON.stringify(stages, null, 1).replace(/</g, "\\u003c"),
   });
 }
@@ -830,28 +1006,58 @@ function build() {
   for (const file of files) {
     // `file` is a POSIX-style path relative to CONTENT_DIR, e.g.
     // "launchpad/stage-1.md" or "stage-1.md".
-    const src = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
+    const rawSrc = fs.readFileSync(path.join(CONTENT_DIR, file), "utf8");
     const name = file.replace(/\.md$/i, "");     // e.g. "launchpad/stage-1"
     const dir = path.posix.dirname(file);         // e.g. "launchpad" or "."
     const sourceDir = dir === "." ? "" : dir + "/";
     const pageUrl = name + "/";                   // e.g. "launchpad/stage-1/"
 
+    // Per-page directives (Sidebar: / Breadcrumb:) apply to both templates.
+    const { sidebar, breadcrumb, cleaned: src } = parseDirectives(rawSrc);
+    const sidebarHtml = sidebar ? buildSidebarNav(sidebar, pageUrl) : "";
+
     // Files declaring "Template: sdlc" render as the interactive timeline.
     if (/^Template:\s*sdlc\s*$/im.test(src)) {
-      writePage(name, buildSdlcPage(src, name), "SDLC interactive timeline");
+      writePage(
+        name,
+        buildSdlcPage(src, name, { sidebarHtml, breadcrumb, pageUrl }),
+        "SDLC interactive timeline"
+      );
       continue;
     }
 
     const body = decorate(md.render(src), { sourceDir, pageUrl });
     const title = titleFrom(body, name);
+    const breadcrumbHtml = breadcrumb
+      ? buildBreadcrumbNav(breadcrumb, title, pageUrl)
+      : "";
+
+    // Assemble the main content. With a sidebar, everything before the
+    // first <h2> (the h1 + lede) stays full width, and the sidebar sits
+    // beside the rest — matching maryland.gov/services/* section pages.
+    let content;
+    if (sidebarHtml) {
+      const splitAt = body.indexOf("<h2");
+      const pre = splitAt > 0 ? body.slice(0, splitAt) : "";
+      const post = splitAt > 0 ? body.slice(splitAt) : body;
+      content =
+        (pre ? `<div class="usa-prose page-lede">${pre}</div>` : "") +
+        `<div class="layout-sidebar">` +
+        sidebarHtml +
+        `<div class="usa-prose">${post}</div>` +
+        `</div>`;
+    } else {
+      content = `<div class="usa-prose">${body}</div>`;
+    }
 
     const chrome = buildChrome();
     const page = interpolate(TEMPLATE, {
       TITLE: escapeHtml(title),
       MDWDS_CSS: CONFIG.mdwdsCss,
-        SITE_HEADER: chrome.header,
+      SITE_HEADER: chrome.header,
       SITE_FOOTER: chrome.footer,
-      CONTENT: body,
+      BREADCRUMB: breadcrumbHtml,
+      CONTENT: content,
     });
 
     writePage(name, page, title);
@@ -866,7 +1072,7 @@ function build() {
 function walkMarkdown(dir, base = dir) {
   const out = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith(".")) continue;
+    if (entry.name.startsWith(".") || entry.name.startsWith("_")) continue;
     if (entry.name === "node_modules") continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
@@ -922,7 +1128,7 @@ function interpolate(template, values) {
 
 function copyAssets(srcDir, destDir) {
   for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
-    if (entry.name.startsWith(".") || entry.name.toLowerCase().endsWith(".md")) continue;
+    if (entry.name.startsWith(".") || entry.name.startsWith("_") || entry.name.toLowerCase().endsWith(".md")) continue;
     const src = path.join(srcDir, entry.name);
     const dest = path.join(destDir, entry.name);
     if (entry.isDirectory()) {

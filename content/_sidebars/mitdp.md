@@ -1,0 +1,12 @@
+Back: [MITDP Oversight](mitdp-overview.md)
+
+- [Launchpad](launchpad.md)
+  - [Why do I need a Launchpad?](launchpad.md#why-do-i-need-a-launchpad)
+  - [Launchpad Contents](launchpad.md#launchpad-contents)
+  - [How to submit](launchpad.md#how-to-submit)
+  - [Requirements and timelines](launchpad.md#requirements-and-timelines)
+- [Stage 1](stage-1.md)
+  - [Understanding of User Needs](stage-1.md#understanding-of-user-needs)
+  - [Core Problems & Definition of Success](stage-1.md#core-problems-&-definition-of-success)
+  - [Product Strategy](stage-1.md#product-strategy)
+- [System Development Life Cycle (SDLC)](sdlc.md)

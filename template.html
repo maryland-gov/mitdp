@@ -353,12 +353,109 @@
       .site-footer__link { color: #fff; text-decoration: underline; font-size: 1rem; }
       .site-footer__link:visited { color: #fff; }
       .site-footer__link:hover { color: #dfe1e2; }
-    </style>
+
+/* --- Breadcrumbs -------------------------------------------------- */
+      .breadcrumb-wrap { max-width: 72rem; margin: 0 auto; padding: 1.25rem 1.5rem 0; }
+      /* Zero-specificity fallbacks; real MDWDS breadcrumb rules win. */
+      :where(.usa-breadcrumb) { font-size: 0.95rem; }
+      :where(.usa-breadcrumb__list) {
+        list-style: none; display: flex; flex-wrap: wrap;
+        margin: 0; padding: 0; align-items: center;
+      }
+      :where(.usa-breadcrumb__list-item + .usa-breadcrumb__list-item)::before {
+        content: "\203A"; margin: 0 0.5rem; color: #71767a;
+      }
+      :where(.usa-breadcrumb__link) { color: #005ea2; }
+      :where(.usa-breadcrumb__list-item.usa-current span) { color: #1b1b1b; }
+
+      /* --- Section sidebar (maryland.gov/services pattern) --------------- */
+      .layout-sidebar {
+        max-width: 72rem; margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+        display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+      }
+      .layout-sidebar > .usa-prose { padding: 0; margin: 0; max-width: none; }
+      .page-lede { padding-bottom: 0; }
+
+      .section-nav__toggle {
+        display: flex; justify-content: space-between; align-items: center;
+        background: #1b1b1b; color: #fff;
+        font-weight: 700; font-size: 1rem;
+        padding: 0.9rem 1.25rem; border-radius: 6px;
+        cursor: pointer; list-style: none;
+      }
+      .section-nav__toggle::-webkit-details-marker { display: none; }
+      .section-nav__toggle::after { content: "\2304"; font-size: 1.1rem; line-height: 0.5; }
+      .section-nav__details[open] .section-nav__toggle::after { content: "\2303"; }
+      .section-nav__body { padding-top: 1rem; }
+      .section-nav__back {
+        display: block; font-weight: 700; color: #1b1b1b;
+        text-decoration: none; padding-bottom: 0.75rem;
+        border-bottom: 1px solid #dfe1e2; margin-bottom: 0.25rem;
+      }
+      .section-nav__back:hover { text-decoration: underline; }
+      .section-nav__list, .section-nav__sublist { list-style: none; margin: 0; padding: 0; }
+      .section-nav__item { border-bottom: 1px solid #dfe1e2; padding: 0.6rem 0; }
+      .section-nav__item--sub { border-bottom: 0; padding: 0.35rem 0 0.35rem 1rem; }
+      .section-nav__sublist { margin-top: 0.35rem; }
+      .section-nav__link {
+        color: #1b1b1b; text-decoration: none; font-size: 0.98rem; line-height: 1.35;
+      }
+      .section-nav__link:hover { text-decoration: underline; color: #005ea2; }
+      .section-nav__link.is-current { font-weight: 700; }
+      .section-nav__item--sub .section-nav__link { font-size: 0.92rem; }
+
+      @media (min-width: 55em) {
+        .layout-sidebar { grid-template-columns: 230px minmax(0, 1fr); gap: 3rem; }
+        .section-nav__toggle { display: none; }
+        .section-nav__body { border-top: 3px solid #1b1b1b; }
+      }
+
+      .site-footer {
+        background-color: #1a4480;   /* MDWDS primary-darker */
+        color: #fff;
+        padding: 30px 0;
+        margin-top: 36px;
+      }
+      .site-footer__content {
+        max-width: 87.5rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .site-footer__title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+        max-width: 800px;
+      }
+      .site-footer__text {
+        margin: 0 0 15px;
+        line-height: 1.2rem;
+        opacity: 0.9;
+        max-width: 800px;
+        font-size: 1rem;
+      }
+      @media (min-width: 55em) {
+        .site-footer__content { padding-inline: 3.5rem; }
+      }
+      .site-footer__links { display: flex; gap: 15px; flex-wrap: wrap; }
+      .site-footer__link { color: #fff; text-decoration: underline; font-size: 1rem; }
+      .site-footer__link:visited { color: #fff; }
+      .site-footer__link:hover { color: #dfe1e2; }
+
+
+
+</style>
   </head>
   <body>
     <div class="site-chrome site-chrome--header">{{SITE_HEADER}}</div>
 
-    <!-- All content is a DIRECT child of .usa-prose so the MDWDS
+    {{BREADCRUMB}}
+
+    <!-- CONTENT brings its own wrappers: a .usa-prose div (and, when the
+         page declares a sidebar, a .layout-sidebar grid). Markdown content
+         is always a DIRECT child of a .usa-prose element so the MDWDS
          `.usa-prose > *` typography and table styles apply. -->
     <main id="main-content" class="usa-prose">
       {{CONTENT}}
@@ -366,6 +463,18 @@
 
     <div class="site-chrome site-chrome--footer">{{SITE_FOOTER}}</div>
 
-
+ <script>
+      /* The section sidebar is a <details> accordion on mobile; keep it
+         forced open on desktop widths so the rail is always visible. */
+      (function () {
+        var mq = window.matchMedia("(min-width: 55em)");
+        function sync() {
+          if (!mq.matches) return;
+          document.querySelectorAll(".section-nav__details").forEach(function (d) { d.open = true; });
+        }
+        if (mq.addEventListener) mq.addEventListener("change", sync);
+        sync();
+      })();
+    </script>
   </body>
 </html>

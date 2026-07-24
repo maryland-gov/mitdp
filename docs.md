@@ -260,6 +260,67 @@ Google export can't express that intent, the rule is prefix-driven — add
 `Alert:` (or `Note:`, etc.) to the start of a callout cell in the Markdown to
 render it as an Alert; leave it unprefixed to get a Summary Box.
 
+## Sidebar and breadcrumbs
+
+Any page can opt into a left sidebar (the maryland.gov/services section-menu
+pattern) and a breadcrumb trail with two directive lines at the top of its
+Markdown:
+
+```markdown
+Sidebar: mitdp
+Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)
+```
+
+Pages **without** these lines render exactly as before — no sidebar, no
+breadcrumb. (This is the opt-out: just omit the lines.)
+
+### Sidebar definitions
+
+`Sidebar: mitdp` points at `content/_sidebars/mitdp.md`, so many pages share
+one menu, edited in one place. The format:
+
+```markdown
+Back: [MITDP Oversight](mitdp-overview.md)
+
+- [Launchpad](launchpad.md)
+  - [Why do I need a Launchpad?](launchpad.md#why-do-i-need-a-launchpad)
+  - [How to submit](launchpad.md#how-to-submit)
+- [Stage 1](stage-1.md)
+```
+
+Rules:
+
+- **All links are written relative to the content root**, regardless of where
+  the pages that use the sidebar live. The build resolves them per page.
+- The item whose target is the current page is bolded automatically and gets
+  `aria-current="page"`. Anchor links (`page.md#section`) are never marked
+  current — they're section links, not page links.
+- `Back:` renders the "‹ Parent" link at the top. Omit it for no back link.
+- Underscore-prefixed files and folders (like `_sidebars/`) are never built
+  as pages.
+
+On desktop (≥55em) the sidebar renders as an always-open rail with a thick
+top border. On mobile it collapses into the black **Section Menu** accordion
+(a `<details>` element, so it works without JavaScript; a small script keeps
+it forced open on desktop).
+
+Headings without an explicit `{#id}` get an auto-generated id (slug of the
+heading text), so sidebar anchor links like `launchpad.md#how-to-submit` work
+without editing the target page.
+
+### Layout with a sidebar
+
+On prose pages, the `# Title` and everything before the first `##` heading
+stay full-width (the lede area); the sidebar sits beside everything from the
+first `##` onward. On the SDLC template, the timeline stays full-width and
+the sidebar sits beside the Phase Details section.
+
+### Breadcrumbs
+
+`Breadcrumb:` takes ` > `-separated Markdown links. The current page's title
+is appended automatically as the final, non-linked crumb. Links resolve like
+sidebar links (relative to content root; external URLs pass through).
+
 ## Official Maryland header and footer
 
 Pages are built with the official Maryland site chrome, copied from
@@ -406,6 +467,8 @@ mitdp-pipeline/
 ├── .gitignore                      # ignores node_modules/ and docs/ (required)
 ├── README.md                       # this file
 ├── content/
+│   ├── _sidebars/
+│   │   └── mitdp.md                # shared sidebar definition (not built as a page)
 │   ├── images/                     # PNG/JPG/SVG assets, copied to docs/ on build
 │   │   └── mitdp-venn.png
 │   ├── launchpad.md                # buttons + two-column TOC + data table example
