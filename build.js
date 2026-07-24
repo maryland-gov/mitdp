@@ -4,7 +4,7 @@
  *
  * Reads every `content/*.md` file, converts it to HTML, injects `.usa-*`
  * classes so the output matches the Maryland design system, wraps it in a
- * standalone GitHub Pages page (with the iframe auto-height reporter), and
+ * standalone GitHub Pages page, and
  * writes the result to `docs/<name>.html` for GitHub Pages to serve.
  *
  * Run: `npm run build`
@@ -20,9 +20,6 @@ const { load } = require("cheerio");
 // Configuration — edit these two values for your environment.
 // ---------------------------------------------------------------------------
 const CONFIG = {
-  // The SharePoint host that will embed these pages. The child page posts its
-  // height ONLY to this origin (never "*"), so set it correctly.
-  parentOrigin: "https://doit.maryland.gov",
   // The MDWDS stylesheet, pinned to the version digital.maryland.gov serves so
   // components render identically. Bump this when Maryland ships a new release.
   mdwdsCss: "https://cdn.maryland.gov/mdwds/0.47.4/css/mdwds.min.css",
@@ -729,7 +726,6 @@ function buildSdlcPage(src, name) {
   return interpolate(SDLC_TEMPLATE, {
     TITLE: escapeHtml(meta.title),
     INTRO: escapeHtml(meta.intro),
-    PARENT_ORIGIN: CONFIG.parentOrigin,
     SITE_HEADER: chrome.header,
     SITE_FOOTER: chrome.footer,
     STAGES_JSON: JSON.stringify(stages, null, 1).replace(/</g, "\\u003c"),
@@ -751,7 +747,7 @@ function build() {
 
   // Custom 404 page. GitHub Pages serves this for any unmatched URL. The
   // script gracefully redirects legacy `.html` URLs to their clean-URL
-  // equivalents so old SharePoint iframes don't hard-404 during transition.
+  // equivalents so older links don't hard-404.
   fs.writeFileSync(
     path.join(OUT_DIR, "404.html"),
     `<!doctype html>
@@ -801,8 +797,7 @@ function build() {
     const page = interpolate(TEMPLATE, {
       TITLE: escapeHtml(title),
       MDWDS_CSS: CONFIG.mdwdsCss,
-      PARENT_ORIGIN: CONFIG.parentOrigin,
-      SITE_HEADER: chrome.header,
+        SITE_HEADER: chrome.header,
       SITE_FOOTER: chrome.footer,
       CONTENT: body,
     });

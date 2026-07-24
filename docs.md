@@ -1,40 +1,29 @@
-# MITDP Markdown → SharePoint pipeline
+# MITDP Markdown → GitHub Pages pipeline
 
 Converts Markdown into HTML styled with the **Maryland Web Design System
-(MDWDS)**, publishes it to **GitHub Pages**, and embeds it in a **classic
-SharePoint** page via an auto-resizing iframe. Content changes are made in
-Markdown; a push rebuilds and republishes with no copy-paste.
+(MDWDS)** and publishes it to **GitHub Pages** as a standalone site with the
+official Maryland header and footer. Content changes are made in Markdown; a
+push rebuilds and republishes automatically.
 
 ```
-content/*.md ──► build.js ──► docs/*.html ──► GitHub Pages ──► <iframe> in SharePoint
-   (edit)        (convert +      (served)        (hosts)         (auto-height)
+content/*.md ──► build.js ──► docs/<name>/index.html ──► GitHub Pages
+   (edit)        (convert +          (built)                (served)
                 class-inject)
 ```
 
-## Tier 1 — one-time setup
+## One-time setup
 
-1. **Create the repo** and push these files. In repo **Settings → Pages**, set
-   the source to **GitHub Actions**.
-2. **Set your origins.** In `build.js`, set `CONFIG.parentOrigin` to your
-   SharePoint host (e.g. `https://doit.maryland.gov`). In
-   `sharepoint-snippet.html`, set `GITHUB_PAGES_ORIGIN` to your Pages origin
-   (e.g. `https://maryland-gov.github.io`). These two must be correct or the
-   height messages are silently dropped.
-3. **Add the web part.** On the classic page, add a **Content Editor Web Part**
-   (or Script Editor Web Part), edit its HTML source, and paste
-   `sharepoint-snippet.html`. Point the iframe `src` at the specific
-   `docs/<name>.html` URL on GitHub Pages.
+1. **Create the repo** and push these files.
+2. In repo **Settings → Pages**, set the source to **GitHub Actions**.
+3. **Set the site chrome** — edit `CONFIG.siteName` and `CONFIG.footer` at the
+   top of `build.js` (see "Official Maryland header and footer" below).
 
-That's it — the MDWDS stylesheet is loaded by the embedded page itself, so
-nothing about the SharePoint page's own styling matters.
-
-## Tier 2 — repeatable content updates
+## Updating content
 
 1. Edit a file in `content/` (or add a new `*.md`).
 2. Commit and push to `main`.
-3. The GitHub Action rebuilds `docs/` and redeploys Pages. The SharePoint page
-   shows the update automatically — no re-paste. (A brand-new page only needs
-   its own web part + iframe `src` added once.)
+3. The GitHub Action rebuilds `docs/` and redeploys Pages. The live site shows
+   the update automatically.
 
 ## What the converter handles
 
@@ -300,18 +289,6 @@ footer: {
 
 The markup itself is in `partials/header.html` and `partials/footer.html`.
 
-### Chrome is hidden inside the SharePoint iframe
-
-The SharePoint page that embeds these pages **already has Maryland's header
-and footer**. Rendering ours inside the iframe too would show them twice,
-nested. So each page detects whether it's framed (`window.parent !== window`)
-and, if so, adds `is-embedded` to `<html>`, which hides `.site-chrome` via
-CSS.
-
-The practical effect: standalone on GitHub Pages you get the full official
-Maryland page; embedded in SharePoint you get just the content, exactly as
-before. No configuration needed — it switches automatically.
-
 ## URL structure
 
 Pages are published as clean URLs — no `.html` extension. Each Markdown file
@@ -349,8 +326,8 @@ left completely untouched.
 
 For old URLs ending in `.html` (from an earlier version of the pipeline or
 elsewhere), the build ships a small `docs/404.html` that redirects them to
-the clean form. So an old SharePoint iframe pointing at `launchpad.html`
-still works — it just takes one extra hop through the 404 page.
+the clean form, so older `.html` links still work — they just take one extra
+hop through the 404 page.
 
 ## Deploying to GitHub Pages
 
@@ -366,9 +343,7 @@ the GitHub Actions source so the workflow's built output is what gets served.
 4. Push any change to `main` (or run the workflow manually from the **Actions**
    tab → *Publish to GitHub Pages* → *Run workflow*). The workflow installs
    dependencies, runs `npm run build`, and deploys `docs/` to Pages.
-5. Confirm at `https://<org>.github.io/<repo>/<name>.html`. The URL does not
-   change between the Jekyll version and this one, so your SharePoint iframe
-   `src` stays the same.
+5. Confirm at `https://<org>.github.io/<repo>/<name>/`.
 
 If the page still looks unstyled after deploying, it's almost always that the
 Pages **Source** is still set to "Deploy from a branch" — recheck step 3.
@@ -390,7 +365,6 @@ mitdp-pipeline/
 ├── package-lock.json               # exact dep versions for `npm ci` (required)
 ├── .gitignore                      # ignores node_modules/ and docs/ (required)
 ├── README.md                       # this file
-├── sharepoint-snippet.html         # paste into the classic Web Part (reference)
 ├── content/
 │   ├── images/                     # PNG/JPG/SVG assets, copied to docs/ on build
 │   │   └── mitdp-venn.png
@@ -416,11 +390,9 @@ npx serve docs         # or any static server, then open the file
 
 ## Notes
 
-- **Security:** the parent listener validates `event.origin` and the child posts
-  only to `parentOrigin` — not `"*"`. Keep it that way.
-- **Accessibility (Section 508):** the iframe needs a real `title` (the snippet
-  sets one). Framed content is a separate document for screen readers and is not
-  in SharePoint search — link to the source page too if discoverability matters.
+- **Accessibility (Section 508):** each page has a skip link and a single
+  `<main id="main-content">` landmark. Keep heading levels in order when
+  authoring.
 - **CSS version** is pinned to `0.47.4` in `build.js` to match what
   digital.maryland.gov serves, so components render identically. Bump it when
   Maryland ships a newer release (check the version in the wordmark URL on

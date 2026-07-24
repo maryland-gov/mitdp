@@ -6,10 +6,8 @@
     <title>{{TITLE}}</title>
     <link rel="stylesheet" href="{{MDWDS_CSS}}" />
     <style>
-      /* The page is rendered inside a SharePoint iframe, so keep the body
-         transparent and let SharePoint provide the outer chrome/margins. */
       html,
-      body { margin: 0; padding: 0; background: transparent; }
+      body { margin: 0; padding: 0; background: #fff; }
       .usa-prose { padding: 1rem 1.5rem; max-width: 72rem; margin: 0 auto; }
 
       /* Table of contents block (`## Heading {.toc}` + list). Two-column
@@ -168,9 +166,6 @@
       .card-grid__card:hover .card-grid__arrow { color: #005ea2; }
       .card-grid__card:hover .card-grid__title { text-decoration: underline; }
       /* --- Official Maryland site chrome (header + footer) --------------- */
-      /* Hidden when the page is embedded in a SharePoint iframe, because
-         the host page already has Maryland's header and footer. */
-      html.is-embedded .site-chrome { display: none !important; }
 
       .usa-skipnav {
         position: absolute;
@@ -273,35 +268,6 @@
 
     <div class="site-chrome site-chrome--footer">{{SITE_FOOTER}}</div>
 
-    <script>
-      /* These pages are viewed two ways: standalone on GitHub Pages, and
-         embedded in a SharePoint iframe on a doit.maryland.gov page that
-         ALREADY has Maryland's header and footer. Showing our own chrome
-         inside that iframe would duplicate it, so hide it when framed. */
-      (function () {
-        if (window.parent !== window) {
-          document.documentElement.classList.add("is-embedded");
-        }
-      })();
-    </script>
 
-    <!-- Auto-height reporter: tells the SharePoint parent how tall this
-         content is, so the iframe can resize to fit (no inner scrollbar,
-         no clipping). Posts ONLY to the configured parent origin. -->
-    <script>
-      (function () {
-        var PARENT_ORIGIN = "{{PARENT_ORIGIN}}";
-        function reportHeight() {
-          if (window.parent === window) return;
-          var h = document.documentElement.scrollHeight;
-          window.parent.postMessage({ type: "setHeight", height: h }, PARENT_ORIGIN);
-        }
-        window.addEventListener("load", reportHeight);
-        window.addEventListener("resize", reportHeight);
-        if (window.ResizeObserver) {
-          new ResizeObserver(reportHeight).observe(document.body);
-        }
-      })();
-    </script>
   </body>
 </html>

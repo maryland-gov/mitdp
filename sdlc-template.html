@@ -216,7 +216,6 @@
   }
 
   /* --- Official Maryland site chrome (header + footer) --------------- */
-  html.is-embedded .site-chrome{display:none !important;}
   .usa-skipnav{position:absolute;left:-999em;background:#fff;padding:.5rem 1rem;z-index:100;}
   .usa-skipnav:focus{left:0;top:0;position:fixed;}
   /* Zero-specificity fallback for the header container (see template.html). */
@@ -329,25 +328,6 @@
     }
   });
 </script>
-<script>
-  (function () {
-    var PARENT_ORIGIN = "{{PARENT_ORIGIN}}";
-    function reportHeight() {
-      // Only post when actually iframed (parent !== self). Otherwise the
-      // browser logs a benign but noisy origin-mismatch warning every time.
-      if (window.parent === window) return;
-      window.parent.postMessage({ type: "setHeight", height: document.documentElement.scrollHeight }, PARENT_ORIGIN);
-    }
-    window.addEventListener("load", reportHeight);
-    window.addEventListener("resize", reportHeight);
-    if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
-  })();
-</script>
 <div class="site-chrome site-chrome--footer">{{SITE_FOOTER}}</div>
-<script>
-  /* Hide our chrome when embedded in SharePoint, which already has
-     Maryland's header and footer. */
-  (function(){ if (window.parent !== window) document.documentElement.classList.add("is-embedded"); })();
-</script>
 </body>
 </html>
