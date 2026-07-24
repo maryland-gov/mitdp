@@ -186,10 +186,13 @@
         :where(.maryland-header) { padding-inline: 3.5rem; }
       }
 
-      /* Header layout mirrors mitdp.maryland.gov exactly. MDWDS owns the
-         outer .maryland-header (padding / max-width / centering) — do NOT
-         set max-width or auto margins on the inner __dashboard element or
-         the header ends up double-centered. */
+      /* --- Header: CSS copied verbatim from mitdp.maryland.gov -----------
+         MDWDS owns the outer .maryland-header (padding / max-width /
+         centering) and the .maryland-header__agency typography. Do NOT set
+         max-width or auto margins on the inner __dashboard element — that
+         double-centers the header.
+         Layout: mobile stacks (title and meta both 100% wide); at >=55em it
+         becomes a row with the meta block right-aligned. */
       .maryland-header .maryland-header__dashboard {
         display: inline-flex;
         flex-wrap: wrap;
@@ -202,13 +205,40 @@
       .maryland-header .maryland-header__dashboard .maryland-header__logo {
         width: auto;
       }
-      .maryland-header .maryland-header__dashboard .site-header__title {
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: -10px;
+      .maryland-header .maryland-header__dashboard .dashboard-header-title {
         text-decoration: none;
         max-width: 100%;
         line-height: 1.3em;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: -10px;
+      }
+      .maryland-header .maryland-header__dashboard .header-meta {
+        width: 100%;
+        text-align: left;
+      }
+      .header-meta { font-size: 1rem; }
+      .beta-badge {
+        background-color: #ffbe2e;
+        color: #000;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-right: 8px;
+        font-size: 0.9rem;
+      }
+      .version-text { font-weight: 600; }
+      .update-text {
+        display: block;
+        font-size: 1rem;
+        opacity: 0.9;
+        margin-top: 3px;
+      }
+      .update-link {
+        color: #005ea2;
+        text-decoration: underline;
+        white-space: nowrap;
+        padding-left: 6px;
       }
       .maryland-header .maryland-header__divider {
         display: block;
@@ -218,9 +248,24 @@
         .maryland-header .maryland-header__dashboard .maryland-header__logo {
           width: 8%;
         }
-        .maryland-header .maryland-header__dashboard .site-header__title {
+        .maryland-header .maryland-header__dashboard .dashboard-header-title {
           width: 60%;
         }
+        .maryland-header .maryland-header__dashboard .header-meta {
+          flex: 1;
+          margin-right: 4px;
+          margin-top: 0;
+          text-align: right;
+        }
+      }
+
+      /* Zero-specificity fallback for .maryland-header__agency typography.
+         MDWDS is expected to supply this; :where() has specificity 0 so any
+         real MDWDS rule always wins. Only applies if MDWDS ships nothing. */
+      :where(.maryland-header__agency) {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #1b1b1b;
       }
 
       .site-footer {

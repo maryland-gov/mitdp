@@ -280,6 +280,8 @@ All editable text lives in `CONFIG` at the top of `build.js`:
 ```js
 siteChrome: true,                    // set false to build with no chrome
 siteName: "Major IT Development Project (MITDP) Oversight",
+siteTitleTag: "h1",                  // element for the header title
+headerMeta: null,                    // optional badge/version/updated block
 footer: {
   title: "This content is published by …",
   text:  "For questions about MITDP oversight, …",
@@ -288,6 +290,44 @@ footer: {
 ```
 
 The markup itself is in `partials/header.html` and `partials/footer.html`.
+
+### Header markup
+
+The header markup and CSS are copied verbatim from mitdp.maryland.gov:
+
+```html
+<header class="maryland-header">
+  <div class="maryland-header__dashboard">
+    <img class="maryland-header__logo" alt="Maryland header logo" src="data:image/svg+xml,…" />
+    <h1 class="maryland-header__agency dashboard-header-title">Site name</h1>
+    <div class="header-meta">…</div>          <!-- optional -->
+  </div>
+  <hr aria-hidden="true" class="maryland-header__divider" />
+</header>
+```
+
+Layout matches the dashboard: on mobile the logo, title, and meta block stack
+(each full width, left-aligned); at `min-width: 55em` it becomes a row with
+the logo at 8%, the title at 60%, and the meta block right-aligned.
+
+**`siteTitleTag`** — the element used for the title. Defaults to `"h1"`, which
+matches mitdp.maryland.gov exactly. Note that these pages *also* get an `<h1>`
+from the Markdown's `# Title`, so the default means **two `<h1>`s per page**,
+which some Section 508 checkers flag. Set it to `"span"` for identical
+appearance with a single `<h1>` per page. (The dashboard doesn't hit this
+because its header title *is* the page's only `h1`.)
+
+**`headerMeta`** — the optional block on the right of the header. `null` omits
+it entirely. When set, every field is itself optional:
+
+```js
+headerMeta: {
+  badge:   "BETA",
+  version: "Version 0.1",
+  updated: "Updated May 8, 2026",
+  link:    { text: "See changes", href: "https://github.com/…" },
+},
+```
 
 ## URL structure
 

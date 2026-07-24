@@ -31,6 +31,25 @@ const CONFIG = {
   // Title shown next to the state logo in the header.
   siteName: "Major IT Development Project (MITDP) Oversight",
 
+  // Element used for that title. mitdp.maryland.gov uses "h1", so that's the
+  // default here for an exact match. NOTE: these pages also get an <h1> from
+  // the Markdown's `# Title`, so "h1" means two <h1>s per page — which some
+  // Section 508 / accessibility checkers flag. Set this to "span" to keep the
+  // identical appearance with only one <h1> per page.
+  siteTitleTag: "h1",
+
+  // Optional meta block on the right of the header (badge / version /
+  // last-updated line), matching the dashboard's markup. Set to null to omit
+  // the block entirely. Every field below is itself optional.
+  headerMeta: null,
+  // Example:
+  // headerMeta: {
+  //   badge: "BETA",
+  //   version: "Version 0.1",
+  //   updated: "Updated May 8, 2026",
+  //   link: { text: "See changes", href: "https://github.com/..." },
+  // },
+
   // Attribution block above the official statewide footer.
   footer: {
     title:
@@ -58,9 +77,42 @@ const TEMPLATE = fs.readFileSync(path.join(__dirname, "template.html"), "utf8");
 function buildChrome() {
   if (!CONFIG.siteChrome) return { header: "", footer: "" };
 
+  // Title element — matches mitdp.maryland.gov's
+  // `<h1 class="maryland-header__agency dashboard-header-title">`.
+  const tag = CONFIG.siteTitleTag || "h1";
+  const headerTitle =
+    `<${tag} class="maryland-header__agency dashboard-header-title">` +
+    escapeHtml(CONFIG.siteName) +
+    `</${tag}>`;
+
+  // Optional meta block (badge / version / updated line). Omitted entirely
+  // when CONFIG.headerMeta is null.
+  let headerMeta = "";
+  const meta = CONFIG.headerMeta;
+  if (meta) {
+    const badgeLine =
+      meta.badge || meta.version
+        ? `<div>` +
+          (meta.badge ? `<span class="beta-badge">${escapeHtml(meta.badge)}</span>` : "") +
+          (meta.version ? `<span class="version-text">${escapeHtml(meta.version)}</span>` : "") +
+          `</div>`
+        : "";
+    const updatedLine = meta.updated
+      ? `<span class="update-text">${escapeHtml(meta.updated)}` +
+        (meta.link
+          ? `<a href="${escapeHtml(meta.link.href)}" class="update-link">${escapeHtml(meta.link.text)}</a>`
+          : "") +
+        `</span>`
+      : "";
+    if (badgeLine || updatedLine) {
+      headerMeta = `<div class="header-meta">${badgeLine}${updatedLine}</div>`;
+    }
+  }
+
   const header = fs
     .readFileSync(path.join(__dirname, "partials", "header.html"), "utf8")
-    .replace(/\{\{SITE_NAME\}\}/g, () => escapeHtml(CONFIG.siteName));
+    .replace(/\{\{HEADER_TITLE\}\}/g, () => headerTitle)
+    .replace(/\{\{HEADER_META\}\}/g, () => headerMeta);
 
   const links = (CONFIG.footer.links || [])
     .map(
