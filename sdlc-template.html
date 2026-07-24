@@ -99,8 +99,8 @@
     .track::before,.track::after{display:none;}
 
     .stage{
-      flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;
-      padding:26px 18px;text-align:center;min-height:200px;
+      flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:normal;
+      padding:26px 8px;text-align:center;min-height:186px;
       background:var(--col);border-radius:14px;
     }
     .stage::before{display:none;}              /* hide the mobile spine node */
@@ -176,13 +176,13 @@
   /* gate interstitial: sits between steps on the spine */
   .maryland-gate{position:relative;padding:10px 0 14px 64px;list-style:none;}
   .maryland-gate::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:4px;background:var(--step-line);border-radius:0;}
-  .maryland-gate .maryland-summary-box{margin:0;max-width:68ch;}
+  .maryland-gate .maryland-summary-box{margin:0;max-width:68ch;margin-bottom: 4rem;}
 
   .maryland-step__title{font-family:var(--font-serif);font-weight:400;font-size:1.8rem;line-height:1.2;color:var(--text-dark);margin:0 0 .5rem;}
   .maryland-step__title .tag{font-family:var(--font-family);font-size:1.05rem;font-style:italic;color:var(--text-meta);}
 
   .maryland-step__body{font-size:1.06rem;line-height:1.6;color:var(--text-dark);max-width:68ch;}
-  .maryland-step__body p{margin:0 0 1em;}
+  .maryland-step__body p{margin:0 0;}
   .maryland-step__body a{color:var(--primary-blue);}
   .maryland-step__body strong{font-weight:700;}
   .maryland-step__body > ul{list-style:none;margin:.25em 0 1.25em;padding-left:1.6em;}
@@ -277,7 +277,7 @@
   </main>
 
   <footer class="meta">
-    Styled to match the <a href="https://mitdp.maryland.gov/">Maryland MITDP Dashboard</a>. Type, color, and chrome follow the Maryland Web Design System and the U.S. Web Design System (USWDS).
+    <!-- Footer text -->
   </footer>
 
 <script>
@@ -296,7 +296,7 @@
     const ms  = s.milestone ? `<span class="milestone">${s.milestone}</span>` : '';
     const opt = s.opt ? ` <span class="opt">${s.opt}</span>` : '';
     li.innerHTML = ms +
-      `<a class="stage-body" href="#d-${s.key}" aria-label="View details for ${esc(s.title)}">` +
+      `<a class="stage-body" href="#phase-${s.key}" aria-label="View details for ${esc(s.title)}">` +
         `<h2>${s.title}${opt}</h2>` +
         `<p class="${s.italic ? 'italic' : ''}">${s.text}</p>` +
       `</a>`;
@@ -309,7 +309,7 @@
     // phase step
     const li = document.createElement('li');
     li.className = 'maryland-step';
-    li.id = 'd-' + s.key;
+    li.id = 'phase-' + s.key;
     li.tabIndex = -1;
     li.style.setProperty('--accent', s.color);
     const tag = s.opt ? ` <span class="tag">${s.opt}</span>` : '';
