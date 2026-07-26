@@ -51,18 +51,18 @@ const CONFIG = {
   // },
 
   // Attribution block above the official statewide footer.
-  // footer: {
-  //   title:
-  //     "This content is published by the State of Maryland Department of Information Technology (DoIT), in partnership with State agencies",
-  //   text: "For questions about MITDP oversight, contact the MITDP Oversight team.",
-  //   links: [
-  //     { text: "MITDP Dashboard", href: "https://mitdp.maryland.gov" },
-  //     {
-  //       text: "MITDP Oversight",
-  //       href: "https://doit.maryland.gov/MITDP-Oversight/Pages/MITDP-oversight.aspx",
-  //     },
-  //   ],
-  // },
+  footer: {
+    title:
+      "This content is published by the State of Maryland Department of Information Technology (DoIT), in partnership with State agencies",
+    text: "For questions about MITDP oversight, contact the MITDP Oversight team.",
+    links: [
+      { text: "MITDP Dashboard", href: "https://mitdp.maryland.gov" },
+      {
+        text: "MITDP Oversight",
+        href: "https://doit.maryland.gov/MITDP-Oversight/Pages/MITDP-oversight.aspx",
+      },
+    ],
+  },
 };
 
 const CONTENT_DIR = path.join(__dirname, "content");
