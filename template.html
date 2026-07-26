@@ -8,9 +8,9 @@
     <style>
       html,
       body { margin: 0; padding: 0; background: #fff; }
-      
+
       .usa-prose {
-        padding: 1rem 1.5rem;
+        padding: 1rem 12px;
         /* max-width: 72rem;  */
         margin: 0 auto; }
 
@@ -30,8 +30,13 @@
       }
 
       .usa-prose h2 {
-        margin-top: 6em;
+        margin-top: 4rem;
       }
+
+      .usa-prose h2#why-do-i-need-a-launchpad {
+        margin-top: 0rem;
+      }
+      /* NOTE: this is a hack so that the first item lines up with the sidebar */
 
       .usa-prose h2.no-top-padding {
         margin-top: 0em;
@@ -389,7 +394,7 @@
         display: grid; grid-template-columns: 1fr; gap: 1.5rem;
       }
       .layout-sidebar > .usa-prose { padding: 0; margin: 0; max-width: none; }
-      .page-lede { padding-bottom: 1rem; }
+      .page-lede { padding-bottom: 2.5rem; }
 
       .section-nav__toggle {
         display: flex; justify-content: space-between; align-items: center;
