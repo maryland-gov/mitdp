@@ -8,7 +8,11 @@
     <style>
       html,
       body { margin: 0; padding: 0; background: #fff; }
-      .usa-prose { padding: 1rem 1.5rem; max-width: 72rem; margin: 0 auto; }
+      
+      .usa-prose {
+        padding: 1rem 1.5rem;
+        /* max-width: 72rem;  */
+        margin: 0 auto; }
 
       .usa-prose p {
         margin-top: 1rem;
@@ -24,6 +28,15 @@
       .usa-prose h4 {
         margin-top: 2rem;
       }
+
+      .usa-prose h2 {
+        margin-top: 6em;
+      }
+
+      .usa-prose h2.no-top-padding {
+        margin-top: 0em;
+      }
+
 
       .usa-prose p,
       .usa-prose li,
@@ -370,7 +383,8 @@
 
       /* --- Section sidebar (maryland.gov/services pattern) --------------- */
       .layout-sidebar {
-        max-width: 72rem; margin: 0 auto;
+        /* max-width: 72rem;  */
+        margin: 0 auto;
         padding: 0 1.5rem 3rem;
         display: grid; grid-template-columns: 1fr; gap: 1.5rem;
       }
