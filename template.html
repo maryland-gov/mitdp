@@ -9,6 +9,10 @@
       html,
       body { margin: 0; padding: 0; background: #fff; }
 
+      #main-content{max-width:var(--maxw);margin:0 auto;padding:12px 24px 18px;}
+      .breadcrumb-wrap{max-width:var(--maxw);margin:0 auto;padding:0rem 24px 0;}
+
+
       .usa-prose {
         padding: 1rem 12px;
         /* max-width: 72rem;  */
@@ -375,7 +379,8 @@
       .site-footer__link:hover { color: #dfe1e2; }
 
 /* --- Breadcrumbs -------------------------------------------------- */
-      .breadcrumb-wrap { max-width: 72rem; margin: 0 auto; padding: 1.25rem 1.5rem 0; }
+      .breadcrumb-wrap{max-width:var(--maxw);margin:0 auto;padding:0rem 24px 0;}
+
       /* Zero-specificity fallbacks; real MDWDS breadcrumb rules win. */
       :where(.usa-breadcrumb) { font-size: 0.95rem; }
       :where(.usa-breadcrumb__list) {
