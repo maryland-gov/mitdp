@@ -22,7 +22,6 @@
         margin-bottom: 6rem;
        }
 
-      .usa-prose h1,
       .usa-prose h2,
       .usa-prose h3,
       .usa-prose h4 {
@@ -381,7 +380,7 @@
         margin: 0; padding: 0; align-items: center;
       }
       :where(.usa-breadcrumb__list-item + .usa-breadcrumb__list-item)::before {
-        content: "\203A"; margin: 0 0.5rem; color: #71767a;
+        content: ""; margin: 0 0.5rem; color: #71767a;
       }
       :where(.usa-breadcrumb__link) { color: #005ea2; }
       :where(.usa-breadcrumb__list-item.usa-current span) { color: #1b1b1b; }
@@ -394,7 +393,7 @@
         display: grid; grid-template-columns: 1fr; gap: 1.5rem;
       }
       .layout-sidebar > .usa-prose { padding: 0; margin: 0; max-width: none; }
-      .page-lede { padding-bottom: 2.5rem; }
+      .page-lede { padding-bottom: 2.5rem; padding-top: 0}
 
       .section-nav__toggle {
         display: flex; justify-content: space-between; align-items: center;
@@ -458,6 +457,7 @@
       @media (min-width: 55em) {
         .site-footer__content { padding-inline: 3.5rem; }
       }
+
       .site-footer__links { display: flex; gap: 15px; flex-wrap: wrap; }
       .site-footer__link { color: #fff; text-decoration: underline; font-size: 1rem; }
       .site-footer__link:visited { color: #fff; }
@@ -469,6 +469,8 @@
         .maryland-header{padding-left: 1.5rem; padding-right: 1.5rem}
         .usa-banner__inner{padding-left: 1.5rem; padding-right: 1.5rem}
       }
+
+  
 
 
 
