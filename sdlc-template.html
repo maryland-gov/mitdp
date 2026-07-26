@@ -50,7 +50,7 @@
     line-height:1.5;
   }
 
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:32px 24px 48px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:12px 24px 18px;}
 
   /* =================================================================
      stage cards
@@ -260,7 +260,7 @@
 
 
  /* --- Breadcrumbs ------------------------------------------------------ */
-  .breadcrumb-wrap{max-width:var(--maxw);margin:0 auto;padding:1.25rem 24px 0;}
+  .breadcrumb-wrap{max-width:var(--maxw);margin:0 auto;padding:0rem 24px 0;}
   :where(.usa-breadcrumb){font-size:.95rem;}
   :where(.usa-breadcrumb__list){list-style:none;display:flex;flex-wrap:wrap;margin:0;padding:0;align-items:center;}
   /* :where(.usa-breadcrumb__list-item + .usa-breadcrumb__list-item)::before{content:"\203A";margin:0 .5rem;color:#71767a;} */
@@ -302,6 +302,14 @@
   @media (min-width: 55em) {
     .maryland-header{padding-left: 1.5rem; padding-right: 1.5rem}
     .usa-banner__inner{padding-left: 1.5rem; padding-right: 1.5rem}
+  }
+
+  .usa-prose p {
+    max-width: 920px;
+  }
+
+  .usa-prose>ul li:last-child, .usa-prose>ol li:last-child {
+    margin-bottom: .5rem;
   }
 
 
