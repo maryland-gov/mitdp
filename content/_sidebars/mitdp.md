@@ -1,5 +1,6 @@
 Back: [MITDP Oversight](overview.md)
 
+- [System Development Life Cycle (SDLC)](sdlc.md)
 - [Launchpad](launchpad.md)
   - [Why do I need a Launchpad?](launchpad.md#why-do-i-need-a-launchpad)
   - [Launchpad Contents](launchpad.md#launchpad-contents)
@@ -9,4 +10,3 @@ Back: [MITDP Oversight](overview.md)
   - [Understanding of User Needs](/launchpad/stage-1.md#understanding-of-user-needs)
   - [Core Problems & Definition of Success](/launchpad/stage-1.md#core-problems-&-definition-of-success)
   - [Product Strategy](/launchpad/stage-1.md#product-strategy)
-- [System Development Life Cycle (SDLC)](sdlc.md)
