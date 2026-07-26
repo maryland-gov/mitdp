@@ -375,7 +375,7 @@
         display: grid; grid-template-columns: 1fr; gap: 1.5rem;
       }
       .layout-sidebar > .usa-prose { padding: 0; margin: 0; max-width: none; }
-      .page-lede { padding-bottom: 0; }
+      .page-lede { padding-bottom: 1rem; }
 
       .section-nav__toggle {
         display: flex; justify-content: space-between; align-items: center;
@@ -443,6 +443,13 @@
       .site-footer__link { color: #fff; text-decoration: underline; font-size: 1rem; }
       .site-footer__link:visited { color: #fff; }
       .site-footer__link:hover { color: #dfe1e2; }
+
+      .breadcrumb-wrap{max-width:var(--maxw);margin:0 auto;padding:0rem 24px 0;}
+
+      @media (min-width: 55em) {
+        .maryland-header{padding-left: 1.5rem; padding-right: 1.5rem}
+        .usa-banner__inner{padding-left: 1.5rem; padding-right: 1.5rem}
+      }
 
 
 
