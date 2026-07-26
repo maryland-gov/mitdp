@@ -3,6 +3,11 @@ Title: System Development Life Cycle (SDLC)
 Sidebar: mitdp
 Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)
 
+# System Development Life Cycle (SDLC)
+
+Maryland’s System Development Life Cycle (SDLC) is a framework for technology development to ensure user-centered, iterative service delivery that reduces risk and maximizes value for the people of Maryland. {.intro}
+
+
 Each phase below corresponds to a stage in the timeline above, shown with the gate that must be cleared to advance to the next phase.
 
 * ### **Discovery**
