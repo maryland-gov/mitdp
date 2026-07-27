@@ -1,4 +1,4 @@
-Sidebar: launchpad-sidebar
+Sidebar: mitdp
 Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)
 
 # Launchpad
