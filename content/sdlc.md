@@ -1,6 +1,6 @@
 Template: sdlc
 Title: System Development Life Cycle (SDLC)
-Sidebar: mitdp
+Sidebar: general
 Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)
 
 
