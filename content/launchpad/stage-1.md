@@ -1,5 +1,5 @@
 Sidebar: stage-1-sidebar
-Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md) > [Launchpad](launchpad.md)
+Breadcrumb: [MITDP Oversight](mitdp-overview.md) > [Launchpad](launchpad.md)
 
 # Stage 1
 
