@@ -1,3 +1,6 @@
+Sidebar: stage-1-sidebar
+Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md) > [Launchpad](launchpad.md)
+
 # Stage 1
 
 Stage 1 of the Launchpad focuses on your understanding of user needs, how you’re defining the core problems that your project exists to solve, and the product strategy that you’re recommending as an investment to solve those problems. {.intro}
@@ -8,7 +11,7 @@ The Launchpad is the foundation of our [System Development Life Cycle](/sdlc/) f
 
 Stage 1 consists of three sections, with a total of four required worksheets. All four worksheets must be submitted in full for your Stage 1 submission to be accepted.
 
-State of Maryland employees with access to Google Docs can access all four worksheets in [this Google document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?usp=sharing). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format. 
+State of Maryland employees with access to Google Docs can access all four worksheets in [this Google document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?usp=sharing). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
 
 ## Sections {.toc}
 
@@ -34,7 +37,7 @@ For this section of the Launchpad, you will need to provide two assets:
 
 #### Conducting interviews directly with representative users
 
-In order to complete this section, you will need to conduct interviews directly with representative users from each of your primary user groups, with a minimum of nine (9) interviews overall. This is required as a foundational step toward the needs and perspectives of your users, which helps you define your Core Problems in the next section. For most projects, you’ll want to interview more than nine users, which is encouraged. 
+In order to complete this section, you will need to conduct interviews directly with representative users from each of your primary user groups, with a minimum of nine (9) interviews overall. This is required as a foundational step toward the needs and perspectives of your users, which helps you define your Core Problems in the next section. For most projects, you’ll want to interview more than nine users, which is encouraged.
 
 Your team may have also conducted other forms of research, such as surveys or focus groups. These can be complementary to the user interviews that are required as part of your MITDP Launchpad.
 
@@ -46,11 +49,11 @@ If you have already hired a UX Lead for your MITDP, it can be reasonable for tha
 
 #### Primary User Groups
 
-Building on your interviews with users, you’ll identify Primary User Groups (this is likely 2-5 groups). For each primary user group, fill out a section of the worksheet to document the group’s primary needs, pain points, opportunities, technology needs, and a journey map of key touchpoints. 
+Building on your interviews with users, you’ll identify Primary User Groups (this is likely 2-5 groups). For each primary user group, fill out a section of the worksheet to document the group’s primary needs, pain points, opportunities, technology needs, and a journey map of key touchpoints.
 
 If you find yourself with way too many user groups, you likely need to reduce the scope of the problem you’re trying to solve right now. Who are the biggest user groups? Who are the most impacted user groups? Can you start with them?
 
-If you find yourself with way too many user needs or challenges, you likely need to make your user groups more granular and / or reduce the scope of the problem you’re trying to solve right now. 
+If you find yourself with way too many user needs or challenges, you likely need to make your user groups more granular and / or reduce the scope of the problem you’re trying to solve right now.
 
 For additional guidance on conducting user research, see our [MITDP Guide for Ethical, Inclusive, and Effective User Research](?tab=t.u9jofsssokze)
 
@@ -86,7 +89,7 @@ These resources can help you complete this section:
 | :---- | :---- |
 | [MITDP Guide for Ethical, Accessible, and Effective User Research](?tab=t.u9jofsssokze) | [User Research Guide](?tab=t.u9jofsssokze) |
 
-## 
+##
 
 ---
 
@@ -100,23 +103,23 @@ Together, the core problems your project is intended to solve and your definitio
 
 ### Guidance for completing this step
 
-For this section of the Launchpad, you will complete the [Core Problems & Definition of Success](?tab=t.hcgv7rfr0i16) worksheet, which walks you through identifying your top three problems, describing what successfully solving the problem would look like, and identifying key metrics you’ll track throughout the project to measure your progress. 
+For this section of the Launchpad, you will complete the [Core Problems & Definition of Success](?tab=t.hcgv7rfr0i16) worksheet, which walks you through identifying your top three problems, describing what successfully solving the problem would look like, and identifying key metrics you’ll track throughout the project to measure your progress.
 
 While these prompts may seem simple, this information is worth spending time on as it defines the scope of your MITDP and limits what you can spend MITDP funding on. Future changes to this scope require review and approval by DoIT as well as notification to the legislature. Your project’s performance will be measured against the information you provide here, and your progress will be reported publicly.
 
 It is essential that your core problems and definition of success be grounded in both user needs and program needs. Consider the following questions:
 
-- *What service delivery problems do you need to solve?* 
+- *What service delivery problems do you need to solve?*
 
-- *Why is this important to your agency?* 
+- *Why is this important to your agency?*
 
-- *What impact do you intend to have?* 
+- *What impact do you intend to have?*
 
 There should be a clear connection between your core problems, your definition of success, and the challenges documented for each of your primary user groups.
 
 #### Impact for the people of Maryland
 
-To that end, your problem statements and success criteria should be framed in terms of the impact for the people of Maryland, whether state employees, the general public, or other groups, such as reducing wait times, increasing accessibility for specific audiences, or expanding coverage for specific programs. This centers the work around people instead of technology. 
+To that end, your problem statements and success criteria should be framed in terms of the impact for the people of Maryland, whether state employees, the general public, or other groups, such as reducing wait times, increasing accessibility for specific audiences, or expanding coverage for specific programs. This centers the work around people instead of technology.
 
 For example, the people of Maryland don’t necessarily benefit if the desired outcome is to migrate an IT system to a new software provider. What problem will that solve for the people of Maryland?
 
@@ -149,7 +152,7 @@ We will evaluate the materials you provide based on the following criteria:
 | **5** | For each core problem, at least one success metric is provided, including its current value, a target value, and the source of the current value | We’ll review your responses to the “Success Metrics” section to ensure that at least one success metric is provided, including its current value, a  target value, and information about the source of target value. For the source of the current value, we want to understand what systems exist for measurement and whether your team is able to access those systems |
 | **6** | Project stakeholders agree with the project’s core problems and definition of success | We’ll review your core problems and definition of success with your project stakeholders (see the stakeholder strategy section below), to ensure alignment with how they’re defined and prioritized |
 
-## 
+##
 
 ---
 
@@ -158,13 +161,13 @@ We will evaluate the materials you provide based on the following criteria:
 | A successful product strategy ensures that: 1. You have an overall strategy for how the product you intend to build or deploy will get you to your definition of success 2. You have given your technical team a sense of direction that they can then explore implementation options around. 3. You have given your design team a sense of direction that they can then explore user experience options around. 4. You have a clear strategy that you can measure the efficacy of as you build, measure, and learn — and from which you can either pivot or persevere, as you learn whether or not the strategy is actually getting you to your goal. |
 | :---- |
 
-In doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy. 
+In doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy.
 
-An example may help: 
+An example may help:
 
-*Imagine that you were starting a business aimed at pet owners who have animals with grooming needs. Based on what you learned about your customers, and about the pets that they have, you may explore a few strategically different visions for your business:* 
+*Imagine that you were starting a business aimed at pet owners who have animals with grooming needs. Based on what you learned about your customers, and about the pets that they have, you may explore a few strategically different visions for your business:*
 
-1. *You might decide to start a traditional grooming service. You open a business in a physical location, you advertise in your community, and you serve your customers, and their pets, by grooming their pets right there in your shop.* 
+1. *You might decide to start a traditional grooming service. You open a business in a physical location, you advertise in your community, and you serve your customers, and their pets, by grooming their pets right there in your shop.*
 
 2. *Alternatively, you might decide to start a mobile grooming business \--- i.e., you purchase large vans, equipped with grooming equipment and supplies, that you then drive to your customers homes, so that you can groom their pets right there in the van, while parked in their driveway.*
 
@@ -197,7 +200,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Completing Stage 1
 
-For information about submitting Stage 1 of your Launchpad, see How To Submit. 
+For information about submitting Stage 1 of your Launchpad, see How To Submit.
 
 [Go to Launchpad Stage 2](stage-2.html){.button}
-[Go to Launchpad Overview](overview.html){.button .outline} 
+[Go to Launchpad Overview](overview.html){.button .outline}
