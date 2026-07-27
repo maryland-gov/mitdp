@@ -1,6 +1,7 @@
 Back: [Launchpad overview](launchpad.md)
 
 - [Stage 1](/mitdp/launchpad/stage-1)
+  - [Overview](#overview)
   - [Understanding of User Needs](#understanding-of-user-needs)
   - [Core Problems & Definition of Success](#core-problems-&-definition-of-success)
   - [Product Strategy](#product-strategy)
