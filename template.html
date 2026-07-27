@@ -393,7 +393,10 @@
         margin: 0; padding: 0; align-items: center;
       }
       :where(.usa-breadcrumb__list-item + .usa-breadcrumb__list-item)::before {
-        content: ""; margin: 0 0.5rem; color: #71767a;
+        content: ""; margin: 0 0.15rem; color: #71767a;
+      }
+      :where(.usa-breadcrumb__list-item + .usa-breadcrumb__list-item)::after {
+        margin: 0 0.15rem; 
       }
       :where(.usa-breadcrumb__link) { color: #005ea2; }
       :where(.usa-breadcrumb__list-item.usa-current span) { color: #1b1b1b; }
