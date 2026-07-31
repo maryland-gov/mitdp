@@ -1,20 +1,27 @@
 Sidebar: stage-1-sidebar
 Breadcrumb: [MITDP Oversight](overview.md) > [Launchpad](launchpad.md)
 Meta title: Launchpad Stage 2 | Major IT Project (MITDP) Oversight | State of Maryland
-Description:
+Description: Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best, how you'll demonstrate working software within 90 days, how you'll build a team that can deliver on your success metrics, and how you'll work across stakeholders and known risk areas to address the Core Problems that your MITDP exists to solve.
 Image:
 
-# Stage 1
+# Stage 2
 
-Stage 1 of the Launchpad focuses on your understanding of user needs, how you’re defining the core problems that your project exists to solve, and the product strategy that you’re recommending as an investment to solve those problems. {.intro}
+Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best, how you'll demonstrate working software within 90 days, how you'll build a team that can deliver on your success metrics, and how you'll work across stakeholders and known risk areas to address the Core Problems that your MITDP exists to solve. {.intro}
 
 ## Overview
 
-The Launchpad is the foundation of our [System Development Life Cycle](/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP. {.intro}
+The Launchpad is the foundation of our [System Development Life Cycle](https://maryland-gov.github.io/mitdp/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment.
 
-Stage 1 consists of three sections, with a total of four required worksheets. All four worksheets must be submitted in full for your Stage 1 submission to be accepted.
+Stage 2 consists of 6 sections, with a total of 7 required worksheets. All 7 required worksheets must be submitted in full for your Stage 2 submission to be accepted.
 
-State of Maryland employees with access to Google Docs can access all four worksheets in [this Google document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?usp=sharing). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
+State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
+
+
+## Sections {.toc}
+
+- [Understanding of User Needs](#understanding-of-user-needs)
+- [Core Problems & Definition of Success](#core-problems-&-definition-of-success)
+- [Product Strategy](#product-strategy)
 
 
 ## Implementation Strategy {#implementation-strategy}
