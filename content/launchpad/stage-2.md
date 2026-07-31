@@ -1,4 +1,4 @@
-Sidebar: stage-2-sidebar
+Sidebar: stage-1-sidebar
 Breadcrumb: [MITDP Oversight](overview.md) > [Launchpad](launchpad.md)
 Meta title: Launchpad Stage 2 | Major IT Project (MITDP) Oversight | State of Maryland
 Description:
