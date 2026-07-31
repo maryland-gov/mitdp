@@ -124,8 +124,8 @@ For this section, you are required to use the following worksheets:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| User Research Summary worksheet | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) |  [Word Document](ADDLINK) |
-| Primary User Groups worksheet | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) |  [Word Document](ADDLINK) |
+| [**User Research Summary worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) |  [Word Document](ADDLINK) |
+| [**Primary User Groups worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) |  [Word Document](ADDLINK) |
 
 ### Acceptance criteria
 
@@ -138,9 +138,12 @@ We will evaluate the materials you provide based on the following criteria:
 | **3** | Research plan provides estimates of the number of potential users in each user group  | We’ll check whether estimates are present, including the data sources used |
 | **4** | Interviews have been conducted with at least nine (9) individual users | We’ll check to ensure that your team has conducted interviews with at least nine (9) individual users  Note: User participation in Focus Groups does not meet this requirement  |
 | **5** | Participants of user research interviews adequately represent all primary user groups | We’ll cross-reference your list of interview participants with your list of primary user groups to ensure that you’ve conducted interviews with a sufficient number of individuals in each user group. We’re generally looking for at least three (3) participants per Primary User Group. Note: User participation in Focus Groups does not meet this requirement  |
-| **6** | Interview guide is included in Research Report and is in alignment with MITDP Guidelines for [Ethical, Inclusive, and Effective User Research](?tab=t.u9jofsssokze) | We’ll review your interview guide(s) to ensure alignment with MITDP Guidelines for Ethical, Accessible, and Effective User Research |
-| **7** | Primary User Groups have been identified | We’ll review your Primary User Groups to ensure that significant user groups have been included |
-| **8** | All sections for each Primary User Group are completed, and align with other research findings | We’ll review your Primary User Groups to ensure that all sections are completed and findings are in alignment with existing research deliverables |
+| **6** | Interview guide is included in Research Report and is in alignment with MITDP user research guidelines | We’ll review your interview guide(s) to ensure alignment with the [MITDP Guidelines for Ethical, Accessible, and Effective User Research](/mitdp/launchpad/user-research-guide/) |
+| **7** | Synthesis has been conducted to develop insights from  user research | We'll review the screenshots or other deliverables included from your synthesis process to observe how your team went from raw data to polished insights |
+| **8** | Primary User Groups have been identified | We’ll review your Primary User Groups to ensure that significant user groups have been included |
+| **9** | All sections for each Primary User Group are completed, and align with other research findings | We’ll review your Primary User Groups to ensure that all sections are completed and findings are in alignment with existing research deliverables |
+
+
 
 ### Recommended resources
 
@@ -148,7 +151,7 @@ These resources can help you complete this section:
 
 | Resource | Link |
 | :---- | :---- |
-| [MITDP Guide for Ethical, Accessible, and Effective User Research](/mitdp/launchpad/user-research-guide/) | [Webpage](/mitdp/launchpad/user-research-guide/) |
+| [**MITDP Guide for Ethical, Accessible, and Effective User Research**](/mitdp/launchpad/user-research-guide/) | [Webpage](/mitdp/launchpad/user-research-guide/) |
 
 ##
 
