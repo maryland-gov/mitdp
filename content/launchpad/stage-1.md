@@ -50,7 +50,7 @@ Your User Research Summary is an overview of how you’ve conducted your researc
 
 If you have already hired a UX Lead for your MITDP, it can be reasonable for that individual to lead your user research efforts. In the case that you have not yet filled the UX Lead role, you may need to hire a user research team to support this area of your Launchpad. Feel free to reach out to our MITDP Oversight team for guidance on how to do so.
 
-An example may help.
+An example may help:
 
 > Imagine that you are researching users involved in construction
 > management. Consider the following prompts in your user interviews:
@@ -58,14 +58,9 @@ An example may help.
 > 1.  What is your role in construction project management? Why does this role exist?
 > 2.  How would you define success in this role? What needs to be true at the end of each month or year for your role to have been
 > successful?
-> 3.  [for some of the key aspects that they’ve listed as part of their role] Walk me through how that works with your current system (Note
-> that ideally the session is conducted on-site and in-person, allowing
-> the interviewer to directly observe the participant using their
-> existing tools and processes)
+> 3.  *[for some of the key aspects that they’ve listed as part of their role]* Walk me through how that works with your current system *(Note that ideally the session is conducted on-site and in-person, allowing the interviewer to directly observe the participant using their existing tools and processes)*
 > 4.  What are the biggest blockers or challenges that prevent you from being successful?
-> 5.  [for each blocker or challenge] Walk me through how that works step-by-step (again, this is ideally conducted on-site and/or in a way
-> that allows for direct observation of current behaviors with existing
-> tools and processes)
+> 5.  *[for each blocker or challenge]* Walk me through how that works step-by-step *(again, this is ideally conducted on-site and/or in a way that allows for direct observation of current behaviors with existing tools and processes)*
 > 6.  What are the biggest enablers that currently exist and help you in being successful?
 > 7.  What worries you most in your current role?
 > 8.  If you could change one thing about how this work is managed, what would you change?
@@ -237,10 +232,8 @@ We will evaluate the materials you provide based on the following criteria:
 
 In doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy.
 
-AIn doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy.
-
-An example may help.
-> Imagine that you were starting a business aimed at pet owners who have
+An example may help:
+> Imagine that you are starting a business aimed at pet owners who have
 > animals with grooming needs. Based on what you learned about your
 > customers, and about the pets that they have, you may explore a few
 > strategically different visions for your business:
