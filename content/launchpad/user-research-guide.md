@@ -32,15 +32,15 @@ Any research effort led by our teams is not just about collecting data; it is ab
 
 ## The user research process
 
-In the sections below, we’ve detailed the steps of the planning and conducting user research in alignment with these Core Requirements.
+In the sections below, we’ve detailed the steps of the planning and conducting user research in alignment with these core requirements.
 
-**Step 1:** [Create a research plan](#research-plan)  
-**Step 2:** [Recruit participants](#recruit-participants)  
-**Step 3:** [Write an interview guide](#interview-guide)  
-**Step 4:** [Test your interview guide](#test-your-guide)  
-**Step 5:** [Conduct user interviews](#conduct-interviews)  
-**Step 6:** [Synthesize research into findings](#synthesize)  
-**Step 7:** [Report on findings](#report-findings)
+1. [Create a research plan](#research-plan)  
+2. [Recruit participants](#recruit-participants)  
+3. [Write an interview guide](#interview-guide)  
+4. [Test your interview guide](#test-your-guide)  
+5. [Conduct user interviews](#conduct-interviews)  
+6. [Synthesize research into findings](#synthesize)  
+7. [Report on findings](#report-findings)
 
 ### User research vs UAT
 
@@ -50,9 +50,7 @@ User Acceptance Testing (UAT)  isn't user research and can’t replace it.  User
 
 *Goal: I need a research plan in order to define clear goals and methodology for my study.*
 
-**For MITDP projects:** We encourage you to use this [research plan template](https://docs.google.com/document/d/16g2IlEr5dofECQYDFX4zo-r-drXvgBRCg7VwyLRsys8/edit?tab=t.0#heading=h.cchlkhlc186r) to get started.
-
-The first step in conducting effective User Research is creating a plan.
+The first step in conducting effective User Research is creating a plan. If your project is an MITDP, we encourage you to use this [research plan template](https://docs.google.com/document/d/16g2IlEr5dofECQYDFX4zo-r-drXvgBRCg7VwyLRsys8/edit?tab=t.0#heading=h.cchlkhlc186r) to get started.
 
 ### Set your research goals
 
