@@ -24,23 +24,23 @@ Any research effort led by our teams is not just about collecting data; it is ab
 
 ### What this means in practice:
 
-1. Prioritize the safety and mental well-being of participants over the speed of the project.  
-2. Consider accessibility challenges in how we plan and conduct user research.  
-3. Compensate participants for their time.  
-4. Safeguard and protect personally identifiable information (PII).  
-5. Actively seek out voices that have been historically marginalized or underserved.
+* Prioritize the safety and mental well-being of participants over the speed of the project.  
+* Consider accessibility challenges in how we plan and conduct user research.  
+* Compensate participants for their time.  
+* Safeguard and protect personally identifiable information (PII).  
+* Actively seek out voices that have been historically marginalized or underserved.
 
 ## The user research process
 
 In the sections below, we’ve detailed the steps of the planning and conducting user research in alignment with these Core Requirements.
 
-* Step 1: [Create a research plan](#research-plan)  
-* Step 2: [Recruit participants](#recruit-participants)  
-* Step 3: [Write an interview guide](#interview-guide)  
-* Step 4: [Test your interview guide](#test-your-guide)  
-* Step 5: [Conduct user interviews](#conduct-interviews)  
-* Step 6: [Synthesize research into findings](#synthesize)  
-* Step 7: [Report on findings](#report-findings)
+**Step 1:** [Create a research plan](#research-plan)  
+**Step 2:** [Recruit participants](#recruit-participants)  
+**Step 3:** [Write an interview guide](#interview-guide)  
+**Step 4:** [Test your interview guide](#test-your-guide)  
+**Step 5:** [Conduct user interviews](#conduct-interviews)  
+**Step 6:** [Synthesize research into findings](#synthesize)  
+**Step 7:** [Report on findings](#report-findings)
 
 ### User research vs UAT
 
