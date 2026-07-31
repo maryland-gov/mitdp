@@ -223,7 +223,7 @@ We will evaluate the materials you provide based on the following criteria:
 | **3** | For each core problem, success is described in a way that is clear, achievable, and independently verifiable | We’ll review your response to the “Definition of Success” section for each core problem to ensure that it’s described in a way that is measurable and achievable |
 | **4** | For each core problem, three (3) impacts of success for the people of Maryland are listed | We’ll review your responses to the “Impacts of Success” section for each core problem to ensure that three (3) impacts are listed that provide value for the people of Maryland |
 | **5** | For each core problem, at least one success metric is provided, including its current value, a target value, and the source of the current value | We’ll review your responses to the “Success Metrics” section to ensure that at least one success metric is provided, including its current value, a  target value, and information about the source of target value. For the source of the current value, we want to understand what systems exist for measurement and whether your team is able to access those systems |
-| **6** | Project stakeholders agree with the project’s core problems and definition of success | We’ll review your core problems and definition of success with your project stakeholders (see the stakeholder strategy section below), to ensure alignment with how they’re defined and prioritized |
+
 
 ##
 
