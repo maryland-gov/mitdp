@@ -9,7 +9,7 @@ Stage 2 of the Launchpad focuses on your strategy for implementation, including 
 
 ## Overview
 
-The Launchpad is the foundation of our [System Development Life Cycle](https://maryland-gov.github.io/mitdp/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment.
+The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment.
 
 Stage 2 consists of 6 sections, with a total of 7 required worksheets. All 7 required worksheets must be submitted in full for your Stage 2 submission to be accepted.
 
@@ -17,10 +17,13 @@ State of Maryland employees with access to Google Docs can access all of the wor
 
 
 ## Sections {.toc}
+- [Implementation Strategy](#implementation-strategy)
+- [Stakeholder Engagement Strategy](#stakeholder-engagement-strategy)
+- [Staffing and Leadership Strategy](#staffing-and-leadership-strategy)
+- [Assessment of Key Risks](#key-risks)
+- [Cost Estimate](#cost-estimate)
+- [Project Vitals](#project-vitals)
 
-- [Understanding of User Needs](#understanding-of-user-needs)
-- [Core Problems & Definition of Success](#core-problems-&-definition-of-success)
-- [Product Strategy](#product-strategy)
 
 
 ## Implementation Strategy {#implementation-strategy}
@@ -42,7 +45,7 @@ Your implementation strategy can and will change as the project moves forward.
 
 ### Guidance for completing this step
 
-To complete this section of the Launchpad, you will start by completing the [Technology Options](?tab=t.0) worksheet, which includes a question on whether you’re confident on what technology options to use for your project.
+To complete this section of the Launchpad, you will start by completing the [Technology Options](#implementation-strategy-worksheets) worksheet, which includes a question on whether you’re confident on what technology options to use for your project.
 
 In the case that you’re already confident about which technology will be best, you’ll need to fill out the Implementation Strategy worksheet, which is described below.
 
@@ -50,7 +53,7 @@ But it’s ok if you aren’t confident about this yet\! In the case it would be
 
 At the end of your Alpha phase, you’ll still need to complete the other steps, including filling the Implementation Strategy worksheet and completing a 90-Day Build, but these steps will hopefully be much easier after testing your preferred solution with real-world use cases.
 
-![][image1]
+![Diagram showing this process in a visual format, from left to right][/mitdp/content/images/alpha-choice-flow-v01.svg]
 
 ####
 
@@ -119,7 +122,7 @@ Your answers to these questions help us understand the scope of functionality th
 \*Delivery begins when the “Definition of Ready” below is met, NOT at the point of MITDP determination. If sufficient time has passed between determination and the beginning of delivery, we will revisit the 90-Day Build details below and make changes if desired.  
 ‘
 
-### Required worksheets
+### Required worksheets {#implementation-strategy-worksheets}
 
 For this section, you are required to use the following worksheets:
 
@@ -165,7 +168,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ##
 
-## Stakeholder Engagement Strategy
+## Stakeholder Engagement Strategy  {#stakeholder-engagement-strategy}
 
 | A successful stakeholder engagement strategy ensures that: Relevant stakeholders are aware of your project and prepared for any impact it will have on them Each stakeholder will have sufficient opportunities to track the project’s progress and provide feedback at relevant intervals Stakeholders are organized into groups based on the level of feedback and/or support that you might need from them |
 | :---- |
@@ -351,7 +354,7 @@ We will evaluate the materials you provide based on the following criteria:
 | **7** | Staffing strategy ensures the team is lean and has the right number of staff | We’ll review your response to ensure that staffing is right-sized each stage of work and prioritizes critical roles for a lean Core Team that can deliver value quickly and effectively |
 | **8** | Staffing strategy demonstrates a commitment to staffing a dedicated, focused team for this effort | We’ll review your response to ensure that all members of the Core Team will be allocated at 100% once you begin building.  This is critical for project health, allowing all members of the Core Team to collaborate effectively throughout each day, testing and learning quickly with minimal scheduling conflicts. |
 
-## Assessment of Key Risks
+## Assessment of Key Risks {#key-risks}
 
 | A successful assessment of key risks ensures that: Stakeholders and team members have shared awareness and alignment on risks that might cause the project to fail  Your team has developed adequate mitigation strategies for the most likely scenarios, reducing negative impacts and preventing project failure Your team is able to set up monitoring for early warning indicators that can signal when a prioritized risk might be materializing |
 | :---- |
@@ -362,7 +365,7 @@ Once your Launchpad is approved, we will expect you to be monitoring these risks
 
 ### Guidance for completing this step
 
-To complete this section of your Launchpad, you will use the Key Risks worksheet linked below to list out your project’s likely risks and include information about likelihood, impact, mitigation strategies, and warning signs. The template instructs you to consider the following prompt:
+To complete this section of your Launchpad, you will use the [Key Risks worksheet](#key-risks-worksheet) to list out your project’s likely risks and include information about likelihood, impact, mitigation strategies, and warning signs. The template instructs you to consider the following prompt:
 
 | *Consider the following prompt:* You’re in the future. This project has failed.  Why did it fail? |
 | :---- |
@@ -376,7 +379,7 @@ You may find it helpful to consider the following potential risk sources, which 
 | Technology Implementation Procurement / Contracting Privacy & Security Infrastructure & Integrations Data Management | Stakeholder Availability Staffing & Expertise Prioritization & Product Management Budget & Funding Timelines & Milestones | Legal & Policy Legislative Priorities Change Management External Dependencies |
 | :---- | :---- | :---- |
 
-### Required worksheets
+### Required worksheets {#key-risks-worksheet}
 
 For this section, you are required to use the following worksheet:
 
@@ -400,7 +403,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ##
 
-## Cost Estimate
+## Cost Estimate {#cost-estimate}
 
 | A reasonable cost estimate communicates: What you think you will need to spend money on to solve the core problem from initiation through to transition How much it will cost Where your estimate came from or how you developed your estimate What existing contract(s) you plan to leverage, if known |
 | :---- |
@@ -484,14 +487,14 @@ We will evaluate the materials you provide based on the following criteria:
 
 ##
 
-## Project Vitals
+## Project Vitals {#project-vitals}
 
 | Your project vitals place a stake in the ground and tell us who are key contacts that can support your project request. The elevator pitch is crucial in helping the audience understand what it is you wish to achieve. |
 | :---- |
 
 ### Guidance for completing this step
 
-For this section of the Launchpad, you will complete the [Project Vitals](?tab=t.m95yewcdfmyd) worksheet, which walks you through providing your agency and a project name,  identifying your key contacts, describing your elevator pitch for the project and whether the project is necessary to allow the state to fulfill legal requirements, often state or federal executive orders, regulations or legal judgements.
+For this section of the Launchpad, you will complete the [Project Vitals](#project-vitals-worksheet) worksheet, which walks you through providing your agency and a project name,  identifying your key contacts, describing your elevator pitch for the project and whether the project is necessary to allow the state to fulfill legal requirements, often state or federal executive orders, regulations or legal judgements.
 
 You will need to provide:
 
@@ -517,7 +520,7 @@ You will need to provide:
 
 11. If applicable, the specific details of the legal requirement (e.g., citation, executive order, regulation, or legal judgment) mandating the project.
 
-### Required worksheets
+### Required worksheets {#project-vitals-worksheet}
 
 For this section, you are required to use the following worksheet:
 
