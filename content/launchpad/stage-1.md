@@ -283,4 +283,4 @@ For information about submitting Stage 1 of your Launchpad, see [How To Submit](
 <br>
 
 [Go to Launchpad Stage 2](/mitdp/launchpad/stage-2/){.button}
-[Go to Launchpad Overview](launchpad.md){.button .outline}
+[Go to Launchpad Overview](/mitdp/launchpad/){.button .outline}
