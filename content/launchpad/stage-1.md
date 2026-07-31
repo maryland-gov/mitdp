@@ -207,9 +207,10 @@ If you have questions or are experiencing any challenges with this step, reach o
 
 For this section, you are required to use the following worksheet:
 
-| Worksheet | Link |
-| :---- | :---- |
-| Core Problems & Definition of Success | [Core Problems & Definition of Success](?tab=t.hcgv7rfr0i16) |
+| Worksheet | Link |  Download  |
+| :---- | :---- | :---- |
+| [**Core Problems & Definition of Success worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) |  [Word Document](ADDLINK) |
+
 
 ### Acceptance criteria
 
@@ -260,9 +261,9 @@ You will consider all that you have learned as a team — about your users, abou
 
 For this section, you are required to use the following worksheet:
 
-| Worksheet | Link |
-| :---- | :---- |
-| Product Strategy | [Product Strategy](?tab=t.wo4orbjm22ni) |
+| Worksheet | Link |  Download  |
+| :---- | :---- | :---- |
+| [**Product Strategy worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) |  [Word Document](ADDLINK) |
 
 ### Acceptance criteria
 
@@ -279,5 +280,5 @@ We will evaluate the materials you provide based on the following criteria:
 
 For information about submitting Stage 1 of your Launchpad, see How To Submit.
 
-[Go to Launchpad Stage 2](stage-2.html){.button}
-[Go to Launchpad Overview](overview.html){.button .outline}
+[Go to Launchpad Stage 2](/mitdp/launchpad/stage-2/){.button}
+[Go to Launchpad Overview](launchpad.md){.button .outline}
