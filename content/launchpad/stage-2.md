@@ -5,7 +5,7 @@ Description: Stage 2 of the Launchpad focuses on your strategy for implementatio
 
 # Stage 2
 
-Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best, how you'll demonstrate working software within 90 days, how you'll build a team that can deliver on your success metrics, and how you'll work across stakeholders and known risk areas to address the Core Problems that your MITDP exists to solve. {.intro}
+Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best and how you'll build a team that can address the Core Problems that your MITDP exists to solve. {.intro}
 
 ## Overview
 
