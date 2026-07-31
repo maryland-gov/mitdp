@@ -66,9 +66,7 @@
         margin-top: .75rem;
       }
 
-      .usa-prose table td {
-        line-height: 1.4rem;
-      }
+
 
       .usa-prose ol {
         margin-top: 1rem;
@@ -78,12 +76,15 @@
         padding: .9rem 1.25rem; margin-right: .5rem;
        }
 
+
+
+
+
+
       /* Table of contents block (`## Heading {.toc}` + list). Two-column
          on desktop, single column on narrow screens. Modelled on the
          Sections list at digital.maryland.gov. */
-        table.usa-table {
-          max-width: 1100px;
-        }
+
 
       .section-toc {
         border-top: 2px solid #1b1b1b;
@@ -92,7 +93,7 @@
         margin: 2.5rem 0 5rem;
         max-width: 1100px;
       }
-      
+
       .section-toc__title {
         font-weight: 700;
         font-size: 1.3rem;
@@ -511,7 +512,80 @@
         display: none;
       }
 
+      /* Data tables (`.usa-table` — emitted by build.js for any
+         multi-column Markdown table). Matched to the table styling on
+         digital.maryland.gov: no grid lines, a tall grey header with a
+         single rule beneath it, and zebra stripes doing the row-tracking.
 
+         Note: markdown-it writes `style="text-align:..."` inline on every
+         th/td from the Markdown alignment row, so text-align is controlled
+         in the source table, not here. */
+      .usa-prose .usa-table {
+        width: 100%;
+        max-width: 1100px;
+        margin: 2rem 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      /* Remove every grid line. USWDS borders all four sides of each cell. */
+      .usa-prose .usa-table th,
+      .usa-prose .usa-table td {
+        border: 0;
+        padding: 1.5rem 1rem;
+        line-height: 1.7;
+        vertical-align: middle;
+      }
+
+      /* Header: grey block, text on the baseline just above a single rule.
+         `vertical-align: bottom` keeps a wrapped two-line header aligned
+         with its one-line neighbours. */
+      .usa-prose .usa-table thead th {
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #565c65;
+        padding: 2rem 1rem 1rem;
+        vertical-align: bottom;
+        font-weight: 700;
+        color: #1b1b1b;
+      }
+
+      /* Striping starts on the SECOND body row, so the row directly under
+         the header rule stays white and doesn't read as part of the header.
+         USWDS's `--striped` shades odd rows, i.e. the opposite. */
+      .usa-prose .usa-table--striped tbody tr:nth-child(odd) th,
+      .usa-prose .usa-table--striped tbody tr:nth-child(odd) td {
+        background-color: transparent;
+      }
+
+      .usa-prose .usa-table--striped tbody tr:nth-child(even) th,
+      .usa-prose .usa-table--striped tbody tr:nth-child(even) td {
+        background-color: #f0f0f0;
+      }
+
+      /* A leading th in a body row is a row label, not a heading. */
+      .usa-prose .usa-table tbody th {
+        font-weight: 400;
+      }
+
+      /* Narrow screens: these tables are wide and the generous padding
+         makes them wider. Tighten the padding and let the table scroll
+         sideways rather than crushing the columns. */
+      @media (max-width: 640px) {
+        .usa-prose .usa-table {
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .usa-prose .usa-table th,
+        .usa-prose .usa-table td {
+          padding: 1rem .75rem;
+        }
+
+        .usa-prose .usa-table thead th {
+          padding: 1.25rem .75rem .75rem;
+        }
+      }
 
 </style>
   </head>
