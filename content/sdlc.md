@@ -1,7 +1,7 @@
 Template: sdlc
 Title: System Development Life Cycle (SDLC)
 Sidebar: general
-Breadcrumb: [Home](https://www.maryland.gov/) > [MITDP Oversight](mitdp-overview.md)
+Breadcrumb: [MITDP Oversight](mitdp-overview.md)
 
 
 Each phase below corresponds to a stage in the timeline above, shown with the gate that must be cleared to advance to the next phase.

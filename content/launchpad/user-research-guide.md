@@ -1,14 +1,18 @@
-# **MITDP Guide to Ethical, Inclusive, and Effective User Research** 
+Sidebar: stage-1-sidebar
+Breadcrumb: [MITDP Oversight](mitdp-overview.md) > [Launchpad](launchpad.md)
+
+
+# **MITDP Guide to Ethical, Inclusive, and Effective User Research**
 
 ##  **Introduction**
 
-This guide exists to help State of Maryland employees conduct user research that places the needs of Marylanders first. Whether you are building a new product or looking to improve something that already exists, speaking directly with users is one of the best ways to evaluate whether your project is on track for success. 
+This guide exists to help State of Maryland employees conduct user research that places the needs of Marylanders first. Whether you are building a new product or looking to improve something that already exists, speaking directly with users is one of the best ways to evaluate whether your project is on track for success.
 
 ## **How to use this guide**
 
-If you are new or less experienced conducting research, we encourage you to use this guide, step-by-step. We provide templates and best practices to walk you through the research process. If you have any questions about the terms we use, see the [Appendix](#key-terms)  for common definitions. 
+If you are new or less experienced conducting research, we encourage you to use this guide, step-by-step. We provide templates and best practices to walk you through the research process. If you have any questions about the terms we use, see the [Appendix](#key-terms)  for common definitions.
 
-If you’re doing this as part of an MITDP launchpad, please reach out. We may be able to connect you to a vendor who can support this work. 
+If you’re doing this as part of an MITDP launchpad, please reach out. We may be able to connect you to a vendor who can support this work.
 
 If you are an experienced researcher, use this guide as it serves you. There is a list of [MITDP-recommended templates](#mitdp-recommended-templates) at the end of the guide; we encourage you to use them in your research.
 
@@ -16,7 +20,7 @@ If you are an experienced researcher, use this guide as it serves you. There is 
 
 Any research effort led by our teams is not just about collecting data; it is about connecting with the people we serve to understand their needs and build deeper trust in government over time. Participants must be treated with respect as individuals and as experts in their own lived experiences, not just subjects to be studied.
 
-### **What this means in practice:** 
+### **What this means in practice:**
 
 1. Prioritize the safety and mental well-being of participants over the speed of the project.  
 2. Consider accessibility challenges in how we plan and conduct user research.  
@@ -38,7 +42,7 @@ In the sections below, we’ve detailed the steps of the planning and conducting
 
 ### **User research vs UAT**
 
-User Acceptance Testing (UAT)  isn't user research and can’t replace it.  User research happens early and helps the team understand users’ needs and behaviors. Meanwhile, UAT happens near the end of the process and focuses on checking to make sure the product functions and meets the original requirements. Use this guide to learn how to conduct ethical, inclusive, and effective user research. 
+User Acceptance Testing (UAT)  isn't user research and can’t replace it.  User research happens early and helps the team understand users’ needs and behaviors. Meanwhile, UAT happens near the end of the process and focuses on checking to make sure the product functions and meets the original requirements. Use this guide to learn how to conduct ethical, inclusive, and effective user research.
 
 ## **Step 1: Create a research plan** {#research-plan}
 
@@ -62,7 +66,7 @@ On a given user research effort, you probably won’t have time to interview *al
 
 ### **Determine methodology**
 
-When conducting discovery research, MITDPs will often find user interviews to be a good starting point. Interviews help to uncover users’ needs, behaviors, pain points, and motivations.  User interviews are useful if your team is still exploring a problem space. 
+When conducting discovery research, MITDPs will often find user interviews to be a good starting point. Interviews help to uncover users’ needs, behaviors, pain points, and motivations.  User interviews are useful if your team is still exploring a problem space.
 
 However, if your goal is to evaluate how well a product or design works, you may consider usability testing.  Your design could be anything from a concept to a Figma prototype or flow in production. With a usability test, you observe participants as they complete tasks with your product to identify where the experience works well and where users struggle.
 
@@ -90,23 +94,23 @@ Conducting user research that is Ethical, Inclusive, and Effective can take time
 
 ## **Step 2: Recruit participants** {#recruit-participants}
 
-*Goal: I need to recruit participants in order to gather insights from a representative audience.* 
+*Goal: I need to recruit participants in order to gather insights from a representative audience.*
 
-**For MITDP projects:** We encourage you to recruit from the primary user groups outlined in the [User Research Summary worksheet](?tab=t.0). We also provide a sample [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) that you can use with your agency’s permission. 
+**For MITDP projects:** We encourage you to recruit from the primary user groups outlined in the [User Research Summary worksheet](?tab=t.0). We also provide a sample [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) that you can use with your agency’s permission.
 
-Once you’ve developed a research plan, it’s time to start to recruit participants. Finding people who fit your user groups can take time, so build in a week or two to fully recruit your study. It is wise to start early while you continue to work on the next research steps. 
+Once you’ve developed a research plan, it’s time to start to recruit participants. Finding people who fit your user groups can take time, so build in a week or two to fully recruit your study. It is wise to start early while you continue to work on the next research steps.
 
 ### **Screen for what you’re looking for**
 
 Identify the primary user groups that you would like to speak with in your study. Consider what experience or demographics you want to be sure to include. To ensure your study is inclusive, use  [Data USA](https://datausa.io/profile/geo/maryland) to determine a sample that accurately represents the diversity of Maryland's population.
 
-Create a "Screener" survey. Ask 5-10 behavioral questions ("When was the last time you visited a park?") rather than demographic ones ("Are you 18-24?").  Avoid leading questions. 
+Create a "Screener" survey. Ask 5-10 behavioral questions ("When was the last time you visited a park?") rather than demographic ones ("Are you 18-24?").  Avoid leading questions.
 
 ### **Over-recruit your study**
 
 Over-recruiting helps protect your study and sets realistic expectations with stakeholders about potential no-shows. In most studies, it’s typical for a quarter of participants to miss their scheduled sessions.
 
- To stay on track, plan to over-recruit. For example, if you need to speak with 9 people, recruit 11 to more realistically reach your goal. If your participants are part of a vulnerable population or are more likely to face barriers to participation, consider increasing the over-recruitment rate to 40–50%. 
+ To stay on track, plan to over-recruit. For example, if you need to speak with 9 people, recruit 11 to more realistically reach your goal. If your participants are part of a vulnerable population or are more likely to face barriers to participation, consider increasing the over-recruitment rate to 40–50%.
 
 ### **Find representative participants**
 
@@ -126,9 +130,9 @@ In many cases, your plans for accommodating participants with more permanent dis
 If your facilitator isn’t familiar with assistive technology, invite an accessibility specialist to join the interview to ensure the participant is comfortable and supported.  Reach out to MITDP staff if you do not have access to an accessibility specialist and need support.  
 
 **Plan for language accommodations**  
-Your plan should include language accommodations to help participants feel most comfortable expressing their feedback. In Maryland, about 1 in 5 households speak a language other than English at home. Most of these homes speak Spanish. A smaller fraction speak Chinese, French, Amharic, or West African languages. 
+Your plan should include language accommodations to help participants feel most comfortable expressing their feedback. In Maryland, about 1 in 5 households speak a language other than English at home. Most of these homes speak Spanish. A smaller fraction speak Chinese, French, Amharic, or West African languages.
 
-To conduct a more inclusive study, plan to communicate with people in the language they know best by asking participants which language they prefer to use. 
+To conduct a more inclusive study, plan to communicate with people in the language they know best by asking participants which language they prefer to use.
 
 **How to Get Help**
 
@@ -140,7 +144,7 @@ To conduct a more inclusive study, plan to communicate with people in the langua
 
 ### **Compensate participants for their time**
 
-Compensating participants for their time is an essential part of conducting ethical, accessible, and inclusive research. 
+Compensating participants for their time is an essential part of conducting ethical, accessible, and inclusive research.
 
 Norms for compensating participants include:
 
@@ -156,13 +160,13 @@ You must have a signed consent form before recording or starting. This is essent
 * They can stop at any time.  
 * How the data will be used.
 
-Here is an example of a  [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) you could use with your agency’s permission. 
+Here is an example of a  [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) you could use with your agency’s permission.
 
 ### **Considerations for Ethics, Accessibility, and Inclusion**
 
 * **Ethics:** Compensation prevents exploitation. We cannot expect low-income residents to take time off work to help us for free.  
 * **Accessibility:** Ensure your screener survey is screen-reader accessible. Offer to read the consent form aloud.  
-* **Inclusion:** If you only recruit via Twitter/X, you exclude those without digital access. 
+* **Inclusion:** If you only recruit via Twitter/X, you exclude those without digital access.
 
 ## **Step 3: Write an interview guide** {#interview-guide}
 
@@ -170,9 +174,9 @@ Here is an example of a  [Digital Research Study Consent Form](https://docs.goog
 
 **For MITDP projects:** We encourage you to use this [user interview guide template](https://docs.google.com/document/d/1XqIUeJf5qUh1oHKkceFzn4QXfEm7k9CyLHyvWle6lPs/edit?tab=t.0) or [usability test template](https://docs.google.com/document/d/1AVCbMBT1j9p7Ql7gc7cekcdRVzs2cw09IaUfXKEESJs/edit?tab=t.0)  for this step.
 
-Your interview guide is at the heart of your user research effort. It consists of the structured questions, guidance on how to start and end the interview, and information about any artifacts or prototypes that you want the participants to engage with at different points in the conversation. 
+Your interview guide is at the heart of your user research effort. It consists of the structured questions, guidance on how to start and end the interview, and information about any artifacts or prototypes that you want the participants to engage with at different points in the conversation.
 
-For a given project, it can sometimes help to have multiple Interview Guides, in the case that you want to ask different questions to participants in different User Groups. Members of your team might also refer to the Interview Guide as an “Interview Script,” “Discussion Guide,” “Moderator Guide,” or “Research Protocol.” 
+For a given project, it can sometimes help to have multiple Interview Guides, in the case that you want to ask different questions to participants in different User Groups. Members of your team might also refer to the Interview Guide as an “Interview Script,” “Discussion Guide,” “Moderator Guide,” or “Research Protocol.”
 
 ### **Start with prioritizing your goals for the interview**
 
@@ -207,7 +211,7 @@ Although your interview guide is your anchor, you will often need to dig deeper 
 
 ### **Be inclusive and trauma-informed**
 
-Your interview guide determines the tone, direction, activities, and outcomes of each interview. It’s important to reflect on this with a clear understanding of your responsibility as its author. 
+Your interview guide determines the tone, direction, activities, and outcomes of each interview. It’s important to reflect on this with a clear understanding of your responsibility as its author.
 
 Here are a few areas to keep in mind:
 
@@ -234,7 +238,7 @@ Here are a few areas to keep in mind:
 
 ## **Step 4: Test your guide**  {#test-your-guide}
 
-*Goal: I need to test my interview guide to make sure my questions are clear and effective.* 
+*Goal: I need to test my interview guide to make sure my questions are clear and effective.*
 
 Before conducting any interviews, you need to test out your interview guide. Testing can work best with someone who has a similar background and experience as the people in your user group but is comfortable giving you candid feedback about the interview guide. This could be another state employee, a community advocate, or someone in your personal circle who is open to help.
 
@@ -256,7 +260,7 @@ For a given user research effort, you might have multiple pairs of facilitators 
 
 * Do you have enough time to get through all of the questions? Do you need to adjust their quantity or structure to make better use of the time?
 
-* Did any question feel awkward or get a response that wasn’t useful? 
+* Did any question feel awkward or get a response that wasn’t useful?
 
 * Based on the content of the responses, did you cover all of your objectives for the interview?
 
@@ -264,11 +268,11 @@ For a given user research effort, you might have multiple pairs of facilitators 
 
 * Do your tools work as expected? Were you able to access the videoconferencing tools on the device that your participants will be using?
 
-* If in a physical space, is your environment quiet and comfortable for your participant? 
+* If in a physical space, is your environment quiet and comfortable for your participant?
 
 ## **Step 5: Conduct user interviews**  {#conduct-interviews}
 
-*I need to conduct user interviews in order to understand my participants' experiences directly.* 
+*I need to conduct user interviews in order to understand my participants' experiences directly.*
 
 ### **Document sessions**
 
@@ -292,11 +296,11 @@ Once you have completed your research sessions, it is time to analyze your sessi
 
 ### **Avoid bias in synthesis**
 
-Conduct balanced, equitable synthesis by developing a structured synthesis plan. This could include activities such as documenting assumptions up front, involving multiple researchers, or coding all data thematically to look for trends across sessions. Disaggregating data by demographics is an equitable way to see if certain groups of users are experiencing unique user needs. 
+Conduct balanced, equitable synthesis by developing a structured synthesis plan. This could include activities such as documenting assumptions up front, involving multiple researchers, or coding all data thematically to look for trends across sessions. Disaggregating data by demographics is an equitable way to see if certain groups of users are experiencing unique user needs.
 
 ### **How to synthesize data**
 
-For research synthesis, collect and combine all your user interview data into one place. Go through each response, grouping by similar answer type or theme. You can use a tool like Miro or Mural to group stickies, or tag within a document. Your resulting groupings will help you identify insights that stand out in the data. 
+For research synthesis, collect and combine all your user interview data into one place. Go through each response, grouping by similar answer type or theme. You can use a tool like Miro or Mural to group stickies, or tag within a document. Your resulting groupings will help you identify insights that stand out in the data.
 
 ## **Step 7: Report findings**  {#report-findings}
 
@@ -304,7 +308,7 @@ For research synthesis, collect and combine all your user interview data into on
 
 **For MITDP projects:** We encourage you to use our [journey map template](https://docs.google.com/spreadsheets/d/1eSggrlg4kzQ0hmi9Z_dSRDK70DdXhvDsV8RwO9xwB50/edit?gid=1180296994#gid=1180296994) as one way to report your findings.
 
-Once you’ve completed synthesis, you should be able to confidently develop journey maps and findings about your users and their experience navigating a service or product. Your report may include background, your research goals and methods, and then a deep dive into key findings. Most importantly, regardless of format, your research report should rigorously identify and advocate for the needs of your user. 
+Once you’ve completed synthesis, you should be able to confidently develop journey maps and findings about your users and their experience navigating a service or product. Your report may include background, your research goals and methods, and then a deep dive into key findings. Most importantly, regardless of format, your research report should rigorously identify and advocate for the needs of your user.
 
 ### **Types of presentations**
 
@@ -315,13 +319,13 @@ Once you’ve completed synthesis, you should be able to confidently develop jou
 
 ### **Prioritizing findings**
 
-Before reporting out, prioritize your findings so your stakeholders understand your most important learnings. 
+Before reporting out, prioritize your findings so your stakeholders understand your most important learnings.
 
-Consider evaluating each of your findings by severity, frequency, and impact on overall goal. 
+Consider evaluating each of your findings by severity, frequency, and impact on overall goal.
 
 * **Severity**: How serious the problem is for the user  
 * **Frequency**: How often an issue occurs  
-* **Impact on goal:** How much the issue affects the user’s ability to achieve their goal. 
+* **Impact on goal:** How much the issue affects the user’s ability to achieve their goal.
 
 Review each of your findings and determine their priority:
 
@@ -329,9 +333,9 @@ Review each of your findings and determine their priority:
 * **Medium Priority:** A recurring issue that creates friction but still allows users to complete their task  
 * **Low priority:** A minor issue that appears infrequently and doesn’t meaningfully impact task success
 
-This is just one way to prioritize findings. The goal is to point out the greatest opportunities for action so your team can implement learnings efficiently. 
+This is just one way to prioritize findings. The goal is to point out the greatest opportunities for action so your team can implement learnings efficiently.
 
-### **Manage data privacy and anonymity** 
+### **Manage data privacy and anonymity**
 
 * Never share raw data (un-anonymized spreadsheets) with stakeholders who don't need it.  
 * Tie every insight back to a recommendation.
