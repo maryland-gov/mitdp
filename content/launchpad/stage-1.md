@@ -47,9 +47,72 @@ Your User Research Summary is an overview of how you’ve conducted your researc
 
 If you have already hired a UX Lead for your MITDP, it can be reasonable for that individual to lead your user research efforts. In the case that you have not yet filled the UX Lead role, you may need to hire a user research team to support this area of your Launchpad. Feel free to reach out to our MITDP Oversight team for guidance on how to do so.
 
+An example may help.
+
+> Imagine that you are researching users involved in construction
+> management. Consider the following prompts in your user interviews:
+>
+> 1.  What is your role in construction project management? Why does this role exist?
+> 2.  How would you define success in this role? What needs to be true at the end of each month or year for your role to have been
+> successful?
+> 3.  [for some of the key aspects that they’ve listed as part of their role] Walk me through how that works with your current system (Note
+> that ideally the session is conducted on-site and in-person, allowing
+> the interviewer to directly observe the participant using their
+> existing tools and processes)
+> 4.  What are the biggest blockers or challenges that prevent you from being successful?
+> 5.  [for each blocker or challenge] Walk me through how that works step-by-step (again, this is ideally conducted on-site and/or in a way
+> that allows for direct observation of current behaviors with existing
+> tools and processes)
+> 6.  What are the biggest enablers that currently exist and help you in being successful?
+> 7.  What worries you most in your current role?
+> 8.  If you could change one thing about how this work is managed, what would you change?
+
+Note, importantly, that these questions are somewhat subjective, which is why we require that user research is conducted with only one participant at a time. In a group setting, the answers to any of these could be affected by the existence of a person’s peers, manager, or direct reports in the conversation, which can influence them to answer in a different way based on what they think would be best for that other person to hear.
+
+Meeting 1-on-1 with individuals also provides a more natural lens toward observing real-world behaviors, such as by asking the interview participant to walk through how something works in their day-to-day working environment and observing how they work with current processes, systems, and tools. This is where your research plan can include elements of participant observation and contextual inquiry.
+
+
 #### Primary User Groups
 
 Building on your interviews with users, you’ll identify Primary User Groups (this is likely 2-5 groups). For each primary user group, fill out a section of the worksheet to document the group’s primary needs, pain points, opportunities, technology needs, and a journey map of key touchpoints.
+
+An example may help:
+
+> Imagine you are part of a software development team researching the
+> experiences of employees and customers at a popular, nationwide coffee
+> chain. You discover four primary employee user groups within the
+> coffee shop locations: barista, support barista, cashier, and food
+> prep; as well as three primary customer user groups: in-store
+> customers, mobile customers, and drive-thru customers. You conduct
+> user research on all of these employee user groups and customer user
+> groups. When you conduct user research on the “barista” user group,
+> you discover a number of user needs:
+> -   Baristas need a way to control the size of an espresso shot so that they can give customers their desired coffee concentration
+> -   Baristas need a way to control the length of an espresso shot so that they can give customers their desired drink size
+> -   Baristas need a way to vary the amount and consistency of crema and microfoam they use so that they can create the chain’s signature
+> latte art
+>
+> You also discover a number of pain points specific to the “barista”
+> user group:
+> -   Baristas collide with food preppers on average four times each day during busy hours (7AM - 9AM) as they criss-cross the work area
+> performing their duties, increasing Barista workloads by 15% as they
+> must redo orders that are dropped or ruined during these collisions
+> -   Baristas run out of milk for their microfoamers on average three times each day during busy hours (7AM - 9AM), leading to a 12%
+> increase in the amount of time it takes baristas to complete an order
+> on average
+> -   Espresso machines break down on average twice each day during busy hours (7AM - 9AM), leading to a 22% increase in the amount of time it
+> takes baristas to complete an order on average; the breakdown
+> frequency is directly proportional to the triple order frequency
+> -   Through the experience sampling method, we found that Baristas experience low levels of psychological flow and high levels of
+> frustration during busy hours (7AM - 9AM); these negative
+> psychological experiences strongly correlate with the aforementioned
+> breakdowns, outages, and collisions
+> -   Through attitudinal interviews, Baristas reported a belief that cashiers write down orders wrong 50% of the time; through ethnographic
+> research we found a 16% error rate in handwritten orders during busy
+> hours, while only a 6% error rate outside of busy hours
+
+
+Note that the user-need statements focus on a specific need in relation to a specific outcome associated with the role. Note also the level of specificity in the pain points, including not only qualitative observations but also quantitative effects — and note also the combination of various research methods in order to validate and contextualize statements and observations.
 
 If you find yourself with way too many user groups, you likely need to reduce the scope of the problem you’re trying to solve right now. Who are the biggest user groups? Who are the most impacted user groups? Can you start with them?
 
@@ -117,6 +180,14 @@ It is essential that your core problems and definition of success be grounded in
 
 There should be a clear connection between your core problems, your definition of success, and the challenges documented for each of your primary user groups.
 
+#### How to describe each Core Problem
+
+It’s important that your Core Problems are focused on user-centered outcomes, not prescribed technology improvements. We’ve included some examples of the right way to frame these problems below, building on the work of our counterparts at the [Colorado Digital Service](https://docs.google.com/presentation/d/1Ssey_0hyDbtA68S6WZXlG57g1K7gugLu4QsioBRJAYI/edit?usp=sharing).
+
+| The right way (user-centered) | The wrong way |
+| :---- | :---- |
+| One or more specific user needs are named. Some examples: <ul><li>**Caseworkers <u>spend hours each day uploading paper documents</u>, reducing the amount of time available to spend with their clients**</li><li>**60% of applications are abandoned because <u>users can’t save and return later</u>**</li><li>**Field staff <u>working in rural areas are unable to do their jobs</u> due to poor internet access and a lack offline functionality among current tools**</li> | Anything technical or bureaucratic in nature that isn’t related to helping your users meet their needs.<br> Some examples: <ul><li>***Replace our outdated, legacy system with modern technology***</li><li>***Migrate to a cloud-based COTS system***</li><li>***Establish a single portal for unified intake and standardization***</li>   |
+
 #### Impact for the people of Maryland
 
 To that end, your problem statements and success criteria should be framed in terms of the impact for the people of Maryland, whether state employees, the general public, or other groups, such as reducing wait times, increasing accessibility for specific audiences, or expanding coverage for specific programs. This centers the work around people instead of technology.
@@ -163,17 +234,24 @@ We will evaluate the materials you provide based on the following criteria:
 
 In doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy.
 
-An example may help:
+AIn doing service delivery, you are creating an enduring capability for your users. In other words, you are creating a product. But what kind of product? There may be many different paths to serving your users. Which path will you take? That is ultimately a question of strategy.
 
-*Imagine that you were starting a business aimed at pet owners who have animals with grooming needs. Based on what you learned about your customers, and about the pets that they have, you may explore a few strategically different visions for your business:*
+An example may help.
+> Imagine that you were starting a business aimed at pet owners who have
+> animals with grooming needs. Based on what you learned about your
+> customers, and about the pets that they have, you may explore a few
+> strategically different visions for your business:
+> 1. You might decide to start a traditional grooming service. You open a business in a physical location, you advertise in your community,
+> and you serve your customers, and their pets, by grooming their pets
+> right there in your shop.
+> 2. Alternatively, you might decide to start a mobile grooming business \--- i.e., you purchase large vans, equipped with grooming equipment
+> and supplies, that you then drive to your customers homes, so that you
+> can groom their pets right there in the van, while parked in their
+> driveway.
+> 3. As a third alternative, you might decide to start a "grooming training" service \-- where you train customers how to groom pets
+> themselves, instead of grooming the pets for them.
 
-1. *You might decide to start a traditional grooming service. You open a business in a physical location, you advertise in your community, and you serve your customers, and their pets, by grooming their pets right there in your shop.*
-
-2. *Alternatively, you might decide to start a mobile grooming business \--- i.e., you purchase large vans, equipped with grooming equipment and supplies, that you then drive to your customers homes, so that you can groom their pets right there in the van, while parked in their driveway.*
-
-3. *As a third alternative, you might decide to start a "grooming training" service \-- where you train customers how to groom pets themselves, instead of grooming the pets for them.*
-
-   *These are ideas that you might have developed directly from your user research; which path you decide to move down is a **strategic** decision about your product service delivery.*
+These are ideas that you might have developed directly from your user research; which path you decide to move down is a **strategic** decision about your product service delivery.
 
 ### Guidance for completing this step
 
