@@ -48,7 +48,7 @@ Your team may have also conducted other forms of research, such as surveys or fo
 
 Your User Research Summary is an overview of how you’ve conducted your research interviews with representative users to help understand the problems you’re looking to solve. It documents high-level information about each of your user groups, how you recruited and selected representative users, the specific interview guide(s) used for interviews, and the dates, durations, and interview notes from each of the interviews you conducted.
 
-If you have already hired a UX Lead for your MITDP, it can be reasonable for that individual to lead your user research efforts. In the case that you have not yet filled the UX Lead role, you may need to hire a user research team to support this area of your Launchpad. Feel free to reach out to our MITDP Oversight team for guidance on how to do so.
+If you have already hired a UX Lead for your MITDP, it can be reasonable for that individual to lead your user research efforts. In the case that you have not yet filled the UX Lead role, you may need to hire a user research team to support this area of your Launchpad. Feel free to reach out to our MITDP Oversight Division for guidance on how to do so.
 
 An example may help:
 
@@ -201,7 +201,7 @@ For each problem in the worksheet, provide at least one metric that you’ll use
 
 If having three core problems doesn’t feel like enough, you may need to reduce the scope of what you’re trying to solve right now and / or prioritize. What are the biggest problems, either in terms of impact or number of people impacted? What problems, if left unsolved, creates the greatest risk of future, bigger problems? The state cannot solve all its problems at once, so pick the most impactful one(s) to start with.
 
-If you have questions or are experiencing any challenges with this step, reach out to our MITDP Oversight team and we’ll be happy to help.
+If you have questions or are experiencing any challenges with this step, reach out to our MITDP Oversight Division and we’ll be happy to help.
 
 ### Required worksheets
 
