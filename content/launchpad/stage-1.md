@@ -148,7 +148,7 @@ These resources can help you complete this section:
 
 | Resource | Link |
 | :---- | :---- |
-| [MITDP Guide for Ethical, Accessible, and Effective User Research](?tab=t.u9jofsssokze) | [User Research Guide](/mitdp/launchpad/user-research-guide/) |
+| [MITDP Guide for Ethical, Accessible, and Effective User Research](/mitdp/launchpad/user-research-guide/) | [Webpage](/mitdp/launchpad/user-research-guide/) |
 
 ##
 
