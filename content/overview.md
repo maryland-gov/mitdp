@@ -6,9 +6,11 @@ Image: /content/images/mitdp-venn.png
 
 Our MITDP Oversight team oversees the planning, execution, and implementation of Major Information Technology Development Projects (MITDPs) across Maryland state agencies. Our oversight processes seek to ensure user-centered, iterative service delivery that reduces risk and maximizes value for the people of Maryland.
 
-![Venn diagram: MITDP criteria include estimated cost over $5M, supporting a critical business function, DoIT Secretary determination, and developing new or improved technology](images/mitdp-venn.svg)
 
 ## What is an MITDP? {.image-right}
+
+![Venn diagram: MITDP criteria include estimated cost over $5M, supporting a critical business function, DoIT Secretary determination, and developing new or improved technology](images/mitdp-venn.svg)
+
 
 Established in law since 2002, MITDPs are IT development projects that meet any one or more of the program criteria.
 
