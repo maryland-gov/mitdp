@@ -14,8 +14,8 @@ This serves two key purposes:
 1. The Launchpad documents the outputs of the discovery and planning work essential to set your project up for success. This is also the information required for the MITDP program team to determine whether your project is ready for full MITDP status and funding ("designation").
 2. Once approved, the contents of your Launchpad establish the first "baseline" for your project—the scope your MITDP funding can be spent on, as well as the initial schedule and cost estimates.
 
-[Go to Launchpad Stage 1](stage-1.html){.button}
-[Go to Launchpad Stage 2](stage-2.html){.button .outline}
+[Go to Launchpad Stage 1](/mitdp/launchpad/stage-1/){.button}
+[Go to Launchpad Stage 2](/mitdp/launchpad/stage-2/){.button .outline}
 
 ## Launchpad contents
 
@@ -25,18 +25,18 @@ The Launchpad provides instructions on how to complete each section, links to th
 
 ### Launchpad Stage 1 {.toc-column}
 
-- [Understanding of User Needs](stage-1.html#understanding-of-user-needs)
-- [Core Problems & Definition of Success](stage-1.html#core-problems-&-definition-of-success)
-- [Product Strategy](stage-1.html#product-strategy)
+- [Understanding of User Needs](/mitdp/launchpad/stage-1.html#understanding-of-user-needs)
+- [Core Problems & Definition of Success](/mitdp/launchpad/stage-1.html#core-problems-&-definition-of-success)
+- [Product Strategy](/mitdp/launchpad/stage-1.html#product-strategy)
 
 ### Launchpad Stage 2 {.toc-column}
 
-- [Implementation Strategy](stage-2.html#implementation-strategy)
-- [Stakeholder Engagement Strategy](stage-2.html#stakeholder-engagement-strategy)
-- [Staffing & Leadership Strategy](stage-2.html#staffing-and-leadership-strategy)
-- [Assessment of Key Risks](stage-2.html#assessment-of-key-risks)
-- [Cost Estimate](stage-2.html#cost-estimate)
-- [Project Vitals](stage-2.html#project-vitals)
+- [Implementation Strategy](/mitdp/launchpad/stage-2.html#implementation-strategy)
+- [Stakeholder Engagement Strategy](/mitdp/launchpad/stage-2.html#stakeholder-engagement-strategy)
+- [Staffing & Leadership Strategy](/mitdp/launchpad/stage-2.html#staffing-and-leadership-strategy)
+- [Assessment of Key Risks](/mitdp/launchpad/stage-2.html#assessment-of-key-risks)
+- [Cost Estimate](/mitdp/launchpad/stage-2.html#cost-estimate)
+- [Project Vitals](/mitdp/launchpad/stage-2.html#project-vitals)
 
 ## How to submit
 
