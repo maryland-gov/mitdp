@@ -116,16 +116,16 @@ If you find yourself with way too many user groups, you likely need to reduce th
 
 If you find yourself with way too many user needs or challenges, you likely need to make your user groups more granular and / or reduce the scope of the problem you’re trying to solve right now.
 
-For additional guidance on conducting user research, see our [MITDP Guide for Ethical, Inclusive, and Effective User Research](?tab=t.u9jofsssokze)
+For additional guidance on conducting user research, see our [MITDP Guide for Ethical, Inclusive, and Effective User Research](/mitdp/launchpad/user-research-guide/)
 
 ### Required worksheets
 
 For this section, you are required to use the following worksheets:
 
-| Worksheet | Link |
-| :---- | :---- |
-| User Research Summary worksheet | [User Research Summary](?tab=t.0) |
-| Primary User Groups worksheet | [Primary User Groups](?tab=t.koz5vcniq49d) |
+| Worksheet | Link |  Download  |
+| :---- | :---- | :---- |
+| User Research Summary worksheet | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) |  [Word Document](ADDLINK) |
+| Primary User Groups worksheet | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) |  [Word Document](ADDLINK) |
 
 ### Acceptance criteria
 
@@ -148,7 +148,7 @@ These resources can help you complete this section:
 
 | Resource | Link |
 | :---- | :---- |
-| [MITDP Guide for Ethical, Accessible, and Effective User Research](?tab=t.u9jofsssokze) | [User Research Guide](?tab=t.u9jofsssokze) |
+| [MITDP Guide for Ethical, Accessible, and Effective User Research](?tab=t.u9jofsssokze) | [User Research Guide](/mitdp/launchpad/user-research-guide/) |
 
 ##
 
