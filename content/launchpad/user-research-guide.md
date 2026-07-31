@@ -190,7 +190,7 @@ It can be helpful to brainstorm a long list of possible questions to get started
    This is important because you want to learn as much as possible from your interview participant, and short, factual answers won’t provide much context about the *why* behind their answer.   
    Examples of open-ended questions include:  
    * “How would you describe your occupation?” *(even if you already know that they are a nurse)*  
-   * *“*How did you first learn about building permits?” *(instead of asking how long they’ve worked with building permits)*
+   * “How did you first learn about building permits?” *(instead of asking how long they’ve worked with building permits)*
 
 2. **It’s not a *leading question*, meaning that it doesn’t attempt to lead the participant toward a preferred answer**  
    A classic example of a leading question is asking *“how are you enjoying your food?”* at a restaurant, where the words used in the question lead a recipient to try to respond with positive feedback even if they are not, in fact, enjoying the food. Leading questions limit your ability to get honest answers from participants, as user research participants tend to have a very human instinct to fit in with the expectations that you set for them.   
