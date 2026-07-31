@@ -187,7 +187,7 @@ It’s important that your Core Problems are focused on user-centered outcomes, 
 
 | The right way (user-centered) | The wrong way |
 | :---- | :---- |
-| One or more specific user needs are named. Some examples: <ul><li>**Caseworkers <u>spend hours each day uploading paper documents</u>, reducing the amount of time available to spend with their clients**</li><li>**60% of applications are abandoned because <u>users can’t save and return later</u>**</li><li>**Field staff <u>working in rural areas are unable to do their jobs</u> due to poor internet access and a lack offline functionality among current tools**</li> | Technical or bureaucratic changes that aren't based on research with users. Some examples:<ul><li class="wrong-red">***Replace our outdated, legacy system with modern technology***</li><li class="wrong-red">***Migrate to a cloud-based COTS system***</li><li class="wrong-red">***Establish a unified portal for intake and standardization***</li>   |
+| One or more specific user needs are named. Some examples: <ul><li>**Caseworkers <u>spend hours each day uploading paper documents</u>, reducing the amount of time available to spend with their clients**</li><li>**60% of applications are abandoned because <u>users can’t save and return later</u>**</li><li>**Field staff <u>working in rural areas are unable to do their jobs</u> due to poor internet access and a lack offline functionality among current tools**</li> | Technical or bureaucratic outcomes that aren't based around user needs. Some examples:<ul><li class="wrong-red">***Replace our outdated, legacy system with modern technology***</li><li class="wrong-red">***Migrate to a cloud-based COTS system***</li><li class="wrong-red">***Establish a unified portal for intake and standardization***</li>   |
 
 #### Impact for the people of Maryland
 
@@ -278,7 +278,8 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Completing Stage 1
 
-For information about submitting Stage 1 of your Launchpad, see How To Submit.
+For information about submitting Stage 1 of your Launchpad, see [How To Submit](/mitdp/launchpad/#how-to-submit).
+<br>
 
 [Go to Launchpad Stage 2](/mitdp/launchpad/stage-2/){.button}
 [Go to Launchpad Overview](launchpad.md){.button .outline}
