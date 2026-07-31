@@ -12,9 +12,9 @@ This guide exists to help State of Maryland employees conduct user research that
 
 ## How to use this guide
 
-If you are new or less experienced conducting research, we encourage you to use this guide, step-by-step. We provide templates and best practices to walk you through the research process. If you have any questions about the terms we use, see the [Appendix](#key-terms)  for common definitions.
+If you are new or less experienced conducting research, we encourage you to use this guide, step-by-step. We provide templates and best practices to walk you through the research process. If you have any questions about the terms we use, see [Key terms](#key-terms)  for common definitions.
 
-If you’re doing this as part of an MITDP launchpad, please reach out. We may be able to connect you to a vendor who can support this work.
+If you’re doing this as part of an [MITDP Launchpad](/mitdp/launchpad/), please reach out. We may be able to connect you to a vendor who can support this work.
 
 If you are an experienced researcher, use this guide as it serves you. There is a list of [MITDP-recommended templates](#mitdp-recommended-templates) at the end of the guide; we encourage you to use them in your research.
 
@@ -50,11 +50,11 @@ User Acceptance Testing (UAT)  isn't user research and can’t replace it.  User
 
 *Goal: I need a research plan in order to define clear goals and methodology for my study.*
 
-The first step in conducting effective User Research is creating a plan. If your project is an MITDP, we encourage you to use this [research plan template](https://docs.google.com/document/d/16g2IlEr5dofECQYDFX4zo-r-drXvgBRCg7VwyLRsys8/edit?tab=t.0#heading=h.cchlkhlc186r) to get started.
+The first step in conducting effective User Research is creating a plan. If your project is an MITDP, we encourage you to use this [research plan template](https://docs.google.com/document/d/16g2IlEr5dofECQYDFX4zo-r-drXvgBRCg7VwyLRsys8/edit?tab=t.0#heading=h.cchlkhlc186r) to get started, which is adapted from the [18F UX Guide](https://guides.18f.org/ux-guide/research/plan/#writing-a-research-plan).
 
 ### Set your research goals
 
-What are the most important things to learn during your study? For example, if your interviews are part of filling out an MITDP Launchpad, you’ll want to make sure that your goals capture the areas of the [Primary User Groups](?tab=t.koz5vcniq49d) worksheet.
+What are the most important things to learn during your study? For example, if your interviews are part of filling out an MITDP Launchpad, you’ll want to make sure that your goals capture the areas of the [Primary User Groups](/mitdp/launchpad/stage-1/#required-worksheets) worksheet.
 
 ### Determine your primary user groups
 
@@ -96,7 +96,7 @@ Conducting user research that is Ethical, Inclusive, and Effective can take time
 
 *Goal: I need to recruit participants in order to gather insights from a representative audience.*
 
-**For MITDP projects:** We encourage you to recruit from the primary user groups outlined in the [User Research Summary worksheet](?tab=t.0). We also provide a sample [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) that you can use with your agency’s permission.
+**For MITDP projects:** We encourage you to recruit from the primary user groups outlined in the [User Research Summary worksheet](/mitdp/launchpad/stage-1/#required-worksheets). We also provide a sample [Digital Research Study Consent Form](https://docs.google.com/document/d/1zLHmk2VotaI6z-LFWRrj6lKao26Z5nx6TKOAAELKeRg/edit?tab=t.0#heading=h.3ulpd8luu9kz) that you can use with your agency’s permission.
 
 Once you’ve developed a research plan, it’s time to start to recruit participants. Finding people who fit your user groups can take time, so build in a week or two to fully recruit your study. It is wise to start early while you continue to work on the next research steps.
 
@@ -180,7 +180,7 @@ For a given project, it can sometimes help to have multiple Interview Guides, in
 
 ### Start with prioritizing your goals for the interview
 
-What are the most important things to learn from your time with the interview participant? For example, if your interviews are part of filling out an MITDP Launchpad, you’ll want to make sure that your questions address all of the areas of the [Primary User Groups](?tab=t.koz5vcniq49d) worksheet.
+What are the most important things to learn from your time with the interview participant? For example, if your interviews are part of filling out an MITDP Launchpad, you’ll want to make sure that your questions address all of the areas of the [Primary User Groups](/mitdp/launchpad/stage-1/#required-worksheets) worksheet.
 
 It can be helpful to brainstorm a long list of possible questions to get started, which you can then curate down to a smaller set for your interview guide.
 
