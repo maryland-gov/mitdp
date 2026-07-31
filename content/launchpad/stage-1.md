@@ -280,6 +280,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 For information about submitting Stage 1 of your Launchpad, see [How To Submit](/mitdp/launchpad/#how-to-submit).
 <br>
+<br>
 
 [Go to Launchpad Stage 2](/mitdp/launchpad/stage-2/){.button}
 [Go to Launchpad Overview](launchpad.md){.button .outline}
