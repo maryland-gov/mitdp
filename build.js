@@ -386,7 +386,7 @@ function buildChrome() {
 // Markdown engine. Tables are on by default in markdown-it; `attrs` turns
 // `## Heading {#anchor}` into `id="anchor"` so internal links keep working.
 // ---------------------------------------------------------------------------
-const md = new MarkdownIt({ html: false, linkify: true }).use(attrs, {
+const md = new MarkdownIt({ html: true, linkify: true }).use(attrs, {
   allowedAttributes: ["id", "class"],
 });
 
