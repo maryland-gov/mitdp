@@ -20,6 +20,21 @@ const { load } = require("cheerio");
 // Configuration — edit these two values for your environment.
 // ---------------------------------------------------------------------------
 const CONFIG = {
+  // Absolute base URL of the published site, with trailing slash. Social and
+  // search crawlers do NOT resolve relative URLs, so canonical/og:url/og:image
+  // must be absolute. Change this if the site moves to a custom domain.
+  siteUrl: "https://maryland-gov.github.io/mitdp/",
+
+  // Appended to the <title> and og:title of pages that do not declare their
+  // own "Meta title:". Set to "" to disable.
+  titleSuffix: " | State of Maryland",
+
+  // Fallbacks for pages that declare no "Description:" / "Image:".
+  // defaultImage is resolved against siteUrl unless it is already absolute.
+  defaultDescription:
+    "Guidance and requirements for Maryland's Major IT Development Project (MITDP) oversight process.",
+  defaultImage: "images/mitdp-venn.png",
+
   // The MDWDS stylesheet, pinned to the version digital.maryland.gov serves so
   // components render identically. Bump this when Maryland ships a new release.
   mdwdsCss: "https://cdn.maryland.gov/mdwds/0.47.4/css/mdwds.min.css",
@@ -75,28 +90,65 @@ const TEMPLATE = fs.readFileSync(path.join(__dirname, "template.html"), "utf8");
  * CONFIG.siteChrome is false.
  */
 /**
- * Extract per-page directive lines from a Markdown source:
- *   Sidebar: <name>       — render with the sidebar defined in
+ * Extract per-page directive lines from a Markdown source. Directives live in
+ * the leading block of the file — every line from the top up to the first
+ * blank line. Recognised keys:
+ *
+ *   Sidebar: <name>        — render with the sidebar defined in
  *                            content/_sidebars/<name>.md
  *   Breadcrumb: [A](x) > [B](y)
- *                          — breadcrumb trail; current page title is
+ *                          — breadcrumb trail; the current page title is
  *                            appended automatically.
- * Returns { sidebar, breadcrumb, cleaned } where `cleaned` is the source
- * with the directive lines removed (so they don't render as text).
+ *   Meta title: <text>     — overrides <title> / og:title / twitter:title.
+ *                            Used verbatim, so include any suffix yourself.
+ *                            Defaults to the page <h1> + CONFIG.titleSuffix.
+ *   Description: <text>    — meta description / og:description. Aim for
+ *                            120–155 characters. Defaults to
+ *                            CONFIG.defaultDescription.
+ *   Image: <path|url>      — og:image / twitter:image. Site-root-relative
+ *                            (NOT relative to this .md file) or absolute.
+ *                            1200x630 recommended. Defaults to
+ *                            CONFIG.defaultImage.
+ *
+ * Unknown keys in the leading block (Template:, Title:) are left in place so
+ * downstream parsers — buildSdlcPage() in particular — still see them.
+ * Scanning stops at the first blank or non-directive line, so a body line
+ * that happens to start with "Description:" is never swallowed.
+ *
+ * Returns { sidebar, breadcrumb, metaTitle, description, image, cleaned }
+ * where `cleaned` is the source with the consumed directive lines removed.
  */
+// Directives recognised in the leading block, mapped to the key they set.
+const DIRECTIVES = {
+  sidebar: "sidebar",
+  breadcrumb: "breadcrumb",
+  description: "description",
+  image: "image",
+  "meta title": "metaTitle",
+};
+
 function parseDirectives(src) {
-  let sidebar = null;
-  let breadcrumb = null;
-  const cleaned = src
-    .split(/\r?\n/)
-    .filter((line) => {
-      let m;
-      if ((m = line.match(/^Sidebar:\s*(.+)\s*$/i))) { sidebar = m[1].trim(); return false; }
-      if ((m = line.match(/^Breadcrumb:\s*(.+)\s*$/i))) { breadcrumb = m[1].trim(); return false; }
-      return true;
-    })
-    .join("\n");
-  return { sidebar, breadcrumb, cleaned };
+  const lines = src.split(/\r?\n/);
+  const out = { sidebar: null, breadcrumb: null, description: null, image: null, metaTitle: null };
+
+  // Only scan the leading block (up to the first blank line). This keeps a
+  // body line that happens to start with "Description:" from being silently
+  // swallowed, and leaves unknown keys (Template:, Title:) in place for the
+  // SDLC parser downstream.
+  let i = 0;
+  for (; i < lines.length; i++) {
+    const line = lines[i];
+    if (!line.trim()) break;
+    const m = line.match(/^([A-Za-z][A-Za-z ]{0,20}):\s*(.+?)\s*$/);
+    if (!m) break;
+    const key = DIRECTIVES[m[1].trim().toLowerCase()];
+    if (!key) continue;            // unknown key: leave the line alone
+    out[key] = m[2].trim();
+    lines[i] = null;               // consumed
+  }
+
+  out.cleaned = lines.filter((l) => l !== null).join("\n");
+  return out;
 }
 
 /**
@@ -225,6 +277,53 @@ function buildBreadcrumbNav(line, pageTitle, pageUrl) {
     `<ol class="usa-breadcrumb__list">${crumbs.join("")}</ol>` +
     `</nav></div>`
   );
+}
+
+/** Resolve a site-relative path against CONFIG.siteUrl. Absolute URLs pass through. */
+function absoluteUrl(relPath) {
+  if (!relPath) return "";
+  if (/^(https?:)?\/\//i.test(relPath)) return relPath;
+  const base = CONFIG.siteUrl.replace(/\/?$/, "/");
+  return base + String(relPath).replace(/^\//, "");
+}
+
+/**
+ * Build the per-page <head> metadata block: canonical link, description, and
+ * the Google/Open Graph/Twitter tag trio. Fields left empty are omitted
+ * entirely rather than emitted blank.
+ */
+function buildHeadMeta({ title, description, image, pageUrl }) {
+  const url = absoluteUrl(pageUrl);
+  const img = absoluteUrl(image || CONFIG.defaultImage);
+  const desc = description || CONFIG.defaultDescription || "";
+
+  const tags = [];
+  const meta = (attr, key, content) => {
+    if (content) tags.push(`    <meta ${attr}="${key}" content="${escapeHtml(content)}" />`);
+  };
+
+  if (url) tags.push(`<link rel="canonical" href="${escapeHtml(url)}" />`);
+  meta("name", "description", desc);
+
+  tags.push("", "    <!-- Google / Search Engine Tags -->");
+  meta("itemprop", "name", title);
+  meta("itemprop", "description", desc);
+  meta("itemprop", "image", img);
+
+  tags.push("", "    <!-- Open Graph / Facebook -->");
+  meta("property", "og:url", url);
+  meta("property", "og:type", "website");
+  meta("property", "og:title", title);
+  meta("property", "og:description", desc);
+  meta("property", "og:image", img);
+
+  tags.push("", "    <!-- Twitter / X -->");
+  meta("name", "twitter:card", img ? "summary_large_image" : "summary");
+  meta("name", "twitter:title", title);
+  meta("name", "twitter:description", desc);
+  meta("name", "twitter:image", img);
+
+  return tags.join("\n").replace(/\n+$/,"");
 }
 
 function buildChrome() {
@@ -1012,8 +1111,11 @@ function build() {
     const sourceDir = dir === "." ? "" : dir + "/";
     const pageUrl = name + "/";                   // e.g. "launchpad/stage-1/"
 
-    // Per-page directives (Sidebar: / Breadcrumb:) apply to both templates.
-    const { sidebar, breadcrumb, cleaned: src } = parseDirectives(rawSrc);
+    // Per-page directives. Sidebar:/Breadcrumb: apply to both templates; the
+    // metadata directives are only consumed by the standard template below.
+    const {
+      sidebar, breadcrumb, description, image, metaTitle, cleaned: src,
+    } = parseDirectives(rawSrc);
     const sidebarHtml = sidebar ? buildSidebarNav(sidebar, pageUrl) : "";
 
     // Files declaring "Template: sdlc" render as the interactive timeline.
@@ -1051,8 +1153,16 @@ function build() {
     }
 
     const chrome = buildChrome();
+    const headTitle = metaTitle || title + (CONFIG.titleSuffix || "");
+
     const page = interpolate(TEMPLATE, {
-      TITLE: escapeHtml(title),
+      TITLE: escapeHtml(headTitle),
+      HEAD_META: buildHeadMeta({
+        title: headTitle,
+        description,
+        image,
+        pageUrl,
+      }),
       MDWDS_CSS: CONFIG.mdwdsCss,
       SITE_HEADER: chrome.header,
       SITE_FOOTER: chrome.footer,
