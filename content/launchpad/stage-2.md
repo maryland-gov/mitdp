@@ -9,9 +9,9 @@ Stage 2 of the Launchpad focuses on your strategy for implementation, including 
 
 ## Overview
 
-The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). [Stage 1](/mitdp/launchpad/stage-1/) sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and this stage gets into the details of how your team will deliver on our investment. {.intro}
+The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). [Stage 1](/mitdp/launchpad/stage-1/) sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment. {.intro}
 
-Stage 2 consists of 6 sections, with a total of 7 required worksheets. All 7 required worksheets must be submitted in full for your Stage 2 submission to be accepted.
+Stage 2 consists of 6 sections, including 7 required worksheets. All required worksheets must be submitted in full for your Stage 2 submission to be accepted.
 
 State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
 
@@ -48,11 +48,11 @@ To complete this section of the Launchpad, you will start by completing the [Tec
 
 In the case that you’re already confident about which technology will be best, you’ll need to fill out the Implementation Strategy worksheet, which is described below.
 
-But it’s ok if you aren’t confident about this yet\! In the case it would be helpful to evaluate options for what technology might be best, you can fill out the Alpha Testing Strategy worksheet instead. This will help you scope an “Alpha Phase” for your project, during which you’ll be able to test and evaluate technology options to get a better understanding of what might work best to solve your Core Problems and address your user needs.
+*But it’s ok if you aren’t confident about this yet\!* In the case it would be helpful to evaluate options for what technology might be best, you can fill out the Alpha Testing Strategy worksheet instead. This will help you scope an “Alpha Phase” for your project, during which you’ll be able to test and evaluate technology options to get a better understanding of what might work best to solve your Core Problems and address your user needs.
 
 At the end of your Alpha phase, you’ll still need to complete the other steps, including filling the Implementation Strategy worksheet and completing a 90-Day Build, but these steps will hopefully be much easier after testing your preferred solution with real-world use cases.
 
-![Diagram showing this process in a visual format, from left to right](/mitdp/content/images/alpha-choice-flow-v01.svg)
+![Diagram showing this process in a visual format, from left to right](/mitdp/images/alpha-choice-flow-v01.svg)
 
 ####
 
@@ -86,9 +86,9 @@ Please include descriptions of:
 
 If your team is confident about which technology will be best for your MITDP, you’ll fill out the Implementation Strategy worksheet. This worksheet has three parts:
 
-1. Systems & Architecture Considerations
+1. Delivery Strategy
 
-2. Delivery Strategy
+2. Systems & Architecture Considerations
 
 3. Plan for 90-Day Build
 
