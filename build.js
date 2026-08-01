@@ -718,6 +718,21 @@ function decorate(html, pageContext = { sourceDir: "", pageUrl: "" }) {
     if (/^https?:\/\//i.test(finalHref)) {
       $el.addClass("usa-link--external").attr("rel", "noopener");
     }
+
+    // 4b. Links to downloadable file assets (Word, Excel, PowerPoint, PDF,
+    //     zip) get the HTML `download` attribute so the browser saves the
+    //     file instead of navigating to it or handing it to a viewer
+    //     plugin. `download` only takes effect for same-origin URLs, which
+    //     these are — external links are skipped deliberately.
+    if (
+      !/^https?:\/\//i.test(finalHref) &&
+      /\.(docx?|xlsx?|pptx?|pdf|zip)(\?|#|$)/i.test(finalHref)
+    ) {
+      const filename = decodeURIComponent(
+        finalHref.split(/[?#]/)[0].split("/").pop()
+      );
+      $el.attr("download", filename);
+    }
   });
 
   // 5. Rewrite <img src> the same way so relative image paths resolve
