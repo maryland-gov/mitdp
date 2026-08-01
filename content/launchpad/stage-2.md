@@ -385,7 +385,7 @@ We may review these risks with your stakeholders as part of the MITDP approval p
 
 You may find it helpful to consider the following potential risk sources, which are also included in the “Category” dropdown within the Key Risks worksheet.
 
-| Technology Implementation Procurement / Contracting Privacy & Security Infrastructure & Integrations Data Management | Stakeholder Availability Staffing & Expertise Prioritization & Product Management Budget & Funding Timelines & Milestones | Legal & Policy Legislative Priorities Change Management External Dependencies |
+| <ul><li>Technology Implementation</li><li>Procurement / Contracting</li> <li>Privacy & Security</li> <li>Infrastructure & Integrations</li> <li>Data Management</li> | <li>Stakeholder Availability</li> <li>Staffing & Expertise</li> <li>Prioritization & Product Management</li> <li>Budget & Funding</li> <li>Timelines & Milestones</li> | Legal & Policy Legislative Priorities Change Management External Dependencies |
 | :---- | :---- | :---- |
 
 ### Required worksheets {#key-risks-worksheet}
