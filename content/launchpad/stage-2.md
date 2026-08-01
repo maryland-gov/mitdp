@@ -9,7 +9,7 @@ Stage 2 of the Launchpad focuses on your strategy for implementation, including 
 
 ## Overview
 
-The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment.
+The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). Stage 1 sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment. {.intro}
 
 Stage 2 consists of 6 sections, with a total of 7 required worksheets. All 7 required worksheets must be submitted in full for your Stage 2 submission to be accepted.
 
