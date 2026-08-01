@@ -12,7 +12,7 @@ Stage 2 of the [Launchpad](launchpad.md) focuses on your strategy for implementa
 
 The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sdlc/) for Major IT Development Projects (MITDPs). [Stage 1](/mitdp/launchpad/stage-1/) sets that foundation with some of the basic tenets for why the State of Maryland should invest in your MITDP, and Stage 2 gets into the details of how your team will deliver on our investment. {.intro}
 
-Stage 2 consists of 6 sections, including 7 required worksheets. All required worksheets must be submitted in full for your Stage 2 submission to be accepted.
+Stage 2 consists of 6 sections, including 7 required worksheets. All required worksheets must be submitted in full for your submission to be accepted.
 
 State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section.
 
@@ -386,8 +386,21 @@ We may review these risks with your stakeholders as part of the MITDP approval p
 
 You may find it helpful to consider the following potential risk sources, which are also included in the “Category” dropdown within the Key Risks worksheet.
 
-| <ul><li>Technology Implementation</li><li>Procurement / Contracting</li> <li>Privacy & Security</li> <li>Infrastructure & Integrations</li> <li>Data Management</li> | <li>Stakeholder Availability</li> <li>Staffing & Expertise</li> <li>Prioritization & Product Management</li> <li>Budget & Funding</li> <li>Timelines & Milestones</li> | Legal & Policy Legislative Priorities Change Management External Dependencies |
-| :---- | :---- | :---- |
+- Technology Implementation
+- Procurement / Contracting
+- Privacy & Security
+- Infrastructure & Integrations
+- Data Management
+- Stakeholder availability
+- Staffing & Expertise
+- Prioritization & Product Management
+- Budget & Funding
+- Timelines & Milestones
+- Legal & Policy
+- Legislative Priorities
+- Change Management
+- External Dependencies
+
 
 ### Required worksheets {#key-risks-worksheet}
 
