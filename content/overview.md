@@ -23,7 +23,7 @@ MITDP funds cannot pay for ongoing operating costs, software or hardware mainten
 
 ## MITDP Resources {.card-grid}
 
-| [Dashboard](http://mitdp.maryland.gov) Data on the schedules, costs, and progress of all current MITDPs | [Oversight Process](https://doit.maryland.gov/MITDP-Oversight/Pages/process.aspx) Operational processes, including oversight requirements, policies, guidance, and how to become a new MITDP |
+| [Dashboard](http://mitdp.maryland.gov) Data on the schedules, costs, and progress of all current MITDPs | [Oversight Process](https://doit.maryland.gov/MITDP-Oversight/Pages/process.aspx) Operational processes, including oversight requirements, policies, and compliance |
 | :---- | :---- |
 | [System Development Life Cycle (SDLC)](https://maryland-gov.github.io/mitdp/sdlc) Our updated SDLC ensures user-centered, iterative service delivery to reduce risk and maximize value for the people of Maryland | [Launchpad](https://maryland-gov.github.io/mitdp/launchpad) The Launchpad supports our SDLC to ensure that projects are clearly defined and have plans for implementation that are highly likely to succeed |
 | [Staffing Requirements](https://maryland-gov.github.io/mitdp/staffing-requirements) Effective July 2026, all MITDPs must be staffed with specific leadership roles to ensure successful project outcomes | |
