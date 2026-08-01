@@ -401,6 +401,8 @@ You may find it helpful to consider the following potential risk sources, which 
 - Change Management
 - External Dependencies
 
+<br>
+<br>
 
 ### Required worksheets {#key-risks-worksheet}
 
@@ -422,7 +424,7 @@ We will evaluate the materials you provide based on the following criteria:
 | **4** | Each key risk includes a response plan that is reasonable and achievable | We’ll review your responses under the heading “How you’ll prevent this from happening” to assess whether it includes reasonable and achievable methods of preventing the key risk from occurring |
 | **5** | Each key risk includes at least one (1) warning sign or leading indicator, including a plan for how to monitor for that warning sign over time | We’ll review each list of warning signs and plans for monitoring those signs over time to assess if all likely warning signs are included and if the plans for monitoring those signs are reasonable and achievable |
 | **6** | Each key risk includes a contingency plan that is reasonable and achievable | We’ll review your responses for contingency plans to assess whether they are reasonable and achievable  |
-|  | Alignment with key stakeholders | We’ll review your documentation of key risks with the stakeholders on your Advisory Team, as well as your agency’s CIO and executive leadership to ensure that all key risks have been identified and have been prioritized appropriately |
+| **7** | Alignment with key stakeholders | We’ll review your documentation of key risks with the stakeholders on your Advisory Team, as well as your agency’s CIO and executive leadership to ensure that all key risks have been identified and have been prioritized appropriately |
 
 ##
 
@@ -562,6 +564,5 @@ We will evaluate the materials you provide based on the following criteria:
 
 
 
-
-[Go to Launchpad Stage 1](/mitdp/launchpad/stage-1/){.button}
-[Go to Launchpad Overview](/mitdp/launchpad/){.button .outline}
+[Go to Launchpad Overview](/mitdp/launchpad/){.button}
+[Go to Launchpad Stage 1](/mitdp/launchpad/stage-1/){.button .outline}
