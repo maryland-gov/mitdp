@@ -124,8 +124,8 @@ For this section, you are required to use the following worksheets:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| [**User Research Summary worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) |  [Word Document](/mitdp/content/launchpad/User-Research-Summary.docx) |
-| [**Primary User Groups worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) |  [Word Document](ADDLINK) |
+| [**User Research Summary worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.0) |  [Word Document](/mitdp/launchpad/User-Research-Summary.docx) |
+| [**Primary User Groups worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.koz5vcniq49d) |  [Word Document](/mitdp/launchpad/Primary-User-Groups.docx) |
 
 ### Acceptance criteria
 
@@ -209,7 +209,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| [**Core Problems & Definition of Success worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) |  [Word Document](ADDLINK) |
+| [**Core Problems & Definition of Success worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) |  [Word Document](/mitdp/content/launchpad/Core-Problems.docx) |
 
 
 ### Acceptance criteria
@@ -263,7 +263,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| [**Product Strategy worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) |  [Word Document](ADDLINK) |
+| [**Product Strategy worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) |  [Word Document](/mitdp/content/launchpad/Product-Strategy.docx) |
 
 ### Acceptance criteria
 
