@@ -14,7 +14,7 @@ The Launchpad is the foundation of our [System Development Life Cycle](/mitdp/sd
 
 Stage 2 consists of 6 sections, including 7 required worksheets. All required worksheets must be submitted in full for your Stage 2 submission to be accepted.
 
-State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
+State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section.
 
 
 ## Sections {.toc}
@@ -133,9 +133,10 @@ For this section, you are required to use the following worksheets:
 
 | Worksheet | Link | Notes |
 | :---- | :---- | :---- |
-| Technology Options Worksheet | [Technology Options Worksheet](?tab=t.0) | This worksheet is required for all projects |
-| Optional: Alpha Strategy Worksheet | [Alpha Strategy Worksheet](?tab=t.38xaiijca8te) | Fill out this worksheet if it would be helpful to conduct an Alpha phase to evaluate options for what technology might be best |
-| Implementation Strategy Worksheet  | [Implementation Strategy Worksheet](?tab=t.meivvo4rhfqb) | Fill out this worksheet if your team is already confident about which technology will be best |
+| Technology Options Worksheet | [Technology Options Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.0
+) | This worksheet is required for all projects |
+| Optional: Alpha Strategy Worksheet | [Alpha Strategy Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.38xaiijca8te) | Fill out this worksheet if it would be helpful to conduct an Alpha phase to evaluate options for what technology might be best |
+| Implementation Strategy Worksheet  | [Implementation Strategy Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.meivvo4rhfqb) | Fill out this worksheet if your team is already confident about which technology will be best |
 
 ### Acceptance criteria
 
@@ -224,7 +225,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |
 | :---- | :---- |
-| Stakeholder Strategy worksheet | [Stakeholder Strategy Worksheet](https://docs.google.com/spreadsheets/d/1rSSvZo3oRGQ_7CRQ0JCpB1bvpTOXHUQ68DE3REOGc14/edit?gid=0#gid=0) |
+| Stakeholder Strategy worksheet | [Stakeholder Strategy Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.fkjrrcjg93mg) |
 
 ### Acceptance criteria
 
@@ -344,8 +345,8 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link | Notes |
 | :---- | :---- | :---- |
-| Staffing & Leadership Strategy for New Projects | [Staffing & Leadership Strategy (new projects)](?tab=t.kwii7o5yz5z6) | Use this worksheet if your project is in Discovery, Planning, or Procurement |
-| Staffing & Leadership Strategy for Existing Projects | [Staffing & Leadership Strategy (existing projects)](?tab=t.grl0oyg3yv5w) | Use this worksheet if your project is in Implementation and Delivery |
+| Staffing & Leadership Strategy for New Projects | [Staffing & Leadership Strategy (new projects)](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.kwii7o5yz5z6) | Use this worksheet if your project is in Discovery, Planning, or Procurement |
+| Staffing & Leadership Strategy for Existing Projects | [Staffing & Leadership Strategy (existing projects)](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.grl0oyg3yv5w) | Use this worksheet if your project is in Implementation and Delivery |
 
 ### Acceptance criteria
 
@@ -393,7 +394,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |
 | :---- | :---- |
-| Key Risks Worksheet | [Key Risks](?tab=t.no18wnykk03u) |
+| Key Risks Worksheet | [Key Risks](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.no18wnykk03u) |
 
 ### Acceptance criteria
 
@@ -478,7 +479,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |
 | :---- | :---- |
-| Cost Estimate worksheet | [Cost Estimate](https://docs.google.com/spreadsheets/d/1dOSzkMpx7NB5SCLEs5VB5qodGHHOOZArnMkIosGxfGk/edit?gid=0#gid=0) |
+| Cost Estimate worksheet | [Cost Estimate](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.pwhth514phci) |
 
 ### Acceptance criteria
 
@@ -534,7 +535,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |
 | :---- | :---- |
-| Project Vitals Worksheet | [Project Vitals](?tab=t.m95yewcdfmyd) |
+| Project Vitals Worksheet | [Project Vitals](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.m95yewcdfmyd) |
 
 ### Acceptance criteria
 
