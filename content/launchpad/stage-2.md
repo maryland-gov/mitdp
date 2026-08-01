@@ -6,7 +6,7 @@ Image: /content/images/stage-1.png
 
 # Stage 2
 
-Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best and how you'll build a team that can address the Core Problems that your MITDP exists to solve. {.intro}
+Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best and how you'll build a team that can address the Core Problems that your MITDP exists to solve.{.intro}
 
 ## Overview
 
