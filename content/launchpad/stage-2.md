@@ -187,7 +187,7 @@ The worksheet organizes your stakeholders by **level of engagement** and **subje
 **Level of Engagement**  
 For levels of engagement, we’re using a framework with four levels, which are based on how often the stakeholder is expected to interact with your project and what types of activities or input you expect during those interactions.
 
-![][image2]
+![Diagram showing each group as nested circles. This information is also included in the table below.](/mitdp/images/nested-teams-v01.svg)
 
 | Engagement level | Time commitment | Expected activities | Expected actions |
 | :---- | :---- | :---- | :---- |
@@ -247,7 +247,7 @@ To be approved for MITDP status, your staffing strategy must meet the MITDP staf
 
 For this section of your Launchpad, use the worksheet linked below to identify your project sponsor, project leadership team, and project core team members and open positions. Your strategy should reflect your staffing plans through the end of your 90-Day Build. At the end of that period, we will discuss changes in staffing based on your experiences in producing the 90-Day Build.
 
-![][image3]
+![Diagram showing roles as an organizational chart. This information is also included in the table below.](/mitdp/images/nested-teams-v01.svg)
 
 #### Required roles across all phases
 
