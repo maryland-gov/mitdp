@@ -28,7 +28,7 @@ State of Maryland employees with access to Google Docs can access all of the wor
 
 ## Implementation Strategy {#implementation-strategy}
 
-| A successful Implementation Strategy ensures that: Your team is ready to move forward once you have funding. Your team will deliver working software (in a test environment if not production) within 90 days. Your team has identified and assessed various solution paths and technical considerations and has a well-grounded theory of the best option. Your team has broken down the work to be done into smaller pieces, thought through how they fit together, and identified the unknowns you’ll need to resolve throughout the project. |
+| A successful Implementation Strategy ensures that: 1. Your team is ready to move forward once you have funding 2. Your team will deliver working software (in a test environment if not production) within 90 days 3. Your team has identified and assessed various solution paths and technical considerations and has a well-grounded theory of the best option 4. Your team has broken down the work to be done into smaller pieces, thought through how they fit together, and identified the unknowns you’ll need to resolve throughout the project |
 | :---- |
 
 Your implementation strategy tells us how you are planning to approach solving your core problems and achieving your definition of success. Crucially, this is NOT a project plan. Instead, your implementation strategy is based on the assumption that there are many things you do not yet know about how the project will go. It is intended to give us confidence that you have a strategy for minimizing risk, resolving uncertainty, learning as you go, and delivering quickly and cheaply.  Instead of asking for a plan, we ask for:
@@ -170,7 +170,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Stakeholder Engagement Strategy  {#stakeholder-engagement-strategy}
 
-| A successful stakeholder engagement strategy ensures that: Relevant stakeholders are aware of your project and prepared for any impact it will have on them Each stakeholder will have sufficient opportunities to track the project’s progress and provide feedback at relevant intervals Stakeholders are organized into groups based on the level of feedback and/or support that you might need from them |
+| A successful stakeholder engagement strategy ensures that: 1. Relevant stakeholders are aware of your project and prepared for any impact it will have on them 2. Each stakeholder will have sufficient opportunities to track the project’s progress and provide feedback at relevant intervals 3. Stakeholders are organized into groups based on the level of feedback and/or support that you might need from them |
 | :---- |
 
 ### Guidance for completing this step {#guidance-for-completing-this-step}
@@ -233,7 +233,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Staffing and Leadership Strategy {#staffing-and-leadership-strategy}
 
-| A successful Staffing and Leadership Strategy ensures that: The project has the right staff with the right skillsets dedicated to the project. The project has the right number of staff to move at a reasonable pace. |
+| A successful Staffing and Leadership Strategy ensures that: 1. The project has the right staff with the right skillsets dedicated to the project 2. The project has the right number of staff to move at a reasonable pace |
 | :---- |
 
 To be approved for MITDP status, your staffing strategy must meet the MITDP staffing requirements, which includes having a UX Lead, Technical Product Manager, and a Technical Lead / Architect.
@@ -356,7 +356,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Assessment of Key Risks {#key-risks}
 
-| A successful assessment of key risks ensures that: Stakeholders and team members have shared awareness and alignment on risks that might cause the project to fail  Your team has developed adequate mitigation strategies for the most likely scenarios, reducing negative impacts and preventing project failure Your team is able to set up monitoring for early warning indicators that can signal when a prioritized risk might be materializing |
+| A successful assessment of key risks ensures that: 1. Stakeholders and team members have shared awareness and alignment on risks that might cause the project to fail 2. Your team has developed adequate mitigation strategies for the most likely scenarios, reducing negative impacts and preventing project failure 3. Your team is able to set up monitoring for early warning indicators that can signal when a prioritized risk might be materializing |
 | :---- |
 
 Your risk assessment should focus on significant risks that could lead to project failure, meaning that the project does not solve the core problems or deliver the success conditions you’ve identified. Notably, these are different from the types of risks specific to maintaining a project on-time and on-budget. We want to empower your team to be iterative and user-centered, which means that your budget or timelines may need to change based on what you learn over the course of your project. (Which can be a good thing if it means that your project will be more successful\!)
@@ -405,7 +405,7 @@ We will evaluate the materials you provide based on the following criteria:
 
 ## Cost Estimate {#cost-estimate}
 
-| A reasonable cost estimate communicates: What you think you will need to spend money on to solve the core problem from initiation through to transition How much it will cost Where your estimate came from or how you developed your estimate What existing contract(s) you plan to leverage, if known |
+| A reasonable cost estimate communicates: 1. What you think you will need to spend money on to solve the core problem from initiation through to transition 2. How much it will cost. 3. Where your estimate came from or how you developed your estimate 4. What existing contract(s) you plan to leverage, if known |
 | :---- |
 
 Your cost estimate will change over time as you learn more and contracts are awarded.
