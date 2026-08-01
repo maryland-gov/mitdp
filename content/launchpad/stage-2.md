@@ -135,8 +135,7 @@ For this section, you are required to use the following worksheets:
 
 | Worksheet | Link | Notes |
 | :---- | :---- | :---- |
-| Technology Options Worksheet | [Technology Options Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.0
-) | This worksheet is required for all projects |
+| Technology Options Worksheet | [Technology Options Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.0) | This worksheet is required for all projects |
 | Optional: Alpha Strategy Worksheet | [Alpha Strategy Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.38xaiijca8te) | Fill out this worksheet if it would be helpful to conduct an Alpha phase to evaluate options for what technology might be best |
 | Implementation Strategy Worksheet  | [Implementation Strategy Worksheet](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8?tab=t.meivvo4rhfqb) | Fill out this worksheet if your team is already confident about which technology will be best |
 
