@@ -209,7 +209,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| [**Core Problems & Definition of Success worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) |  [Word Document](/mitdp/content/launchpad/Core-Problems.docx) |
+| [**Core Problems & Definition of Success worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.hcgv7rfr0i16) |  [Word Document](/mitdp/launchpad/Core-Problems.docx) |
 
 
 ### Acceptance criteria
@@ -263,7 +263,7 @@ For this section, you are required to use the following worksheet:
 
 | Worksheet | Link |  Download  |
 | :---- | :---- | :---- |
-| [**Product Strategy worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) |  [Word Document](/mitdp/content/launchpad/Product-Strategy.docx) |
+| [**Product Strategy worksheet**](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) | [Google Document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?tab=t.wo4orbjm22ni) |  [Word Document](/mitdp/launchpad/Product-Strategy.docx) |
 
 ### Acceptance criteria
 
