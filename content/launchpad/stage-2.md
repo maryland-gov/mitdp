@@ -53,9 +53,14 @@ In the case that you’re already confident about which technology will be best,
 
 At the end of your Alpha phase, you’ll still need to complete the other steps, including filling the Implementation Strategy worksheet and completing a 90-Day Build, but these steps will hopefully be much easier after testing your preferred solution with real-world use cases.
 
+<br>
+<br>
+
 ![Diagram showing this process in a visual format, from left to right](/mitdp/images/alpha-choice-flow-v01.svg)
 
-####
+<br>
+<br>
+
 
 ### Optional step: Starting with an Alpha phase
 
