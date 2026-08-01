@@ -16,6 +16,8 @@ Stage 2 consists of 6 sections, including 7 required worksheets. All required wo
 
 State of Maryland employees with access to Google Docs can access all of the worksheets for Stage 2 in [this Google document](https://docs.google.com/document/d/119gFVwRVaQBXc-2IgpCesQuEtvwiEQWLwdl-3Ko_9r8/edit?tab=t.qmufjz9f2mda). Individual links to each worksheet are also available in the guidance for each section.
 
+State of Maryland employees can also see [this example](https://drive.google.com/file/d/1YmS50BQns2lS_WtGHDy-1yPMjRXYFEDN/view?usp=drivesdk) of an accepted Launchpad to understand what we're looking for with Stage 1.
+
 
 ## Sections {.toc}
 - [Implementation Strategy](#implementation-strategy)
