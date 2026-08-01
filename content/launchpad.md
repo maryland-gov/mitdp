@@ -1,5 +1,7 @@
 Sidebar: launchpad-overview
 Breadcrumb: [MITDP Oversight](overview.md)
+Meta title: Launchpad | Major IT Development Project (MITDP) Oversight | State of Maryland
+Description: The Launchpad is a structure for ensuring that all Major IT Development Projects (MITDPs) are clearly defined around objectives for service delivery and have plans for implementation that are highly likely to succeed.
 
 # Launchpad
 

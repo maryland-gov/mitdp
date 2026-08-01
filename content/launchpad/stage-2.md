@@ -1,6 +1,6 @@
-Sidebar: stage-1-sidebar
+Sidebar: stage-2-sidebar
 Breadcrumb: [MITDP Oversight](overview.md) > [Launchpad](launchpad.md)
-Meta title: Launchpad Stage 2 | Major IT Project (MITDP) Oversight | State of Maryland
+Meta title: Launchpad Stage 2 | Major IT Development Project (MITDP) Oversight | State of Maryland
 Description: Stage 2 of the Launchpad focuses on your strategy for implementation, including how you'll determine what technology options are best, how you'll demonstrate working software within 90 days, how you'll build a team that can deliver on your success metrics, and how you'll work across stakeholders and known risk areas to address the Core Problems that your MITDP exists to solve.
 Image: /mitdp/images/stage-2.png
 
