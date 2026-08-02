@@ -16,6 +16,8 @@ Stage 1 consists of three sections, with a total of four required worksheets. Al
 
 State of Maryland employees with access to Google Docs can access all four worksheets in [this Google document](https://docs.google.com/document/d/1nErXJG0aP2LVsYvZm0JZ8QSzD6n8rau6kR1nI98lnGg/edit?usp=sharing). Individual links to each worksheet are also available in the guidance for each section, as well as a link to download a version of the worksheet in the Microsoft Word .doc format.
 
+For an example of an approved submission of Stage 1 of Launchpad, [see this document](https://drive.google.com/file/d/1YmS50BQns2lS_WtGHDy-1yPMjRXYFEDN/view?usp=drivesdk). (Note that this link is only accessible for State of Maryland employees.)
+
 ## Sections {.toc}
 
 - [Understanding of User Needs](#understanding-of-user-needs)
