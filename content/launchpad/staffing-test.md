@@ -121,7 +121,7 @@ The Delivery Manager supports the day-to-day performance of the team, managing l
 
 #### Quality Assurance (QA) Lead {#qa-lead}
 
-The Quality Assurance Lead directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. {.intro}
+The **Quality Assurance Lead** directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. {.intro}
 
 | Responsibilities | Qualifications |
 | :---- | :---- |
