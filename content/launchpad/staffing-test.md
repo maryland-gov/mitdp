@@ -5,6 +5,8 @@ Image: /midtp/images/mitdp-team-roles.jpg
 
 # MITDP Staffing Requirements
 
+## Overview
+
 As of July 2026, all Major IT Development Projects (MITDPs) are required to have filled specific project leadership roles to drive successful project outcomes and optimize state investments in technology. This increases the likelihood that projects will deliver functional solutions for users. {.intro}
 
 ## Required roles across all phases {#required-roles}
@@ -14,10 +16,10 @@ All projects must have staff assigned to the following roles at all times. For s
 | Name of role | Description |
 | :---- | :---- |
 | **Project Sponsor** | Senior executive responsible for supporting the project team in clearing blockers and coordinating across stakeholder groups. |
-| [**Project Lead**](#project-lead) | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect.* |
-| [**Technical Product Manager**](#product-manager) | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. |
-| [**Technical Lead / Architect**](#technical-lead) | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. |
-| [**User Experience (UX) Lead**](#ux-lead) | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs |
+| **Project Lead** | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect. [**See role details**](#project-lead) |
+| **Technical Product Manager** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. [**See roles details**](#product-manager) |
+| **Technical Lead / Architect** | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. [**See role details**](#technical-lead) |
+| **User Experience (UX) Lead** | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs [**See role details**](#ux-lead) |
 
 ##  Required roles for the Delivery phase and Transition phase {#required-roles-delivery}
 
@@ -25,8 +27,8 @@ All projects in the delivery or transition phases must assign staff for the foll
 
 | Name of role | Description |
 | :---- | :---- |
-| **Delivery Manager** | Supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. |
-| **Quality Assurance (QA) Lead** | Directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. |
+| **Delivery Manager** | Supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. [**See role details**](#delivery-manager) |
+| **Quality Assurance (QA) Lead** | Directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. [**See role details**](#qa-lead) |
 
 ## How this works together {#how-this-works}
 
