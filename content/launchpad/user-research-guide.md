@@ -8,7 +8,7 @@ Image: /content/images/user-research.png
 
 ##  Overview
 
-This guide exists to help State of Maryland employees conduct user research that places the needs of Marylanders first. Whether you are building a new product or looking to improve something that already exists, speaking directly with users is one of the best ways to evaluate whether your project is on track for success.
+This guide exists to help State of Maryland employees conduct user research that places the needs of Marylanders first. Whether you are building a new product or looking to improve something that already exists, speaking directly with users is one of the best ways to evaluate whether your project is on track for success. {.intro}
 
 ## How to use this guide
 
@@ -70,7 +70,7 @@ When conducting discovery research, MITDPs will often find user interviews to be
 
 However, if your goal is to evaluate how well a product or design works, you may consider usability testing.  Your design could be anything from a concept to a Figma prototype or flow in production. With a usability test, you observe participants as they complete tasks with your product to identify where the experience works well and where users struggle.
 
-Our guide will offer two interview guide templates– one for user interviews and one for usability testing. If you are an MITDP and still have questions about the best way forward, contact us for more support. 
+Our guide will offer two interview guide templates– one for user interviews and one for usability testing. If you are an MITDP and still have questions about the best way forward, contact us for more support.
 
 ### Determine format and location
 
