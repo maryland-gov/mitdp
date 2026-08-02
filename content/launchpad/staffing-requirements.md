@@ -9,6 +9,7 @@ Image: /midtp/images/mitdp-team-roles.jpg
 
 As of July 2026, all Major IT Development Projects (MITDPs) are required to have filled specific project leadership roles to drive successful project outcomes and optimize state investments in technology. This increases the likelihood that projects will deliver functional solutions for users. {.intro}
 
+
 ## Required roles across all phases {#required-roles}
 
 All projects must have staff assigned to the following roles at all times. For smaller projects, the same member of the Core Team may be able to fill more than one role. {.intro}
@@ -89,7 +90,6 @@ Knowledge of:
 * Developing secure, scalable, and reliable systems
 
 <br>
-<br>
 
 
 ### Technical Product Manager {#product-manager}
@@ -117,7 +117,6 @@ Knowledge of:
 * Modern technologies
 * User-centered development practices
 
-<br>
 <br>
 
 ### Technical Lead / Architect {#technical-lead}
@@ -151,7 +150,6 @@ Focused on:
 * Ensuring a high-quality user experience
 * Secure, scalable, and reliable systems
 
-<br>
 <br>
 
 ### User Experience (UX) Lead {#ux-lead}
@@ -192,7 +190,6 @@ Focused on:
 * Product design
 
 <br>
-<br>
 
 ### Delivery Manager {#delivery-manager}
 
@@ -224,7 +221,6 @@ Focused on:
 * Driving progress
 * Proactive and consistent communication
 
-<br>
 <br>
 
 ### Quality Assurance (QA) Lead {#qa-lead}
