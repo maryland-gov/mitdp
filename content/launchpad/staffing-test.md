@@ -377,9 +377,7 @@ To use the ADEPT contract, start by submitting an intake ticket through [doit.in
 
 ## Enforcement {#enforcement}
 
-This requirement will be enforced the same way other MITDP requirements are enforced: through the monthly health assessments and the resulting project statuses and risk levels reported to DoIT and agency leadership. {.intro}
-
-In practice, this means:
+This requirement will be enforced the same way other MITDP requirements are enforced: through the monthly health assessments and the resulting project statuses and risk levels reported to DoIT and agency leadership. In practice, this means: {.intro}
 
 1. Agencies will indicate the staff members filling each of these roles and provide their resume, LinkedIn, or other background information as and when requested by DoIT. In addition, agencies are expected to update DoIT if the staffing assignments change over time.   
 2. Oversight will review the provided information. Among other things, we will be assessing:  
@@ -390,4 +388,6 @@ In practice, this means:
 3. Oversight will report to DoIT leadership on their assessment of the above and any resulting risks to the project. This information will be incorporated into the reports shared back with the project team and the portfolio summaries shared with the MITDP-owning agency leadership.   
 4. If we are particularly concerned about the results of the monthly assessment for any specific project, we will reach out to the project or agency to discuss the situation.
 
-If a project is performing poorly and consistently unable to fill these roles, DoIT may intervene, up to and including recommending freezing the project’s funding. We recognize that these new requirements place a burden on agencies but we cannot approve the spending of taxpayer dollars on projects that do not have the necessary staff to deliver value for the State and Marylanders.
+If a project is performing poorly and consistently unable to fill these roles, DoIT may intervene, up to and including recommending freezing the project’s funding.
+
+We recognize that these new requirements place a burden on agencies, but we cannot approve the spending of taxpayer dollars on projects that do not have the necessary staff to deliver value for the State and Marylanders.
