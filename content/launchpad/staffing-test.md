@@ -59,25 +59,19 @@ The following sections list the authorities, core responsibilities, and general 
 The Project Lead is responsible for refining the success criteria for the MITDP and ensuring the project achieves those criteria. Due to the nature of the authorities listed below, the person serving in this role must be a State of Maryland employee (PIN or contractual). Notably, the Project Lead has the following authorities: {.intro}
 
 * Authority to control all staffing allocations related to the project, including placing state employees and contractors in specific roles and removing them from others.
-
 * Authority to define the core problems, definitions of success, and success metrics for the MITDP.
-
 * Authority to direct the work of all vendors funded through the MITDP, including authority to make changes to contract scope, size, and duration.
-
 * Authority to direct the work of all staff and contractors on the MITDP to ensure the project meets its success criteria.
 
 If the designated Project Lead is not able to act on these authorities, the MITDP Oversight division may request corrective action.
 
 Each project must have a designated project lead at all times, even if no other required roles are filled. The project lead is accountable to agency leadership and MOD for the overall execution of the project and performance of the team, ensuring the project is delivering the intended value for users and the State. Generally, once the project is staffed, the Project Lead will also hold one of the other roles, often the Technical Product Manager (but can be any of the other leadership roles on the team).
+<br>
 
 **Responsibilities**
-
 * Responsible for the MITDP achieving its success criteria.
-
 * Responsible for ensuring all external stakeholders are up to date on the progress, blockers, etc., and aligned on the outcomes.
-
 * Responsible for managing the project budget and deadlines.
-
 * Responsible for managing the performance of vendors and staff on the team, including taking prompt corrective action in cases of underperformance.
 
 **Qualifications**
@@ -85,14 +79,12 @@ Each project must have a designated project lead at all times, even if no other 
 8+ years of experience in one or more of the following areas: product management, software engineering, service design, and/or product design.
 
 Includes experience with all of the following areas:
-
 * User-centered, iterative product development  
 * Managing high-performance, cross-disciplinary teams  
 * Managing stakeholders across agencies  
 * Managing contracts and vendor performance
 
 Knowledge of:
-
 * Conducting user research directly with end-users  
 * Developing secure, scalable, and reliable systems
 
@@ -105,35 +97,24 @@ Knowledge of:
 The Technical Product Manager directs the work of prioritizing features based on iterative feedback from users, stakeholders, and technical experts. {.intro}
 
 The person in this role has the authority to serve as the strategic owner of development, accountable for the MITDP’s product lifecycle. They also have the authority to control the priority of items in the backlog, and the allocation of items to individual team members. If the designated Technical Product Manager is not able to act on this authority, the MITDP Oversight division may request corrective action.
+<br>
 
 **Responsibilities**
-
 * Responsible for understanding the users, user value, and mission or business value of the product, based on qualitative and quantitative data.
-
 * Responsible for defining and aligning team and leadership around a product vision, strategy, roadmap, and backlog, based on input from users, stakeholders, and policy or technical constraints.
-
 * Responsible for defining both incremental and substantive product improvements and feature sets, including defining value and success criteria from a user and business perspective.
-
 * Responsible for creating and translating the roadmap and product requirements into actionable backlog items. Includes ensuring the team has a shared definition of done for the work and has a process to test and validate delivered user stories.
-
 * Ensuring the team is always working on the highest value outcome and that progress against outcomes is validated with quantitative and qualitative evidence.
 
 **Qualifications**
-
 8+ years of experience in product delivery experience with:
-
 * Leading product teams supporting systems that are in production, particularly at a similar scale to the project
-
 * Leading product teams launching new products or capabilities
-
 * Aligning products and business processes
-
 * Creating and managing a prioritized backlog and roadmap
 
 Knowledge of:
-
 * Modern technologies
-
 * User-centered development practices
 
 <br>
@@ -144,43 +125,30 @@ Knowledge of:
 The Technical Lead / Architect directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user needs. {.intro}
 
 The person in this role has the **authority** to control the code and the infrastructure, as well as the engineering process on the team and the priority of technology-related items in the backlog (like technical debt remediation chores). If the designated Technical Lead / Architect is not able to act on this authority, the MITDP Oversight division may request corrective action.
+<br>
 
 **Responsibilities**
-
 * Responsible for ensuring the engineering team (regardless of whether they are internal or external) is delivering the user-facing functionality the Technical Product Manager prioritizes
-
 * Responsible for ensuring the engineering team (regardless of whether they are internal or external) is delivering the non-functional quality attributes (secure, reliable, performant, defect-free, disaster-recoverable, maintainable, etc.)
-
 * Responsible for vetting and selecting specific technical solutions for meeting product requirements.
 
 **Qualifications**
-
 8+ years of experience with software development
 
 Experience with:
-
 * Developing software, particularly using technologies relevant to the project
-
 * Working in a legacy ecosystem
-
 * Designing architecture and leading technical strategy
-
 * Translating technical plans into actionable work
-
 * Managing software engineers
 
 Knowledge of:
-
 * Modern and legacy technologies, particularly those relevant to the project
-
 * Operating technology systems at scale, including IaaS
 
 Focused on:
-
 * Practical and maintainable solutions
-
 * Ensuring a high-quality user experience
-
 * Secure, scalable, and reliable systems
 
 <br>
@@ -195,15 +163,10 @@ The person in this role has the authority to control how user research is conduc
 **Responsibilities**
 
 * Responsible for understanding the users, user value, and business value of the product, based on qualitative and quantitative data.
-
 * Responsible for defining the overall service experience, UX, and UI of the product and features and translating them into specific requirements for implementation.
-
 * Responsible for planning and executing learning initiatives, both ad hoc and ongoing, in order to ensure the team has the necessary information to make product decisions.
-
 * Responsible for translating the roadmap and product requirements into actionable tickets and ensuring we have the right tickets to complete the work.
-
 * Responsible for leading design staff on the project and ensuring their work is high-quality and in line with product experience strategy.
-
 * Responsible for ensuring the product meets accessibility requirements.
 
 **Qualifications**
@@ -211,33 +174,21 @@ The person in this role has the authority to control how user research is conduc
 8+ years of experience with service, UX, and / or product design
 
 Experience with:
-
 * Managing product designers and user researchers
-
 * Facilitating user research, usability testing, and workshops
-
 * Low-fidelity and high-fidelity prototyping in collaboration with product managers and engineers
-
 * Leading efforts related to discovery and uncovering user needs
 
 Knowledge of:
-
 * UX research methods
-
 * Design systems
-
 * Content strategy
-
 * Iterative, user-centered product development
 
 Focused on:
-
 * Delivering value for users and ensuring a high-quality user experience
-
 * Making research- and data-informed decisions
-
 * Human-centered design
-
 * Product design
 
 <br>
@@ -250,37 +201,27 @@ The Delivery Manager supports the day-to-day performance of the team, managing l
 **Responsibilities**
 
 * Responsible for ensuring dependencies within and across teams are handled properly.
-
 * Responsible for ensuring all team members know what work they need to do and have the resources and information necessary to execute it.
-
 * Responsible for monitoring and continuously improving team health, performance, and communication practices, including collaboration across staff, contractors, and stakeholders.
-
 * Responsible for ensuring risks are identified, communicated, and mitigated across the project lifecycle.
 
 **Qualifications**
 
 6+ years of experience managing agile projects
 
-* Experience with:
-
+Experience with:
 * Running development teams, including writing technical tickets, supporting sprints and / or prioritized backlogs, and leading ceremonies, particularly at a similar scale to the project
-
 * Building out work processes for new teams or new ways of working
 
 Knowledge of:
-
 * Agile, Scrum, Kanban, and/or other iterative development practices
-
 * Iterative, user-centered product development
-
 * Modern technologies
 
 Focused on:
 
 * Ensuring all members of the team know what they need to do
-
 * Driving progress
-
 * Proactive and consistent communication
 
 <br>
