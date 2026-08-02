@@ -72,9 +72,31 @@ If the designated Project Lead is not able to act on these authorities, the MITD
 
 Each project must have a designated project lead at all times, even if no other required roles are filled. The project lead is accountable to agency leadership and MOD for the overall execution of the project and performance of the team, ensuring the project is delivering the intended value for users and the State. Generally, once the project is staffed, the Project Lead will also hold one of the other roles, often the Technical Product Manager (but can be any of the other leadership roles on the team).
 
-| Responsibilities | Qualifications |
-| :---- | :---- |
-| This role is responsible for the MITDP achieving its success criteria. This role is responsible for ensuring all external stakeholders are up to date on the progress, blockers, etc., and aligned on the outcomes. This role is responsible for managing the project budget and deadlines. This role is responsible for managing the performance of vendors and staff on the team, including taking prompt corrective action in cases of underperformance.  | 8+ years of experience in one or more of the following areas: product management, software engineering, service design, and/or product design.  Includes experience with all of the following areas: User-centered, iterative product development Managing high-performance, cross-disciplinary teams Managing stakeholders across agencies Managing contracts and vendor performance Knowledge of: Conducting user research directly with end-users Developing secure, scalable, and reliable systems  |
+**Responsibilities**
+
+* Responsible for the MITDP achieving its success criteria.
+
+* Responsible for ensuring all external stakeholders are up to date on the progress, blockers, etc., and aligned on the outcomes.
+
+* Responsible for managing the project budget and deadlines.
+
+* Responsible for managing the performance of vendors and staff on the team, including taking prompt corrective action in cases of underperformance.
+
+**Qualifications**
+
+8+ years of experience in one or more of the following areas: product management, software engineering, service design, and/or product design.
+
+Includes experience with all of the following areas:
+
+* User-centered, iterative product development  
+* Managing high-performance, cross-disciplinary teams  
+* Managing stakeholders across agencies  
+* Managing contracts and vendor performance
+
+Knowledge of:
+
+* Conducting user research directly with end-users  
+* Developing secure, scalable, and reliable systems
 
 
 
