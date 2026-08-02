@@ -1,4 +1,4 @@
-Sidebar: user-research-guide-sidebar
+Sidebar: staffing-req-sidebar
 Breadcrumb: [MITDP Oversight](overview.md)
 Meta title: As of July 2026, all Major IT Development Projects (MITDPs) are required to have filled specific project leadership roles to drive successful project outcomes and optimize state investments in technology. This increases the likelihood that projects will deliver functional solutions for users.
 Image: /midtp/images/mitdp-team-roles.jpg
@@ -7,19 +7,19 @@ Image: /midtp/images/mitdp-team-roles.jpg
 
 As of July 2026, all Major IT Development Projects (MITDPs) are required to have filled specific project leadership roles to drive successful project outcomes and optimize state investments in technology. This increases the likelihood that projects will deliver functional solutions for users. {.intro}
 
-## Required roles across all phases
+## Required roles across all phases {#required-roles}
 
 All projects must have staff assigned to the following roles at all times. For smaller projects, the same member of the Core Team may be able to fill more than one role. {.intro}
 
 | Name of role | Description |
 | :---- | :---- |
 | **Project Sponsor** | Senior executive responsible for supporting the project team in clearing blockers and coordinating across stakeholder groups. |
-| **Project Lead** | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect.* |
-| **Technical Product Manager, Lead** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. |
-| **Technical Lead / Architect** | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. |
-| **User Experience (UX) Lead** | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs |
+| [**Project Lead**](#project-lead) | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect.* |
+| [**Technical Product Manager**](#product-manager) | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. |
+| [**Technical Lead / Architect**](#technical-lead) | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. |
+| [**User Experience (UX) Lead**](#ux-lead) | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs |
 
-##  Required roles for the Delivery phase and Transition phase
+##  Required roles for the Delivery phase and Transition phase {#required-roles-delivery}
 
 All projects in the delivery or transition phases must assign staff for the following roles to support delivery management and quality assurance. These roles are optional at the start of the project, but are required to be added following the 90-Day Build.
 
@@ -28,7 +28,7 @@ All projects in the delivery or transition phases must assign staff for the foll
 | **Delivery Manager** | Supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. |
 | **Quality Assurance (QA) Lead** | Directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. |
 
-## How this works together
+## How this works together {#how-this-works}
 
 The following diagram maps these roles across the Core and Advisory teams listed in the Launchpad’s guidance for Staffing and Leadership Strategy. {.intro}
 
@@ -48,13 +48,13 @@ The following diagram maps these roles across the Core and Advisory teams listed
 
   * If filling these leadership roles with contractors, the required roles (UX Lead, Technical Product Manager, and Technical Lead / Architect) must be hired through a contractor (or multiple contractors) that are separate and not financially obligated to any of the other contractors working on the team. This is necessary to ensure their ability to oversee the work of the project without financial conflicts of interest.
 
-## Position details
+## Position details {#position-details}
 
 The following sections list the authorities, core responsibilities, and general qualifications for the required roles, and links to sample position descriptions you may find helpful for each of the required roles for your MITDP.  {.intro}
 
-#### Project Lead
+#### Project Lead {#project-lead}
 
-The Project Lead is responsible for refining the success criteria for the MITDP and ensuring the project achieves those criteria. Due to the nature of the authorities listed below, the person serving in this role must be a State of Maryland employee (PIN or contractual).  {.intro}
+The **Project Lead** is responsible for refining the success criteria for the MITDP and ensuring the project achieves those criteria. Due to the nature of the authorities listed below, the person serving in this role must be a State of Maryland employee (PIN or contractual).  {.intro}
 
 Notably, the Project Lead has the following authorities:
 
@@ -76,7 +76,7 @@ Each project must have a designated project lead at all times, even if no other 
 
 
 
-#### Technical Product Manager
+#### Technical Product Manager {#product-manager}
 
 **The Technical Product Manager** directs the work of prioritizing features based on iterative feedback from users, stakeholders, and technical experts. {.intro}
 
@@ -87,7 +87,7 @@ The person in this role has the authority to serve as the strategic owner of dev
 | Responsible for understanding the users, user value, and mission or business value of the product, based on qualitative and quantitative data. Responsible for defining and aligning team and leadership around a product vision, strategy, roadmap, and backlog, based on input from users, stakeholders, and policy or technical constraints. Responsible for defining both incremental and substantive product improvements and feature sets, including defining value and success criteria from a user and business perspective. Responsible for creating and translating the roadmap and product requirements into actionable backlog items. Includes ensuring the team has a shared definition of done for the work and has a process to test and validate delivered user stories.  Ensuring the team is always working on the highest value outcome and that progress against outcomes is validated with quantitative and qualitative evidence. | 8+ years of experience in product delivery experience with: Leading product teams supporting systems that are in production, particularly at a similar scale to the project Leading product teams launching new products or capabilities Aligning products and business processes Creating and managing a prioritized backlog and roadmap Knowledge of: Modern technologies User-centered development practices Conducting user research directly with end-users Focused on: Delivering value for users and ensuring a high-quality user experience Making research- and data-informed decisions Communicating and managing change |
 
 
-####  Technical Lead / Architect
+####  Technical Lead / Architect {#technical-lead}
 
 **The Technical Lead / Architect** directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user needs. {.intro}
 
@@ -99,7 +99,7 @@ The person in this role has the **authority** to control the code and the infras
 
 
 
-#### User Experience (UX) Lead
+#### User Experience (UX) Lead {#ux-lead}
 
 The User Experience Lead directs the work of understanding what your users need and designing better content, tools, and processes to meet those needs {.intro}
 
@@ -109,7 +109,7 @@ The person in this role has the authority to control how user research is conduc
 | :---- | :---- |
 | Responsible for understanding the users, user value, and business value of the product, based on qualitative and quantitative data. Responsible for defining the overall service experience, UX, and UI of the product and features and translating them into specific requirements for implementation. Responsible for planning and executing learning initiatives, both ad hoc and ongoing, in order to ensure the team has the necessary information to make product decisions. Responsible for translating the roadmap and product requirements into actionable tickets and ensuring we have the right tickets to complete the work. Responsible for leading design staff on the project and ensuring their work is high-quality and in line with product experience strategy. Responsible for ensuring the product meets accessibility requirements. | 8+ years of experience with service, UX, and / or product design Experience with: Managing product designers and user researchers Facilitating user research, usability testing, and workshops Low-fidelity and high-fidelity prototyping in collaboration with product managers and engineers Leading efforts related to discovery and uncovering user needs Knowledge of: UX research methods Design systems Content strategy Iterative, user-centered product development Focused on: Delivering value for users and ensuring a high-quality user experience Making research- and data-informed decisions Human-centered design Product design |
 
-#### Delivery Manager
+#### Delivery Manager {#delivery-manager}
 
 The Delivery Manager supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. {.intro}
 
@@ -117,7 +117,7 @@ The Delivery Manager supports the day-to-day performance of the team, managing l
 | :---- | :---- |
 | Responsible for ensuring dependencies within and across teams are handled properly. Responsible for ensuring all team members know what work they need to do and have the resources and information necessary to execute it. Responsible for monitoring and continuously improving team health, performance, and communication practices, including collaboration across staff, contractors, and stakeholders. Responsible for ensuring risks are identified, communicated, and mitigated across the project lifecycle. | 6+ years of experience managing agile projects Experience with: Running development teams, including writing technical tickets, supporting sprints and / or prioritized backlogs, and leading ceremonies, particularly at a similar scale to the project Building out work processes for new teams or new ways of working Knowledge of: Agile, Scrum, Kanban, and/or other iterative development practices Iterative, user-centered product development Modern technologies Focused on: Ensuring all members of the team know what they need to do Driving progress Proactive and consistent communication |
 
-#### Quality Assurance (QA) Lead
+#### Quality Assurance (QA) Lead {#qa-lead}
 
 The Quality Assurance Lead directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. {.intro}
 
@@ -125,7 +125,7 @@ The Quality Assurance Lead directs the work of testing and monitoring the qualit
 | :---- | :---- |
 | Responsible for defining and running QA processes for the product, including feature, system, and regression testing. Responsible for defining QA criteria for individual tickets and QA test sets. Responsible for leading QA staff on the project and ensuring their work is high-quality and following the testing plan(s). | 6+ years of experience with product QA Experience with: Building out and running QA programs for systems that are in production, particularly at a similar scale to the project Managing QA staff Knowledge of: Modern technologies Human-centered design QA and testing tools Usability testing Focused on: Repeatable, scalable, documented testing regimens |
 
-## How to fill these positions
+## How to fill these positions {#how-to-fill}
 
 Filling these roles with new staff who have new skillsets can be a significant challenge, and we’re here to help. We’ve listed several pathways for hiring and/or contracting this talent below; for more details please reach out to [dlmodmissioncontrol\_doit+web@maryland.gov](mailto:dlmodmissioncontrol_doit+web@maryland.gov). {intro}
 
@@ -137,7 +137,7 @@ If filling any of these leadership roles with contractors, the required roles (U
 
 Eventually, DoIT intends to require additional roles to be filled by state employees, but this requires PINs that we know agencies do not currently have. We will notify agencies if and when this policy changes.
 
-### Talent Pipeline Support
+### Talent pipeline support
 
 The Maryland Digital Service (MDDS) has capacity \- although limited \- to assist agencies with a variety of tasks to bring on new staff through any of the vehicles below. As resources permit, MDDS can provide the following services:
 
@@ -149,7 +149,7 @@ The Maryland Digital Service (MDDS) has capacity \- although limited \- to assis
 
 * ## Conduct resume reviews and interviews and give feedback on candidates
 
-### Hiring as Agency Employees
+### Hiring as Agency employees
 
 If you have available PINs, we encourage you to staff these roles with PIN or contractual state employees whenever possible. As described above, MDDS can provide various services to support you in hiring qualified staff.
 
@@ -180,7 +180,7 @@ To use the ADEPT contract, start by submitting an intake ticket through [doit.in
 
 ##
 
-## Enforcement
+## Enforcement {#enforcement}
 
 This requirement will be enforced the same way other MITDP requirements are enforced: through the monthly health assessments and the resulting project statuses and risk levels reported to DoIT and agency leadership. {.intro}
 
