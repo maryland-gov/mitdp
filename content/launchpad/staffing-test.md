@@ -16,10 +16,10 @@ All projects must have staff assigned to the following roles at all times. For s
 | Name of role | Description |
 | :---- | :---- |
 | **Project Sponsor** | Senior executive responsible for supporting the project team in clearing blockers and coordinating across stakeholder groups. |
-| **Project Lead** | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect. [**See role details**](#project-lead) |
-| **Technical Product Manager** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. [**See roles details**](#product-manager) |
-| **Technical Lead / Architect** | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. [**See role details**](#technical-lead) |
-| **User Experience (UX) Lead** | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs [**See role details**](#ux-lead) |
+| **Project Lead** | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect. &nbsp;[See role details](#project-lead) |
+| **Technical Product Manager** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. &nbsp;[See roles details](#product-manager) |
+| **Technical Lead / Architect** | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. &nbsp;[See role details](#technical-lead) |
+| **User Experience (UX) Lead** | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs &nbsp;[See role details](#ux-lead) |
 
 ##  Required roles for the Delivery phase and Transition phase {#required-roles-delivery}
 
@@ -27,8 +27,8 @@ All projects in the delivery or transition phases must assign staff for the foll
 
 | Name of role | Description |
 | :---- | :---- |
-| **Delivery Manager** | Supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. [**See role details**](#delivery-manager) |
-| **Quality Assurance (QA) Lead** | Directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. [**See role details**](#qa-lead) |
+| **Delivery Manager** | Supports the day-to-day performance of the team, managing logistics, coordination across sub-teams, and continuous delivery. &nbsp;[See role details](#delivery-manager) |
+| **Quality Assurance (QA) Lead** | Directs the work of testing and monitoring the quality of the product, including the data it produces and its underlying infrastructure. &nbsp;[See role details](#qa-lead) |
 
 ## How this works together {#how-this-works}
 
@@ -36,7 +36,7 @@ The following diagram maps these roles across the Core and Advisory teams listed
 
 ![Diagram showing roles as an organizational chart. This information is also included in the tables above.](/mitdp/images/mitdp-team-roles.svg)
 
-##  Items to note
+###  Items to note
 
 * **This requirement represents the minimum roles** required at each phase of an MITDP. The project may always choose to have additional staff at the discretion of the team and agency. 
 
@@ -125,7 +125,7 @@ The Quality Assurance Lead directs the work of testing and monitoring the qualit
 
 | Responsibilities | Qualifications |
 | :---- | :---- |
-| Responsible for defining and running QA processes for the product, including feature, system, and regression testing. Responsible for defining QA criteria for individual tickets and QA test sets. Responsible for leading QA staff on the project and ensuring their work is high-quality and following the testing plan(s). | 6+ years of experience with product QA Experience with: Building out and running QA programs for systems that are in production, particularly at a similar scale to the project Managing QA staff Knowledge of: Modern technologies Human-centered design QA and testing tools Usability testing Focused on: Repeatable, scalable, documented testing regimens |
+| <ul><li>Responsible for defining and running QA processes for the product, including feature, system, and regression testing.</li><li>Responsible for defining QA criteria for individual tickets and QA test sets.</li><li>Responsible for leading QA staff on the project and ensuring their work is high-quality and following the testing plan(s).</li></ul> | 6+ years of experience with product QA Experience with: <ul><li>Building out and running QA programs for systems that are in production, particularly at a similar scale to the project</li><li>Managing QA staff</li></ul> Knowledge of:<ul><li> Modern technologies</li><li>Human-centered design</li><li>QA and testing tools</li><li>Usability testing</li></ul> Focused on: <ul><li>Repeatable, scalable, documented testing regimens</li></ul> |
 
 ## How to fill these positions {#how-to-fill}
 
@@ -143,13 +143,10 @@ Eventually, DoIT intends to require additional roles to be filled by state emplo
 
 The Maryland Digital Service (MDDS) has capacity \- although limited \- to assist agencies with a variety of tasks to bring on new staff through any of the vehicles below. As resources permit, MDDS can provide the following services:
 
-* ## Draft or review position descriptions, job announcements, and interview guides
-
-* ## Review staffing RFPs, RFIs, and contracts / work orders / etc.
-
-* ## Promote open roles to various civic tech networks and refer candidates to agencies
-
-* ## Conduct resume reviews and interviews and give feedback on candidates
+* Draft or review position descriptions, job announcements, and interview guides
+* Review staffing RFPs, RFIs, and contracts / work orders / etc
+* Promote open roles to various civic tech networks and refer candidates to agencies
+* Conduct resume reviews and interviews and give feedback on candidates
 
 ### Hiring as Agency employees
 
