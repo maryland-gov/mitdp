@@ -21,7 +21,7 @@ For an example of an approved submission of Stage 1 of Launchpad, [see this docu
 ## Sections {.toc}
 
 - [Understanding of User Needs](#understanding-of-user-needs)
-- [Core Problems & Definition of Success](#core-problems--definition-of-success)
+- [Core Problems & Definition of Success](#core-problems-&-definition-of-success)
 - [Product Strategy](#product-strategy)
 
 
@@ -71,7 +71,6 @@ Note, importantly, that these questions are somewhat subjective, which is why we
 
 Meeting 1-on-1 with individuals also provides a more natural lens toward observing real-world behaviors, such as by asking the interview participant to walk through how something works in their day-to-day working environment and observing how they work with current processes, systems, and tools. This is where your research plan can include elements of participant observation and contextual inquiry.
 
-If you have already hired a UX Lead for your MITDP, it can be reasonable for that individual to lead your user research efforts. In the case that you have not yet filled the UX Lead role, you may need to hire a user research team to support this area of your Launchpad. Feel free to reach out to our MITDP Oversight Division for guidance on how to do so.
 
 #### Primary User Groups
 
@@ -79,30 +78,41 @@ Building on your interviews with users, you’ll identify Primary User Groups (t
 
 An example may help:
 
-> Imagine you are part of a software development team researching the experiences of environmental consultants,
-> who work on behalf of businesses in the state, and who need to maintain their professional licences with the
-> state so that they can continue to serve the business community. 
-> As you research them, you discover the following needs they have as professionals,
-> along with a number of pain points they have in accomplishing those need: 
-> #### Primary User Group: Licensed Environmental Professionals
+> Imagine you are part of a software development team researching the
+> experiences of employees and customers at a popular, nationwide coffee
+> chain. You discover four primary employee user groups within the
+> coffee shop locations: barista, support barista, cashier, and food
+> prep; as well as three primary customer user groups: in-store
+> customers, mobile customers, and drive-thru customers. You conduct
+> user research on all of these employee user groups and customer user
+> groups. When you conduct user research on the “barista” user group,
+> you discover a number of user needs:
+> -   Baristas need a way to control the size of an espresso shot so that they can give customers their desired coffee concentration
+> -   Baristas need a way to control the length of an espresso shot so that they can give customers their desired drink size
+> -   Baristas need a way to vary the amount and consistency of crema and microfoam they use so that they can create the chain’s signature
+> latte art
+>
+> You also discover a number of pain points specific to the “barista”
+> user group:
+> -   Baristas collide with food preppers on average four times each day during busy hours (7AM - 9AM) as they criss-cross the work area
+> performing their duties, increasing Barista workloads by 15% as they
+> must redo orders that are dropped or ruined during these collisions
+> -   Baristas run out of milk for their microfoamers on average three times each day during busy hours (7AM - 9AM), leading to a 12%
+> increase in the amount of time it takes baristas to complete an order
+> on average
+> -   Espresso machines break down on average twice each day during busy hours (7AM - 9AM), leading to a 22% increase in the amount of time it
+> takes baristas to complete an order on average; the breakdown
+> frequency is directly proportional to the triple order frequency
+> -   Through the experience sampling method, we found that Baristas experience low levels of psychological flow and high levels of
+> frustration during busy hours (7AM - 9AM); these negative
+> psychological experiences strongly correlate with the aforementioned
+> breakdowns, outages, and collisions
+> -   Through attitudinal interviews, Baristas reported a belief that cashiers write down orders wrong 50% of the time; through ethnographic
+> research we found a 16% error rate in handwritten orders during busy
+> hours, while only a 6% error rate outside of busy hours
 
->| # | **Primary User Needs** *(use provided format and limit to 5)* |
->| :-: | :--- |
->| **1** | A way to submit necessary forms and materials to obtain or renew my professional license **so that** I can >continue to work in my field. |
->| **2** | A way to pay any fees associated with my license and receive proof of payment **so that** I can prove to my >clients that my license is up to date. |
->| **3** | A way to find the correct, up-to-date license forms and requirements **so that** I can fill out the application >correctly, along with all required supporting documentation. |
->| **4** | A way to get timely notification about renewals **so that** I can manage my licenses and not have to miss work. |
 
-<br>
-
->| # | **Pain points / Barriers** *(no limit, include at least 3)* |
->| :-: | :--- |
->| **1** | Currently, I have to submit information to the state through the mail, which adds unnecessary delays to the >timeline and doesn’t give me confidence my materials have even been received, much less processed. |
->| **2** | Having to pay through a physical check can add an additional 3-4 days to request the check if going through a >central office. It then adds 1-2 weeks to the processing time because it goes through the state’s fiscal team before the >program receives my application. |
->| **3** | The state is often asking for information or documentation that it already has. Collecting that documentation >can sometimes be time intensive or just repetitive. |
-
-
-Notice that the user-needs in this example speak to things that this user group needs (a way to apply/renew for a license, a way to pay, a way to find up-to-date requirements, a way to get renewal notifications) in order to achieve an outcome (securing or maintaining their status as a licensed professional). These needs and outcomes are independent of the current way the state serves these professionals today. The pain points then speak to the challenges this user group has in achieving these outcomes that stem from the specific solution the state has in place today. To reiterate: user needs are independent of the current solutions; pain points are specific to the current solution.
+Note that the user-need statements focus on a specific need in relation to a specific outcome associated with the role. Note also the level of specificity in the pain points, including not only qualitative observations but also quantitative effects — and note also the combination of various research methods in order to validate and contextualize statements and observations.
 
 If you find yourself with way too many user groups, you likely need to reduce the scope of the problem you’re trying to solve right now. Who are the biggest user groups? Who are the most impacted user groups? Can you start with them?
 
@@ -159,78 +169,41 @@ Together, the core problems your project is intended to solve and your definitio
 
 ### Guidance for completing this step
 
-You’ll start by prioritizing the core problems that your MITDP intends to solve. Then, for each core problem, you’ll identify a definition of success — i.e., the things that must be true for the problem to be considered solved. Lastly, you’ll define success metrics for each definition of success — i.e., what metrics would quantitatively “prove” that you have achieved your definition of success?
+For this section of the Launchpad, you will complete the [Core Problems & Definition of Success](?tab=t.hcgv7rfr0i16) worksheet, which walks you through identifying your top three problems, describing what successfully solving the problem would look like, and identifying key metrics you’ll track throughout the project to measure your progress.
 
 While these prompts may seem simple, this information is worth spending time on as it defines the scope of your MITDP and limits what you can spend MITDP funding on. Future changes to this scope require review and approval by DoIT as well as notification to the legislature. Your project’s performance will be measured against the information you provide here, and your progress will be reported publicly.
 
-#### Core Problems
+It is essential that your core problems and definition of success be grounded in both user needs and program needs. Consider the following questions:
 
-All agencies use software, and software is never perfect. There are always problems. But what makes a problem a “core” problem?
-* A core problem connects a software problem to user pain-points and undesired outcomes ***in a way that avoids the “so what?” objection.***
+- *What service delivery problems do you need to solve?*
 
-For example, it's not enough to say "our software is out of date" ***So what?*** What consequence does "out of date software" have — for the agency, for the state, for Marylanders?
+- *Why is this important to your agency?*
 
-Similarly, it's not enough to say "our <state employees> spend too much time copying information between multiple disconnected systems". ***Again – so what?*** What consequence does this pain point for your users have — for the agency, for the state, for Marylanders?
+- *What impact do you intend to have?*
 
-**For a *core problem* statement to be convincing, you need to make plain what *undesired outcome* your problem or pain point leads to.** Therefore, any good core problem should explicitly frame the *negative* impact that Maryland residents experience because of this core problem.
+There should be a clear connection between your core problems, your definition of success, and the challenges documented for each of your primary user groups.
 
-Here's an example of a good core problem statement:
-* **Core Problem:** *Disconnected Systems Cause Administrative Burden for Case Workers Leading to Missed Casework Deadlines.*
-    * **Software deficiency:** Our software systems are disconnected, thus requiring essential information about juveniles in the system to be manually duplicated between multiple systems.
-    * **Pain Point:** Because of this, case workers spend several hours each day reentering information into multiple systems, taking valuable time away from helping youth achieve their goals.
-    * **Undesired outcome:** This, in turn, leads caseworkers to regularly miss their required casework activity due dates.
+#### How to describe each Core Problem
 
----
+It’s important that your Core Problems are focused on user-centered outcomes, not prescribed technology improvements. We’ve included some examples of the right way to frame these problems below, building on the work of our counterparts at the [Colorado Digital Service](https://docs.google.com/presentation/d/1Ssey_0hyDbtA68S6WZXlG57g1K7gugLu4QsioBRJAYI/edit?usp=sharing).
 
-Why is this a good **core problem** statement? It connects a 1) gap or deficiency in technology to 2) pain points for users to 3) undesired outcomes. It's unlikely that anyone would ask "so what?" after reading this core problem statement. By connecting gaps to pains to undesired outcomes, you effectively avoid the "so what?" objection.
+| The right way (user-centered) | The wrong way |
+| :---- | :---- |
+| One or more specific user needs are named. Some examples: <ul><li>**Caseworkers <u>spend hours each day uploading paper documents</u>, reducing the amount of time available to spend with their clients**</li><li>**60% of applications are abandoned because <u>users can’t save and return later</u>**</li><li>**Field staff <u>working in rural areas are unable to do their jobs</u> due to poor internet access and a lack offline functionality among current tools**</li> | Technical or bureaucratic outcomes that aren't based around user needs. Some examples:<ul><li class="wrong-red">***Replace our outdated, legacy system with modern technology***</li><li class="wrong-red">***Migrate to a cloud-based COTS system***</li><li class="wrong-red">***Establish a unified portal for intake and standardization***</li>   |
 
-Note that a software deficiency may lead to many undesired outcomes. The question then becomes: which undesired outcome or outcomes do you single out in your core problem statement? This is challenging. On the one hand, you want to pick an undesired outcome that seems genuinely compelling — such that, if you solve for it, Marylanders will easily see the value of your work. However, you want to make sure you pick an undesired outcome that you can confidently measure. If you pick an undesired outcome that is not only caused by the software deficiency in your core problem, but by many other causes that you have no control over, then you may struggle to measure what impact your solution has on it.
+#### Impact for the people of Maryland
 
-For example, in the above core problem statement, an example of a *too-high-level* undesired outcome might be "recidivism". Since the software deficiency reduces face time between case workers and their clients, it is conceivable that the software deficiency contributes to elevated rates of recidivism. But recidivism is influenced by many other factors as well — social, economic, political, etc. — most of which you have no control over. Thus, you may struggle to ever truly measure what kind of impact you have on recidivism. That's why "caseworkers regularly missing their required due dates" is a better undesired outcome to single out in this core problem statement. If you have user research that plainly connects deficiencies in the software to caseworkers missing their due dates, then it's likely that you can definitely measure whether or not your eventual solution is eliminating this undesired outcome.
+To that end, your problem statements and success criteria should be framed in terms of the impact for the people of Maryland, whether state employees, the general public, or other groups, such as reducing wait times, increasing accessibility for specific audiences, or expanding coverage for specific programs. This centers the work around people instead of technology.
 
-#### Definition of Success
+For example, the people of Maryland don’t necessarily benefit if the desired outcome is to migrate an IT system to a new software provider. What problem will that solve for the people of Maryland?
 
-For each core problem, you need to write a corresponding definition of success. A definition of success answers the question: What must be true for this core problem to be considered solved?
+#### How we’ll measure success
 
-But what makes a good definition of success? A good definition of success defines a desired outcome that's clearly connected to the core problem statement and yet *completely independent of what the eventual solution might be. (That will be explored in your Product Strategy worksheet and in your Implementation Strategy during Launchpad Stage 2).*
+For each problem in the worksheet, provide at least one metric that you’ll use to measure whether you’ve succeeded at solving the problem. For each metric, provide the current value and target value (can be approximate). Once your Launchpad is approved, you will begin reporting these metrics on a regular basis.
 
-Continuing the core problem example in the previous section, here's what that could look like:
-* **Definition of Success:** The following must be true for this core problem to be considered solved:
-    * Case workers report being able to spend the time they truly need with their juvenile clients in order to help them reform their lives away from crime.
-    * Caseworkers are able to regularly meet their required casework activity due dates.
+If having three core problems doesn’t feel like enough, you may need to reduce the scope of what you’re trying to solve right now and / or prioritize. What are the biggest problems, either in terms of impact or number of people impacted? What problems, if left unsolved, creates the greatest risk of future, bigger problems? The state cannot solve all its problems at once, so pick the most impactful one(s) to start with.
 
-What makes this a good definition of success? It focuses on the things that must be true in order to state that the problem has been solved – *without defining the solution.*
-
-**This is an essential point – a definition of success does not define the specific solution, but rather defines the positive outcomes that must be achieved in order to know that the problem was solved. It leaves the "solution" open. This is essential.** Don't bake the solution into your definition of success. The "solution" will be decided on later, through product strategy (and implementation strategy) – after all core problems, definitions of success, and success metrics have been defined. There are typically many different ways to solve a core problem – and each of those different approaches will have pros and cons. Leaving the solution open at this stage gives you the freedom to find a product and implementation strategy that will work best for you, your users, and the State, in light of all of your core problems, and in consideration of all of your constraints.
-
-Note also that this definition of success explicitly frames the positive impact that will be experienced by achieving this definition of success.
-
----
-
-#### Success Metrics
-
-Now that you have a definition of success, you need success metrics to go along with it.
-
-A success metric is a quantitative metric that tells you whether or not you are getting to your definition of success. Think of it as the quantitative equivalent of your qualitative definition of success.
-
-How many success metrics do you need? That depends on the definition of success. The more dimensions to your definition of success, the more success metrics you are likely to need. Your success metrics should be *holistic* – i.e., they should cover your entire definition of success.
-
-That being said, we don't need every single metric you intend to track. When it comes to defining success metrics, you should aim for "just enough" success metrics. What are the minimum number of success metrics necessary to feel that you could quantitatively "prove" you have achieved your definition of success in its entirety. In other words, you should have a minimally holistic set of success metrics for each definition of success / core problem statement.
-
-Note — whenever possible, appropriate success metrics should not be binary (e.g., "we didn't have a case management system before and now we do"). Instead, they should be a range. A range allows you to evaluate what progress you are (or aren't) making over time, thus allowing you to make more informed decisions as you proceed.
-
-Continuing the example above, that could look like:
-
-| # | **Description of metric** | **Current value** | **Target value** | **Source of current value** |
-| :-: | :--- | :--- | :--- | :--- |
-| **1** | Percentage of case workers reporting that they are able to spend the time they truly need with their juvenile clients in order to help them reform their lives away from crime. | 5% | >= 95% | Quarterly Case Worker Satisfaction Survey ([link](#)) |
-| **2** | Percentage of casework activities completed by their original due dates. | 50% | 90% | DJS Case Work Activity Log ([link](#)) |
-
-Again — note that these success metrics form a more or less *quantitative* mirror image of the definition of success. Tracking only one of these wouldn't be enough to know if we've achieved our entire definition of success — we have to track both.
-
-If having three core problems doesn't feel like enough, you may need to reduce the scope of what you're trying to solve right now and / or prioritize. What are the biggest problems, either in terms of impact or number of people impacted? What problems, if left unsolved, creates the greatest risk of future, bigger problems? The state cannot solve all its problems at once, so pick the most impactful one(s) to start with.
-
-If you have questions or are experiencing any challenges with this step, reach out to our MITDP Oversight Division and we'll be happy to help.
+If you have questions or are experiencing any challenges with this step, reach out to our MITDP Oversight Division and we’ll be happy to help.
 
 ### Required worksheets
 
@@ -251,7 +224,8 @@ We will evaluate the materials you provide based on the following criteria:
 | **2** | Worksheet includes up to three (3) core problems using provided format | We’ll review your core problems to ensure that they are structured using the provided format, including its undesired outcome, its desired outcome, and a description of where or how it is occurring |
 | **3** | For each core problem, success is described in a way that is clear, achievable, and independently verifiable | We’ll review your response to the “Definition of Success” section for each core problem to ensure that it’s described in a way that is measurable and achievable |
 | **4** | For each core problem, three (3) impacts of success for the people of Maryland are listed | We’ll review your responses to the “Impacts of Success” section for each core problem to ensure that three (3) impacts are listed that provide value for the people of Maryland |
-| **5** | For each core problem, a set of success metrics are provided, each with current values, target values, and current value sources |We’ll review your responses to the “Success Metrics” section to ensure that you have provided a minimally holistic set of success metrics such that, if all of the success metrics achieved their target values, it would provide strong objective evidence that you have achieved your definition of success in its entirety. We will also ensure that, for each metric, you have provided a current value and a target value. We will also ensure that you have provided information about the sources of the current value, and whether or not your team is able to access those sources on an ongoing basis.|
+| **5** | For each core problem, at least one success metric is provided, including its current value, a target value, and the source of the current value | We’ll review your responses to the “Success Metrics” section to ensure that at least one success metric is provided, including its current value, a  target value, and information about the source of target value. For the source of the current value, we want to understand what systems exist for measurement and whether your team is able to access those systems |
+
 
 ##
 
