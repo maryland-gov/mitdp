@@ -10,35 +10,25 @@ name: 🚀 LaunchPad PR Preview
 # ArgoCD ApplicationSet that owns preview environments selects PRs by that
 # label, so without it nothing is deployed.
 
-# Narrower than the other MDDS callers, deliberately: this is the first public
-# repo to adopt the pipeline, so the inherited GITHUB_TOKEN is worth trimming.
-# Each downgrade below was traced to the steps that would have needed it.
+# Must match the permission set that launchpad-release.yaml declares at its own
+# workflow level (lines 3-15), verbatim. A caller cannot grant a reusable
+# workflow FEWER permissions than it declares — GitHub rejects the run at
+# validation time as a "workflow file issue", before any job starts and with no
+# logs to read. That is why every other MDDS caller copies this list; it is a
+# requirement, not cargo cult. Narrowing has to happen upstream.
 permissions:
-  # read, not write: the three `update update --commit` steps and both
-  # `changelog full` steps in launchpad-release.yaml (356, 400, 541 and 350,
-  # 394, 536) are all gated on `github.ref == 'refs/heads/main'`, which never
-  # holds on a pull_request event. Nothing on the preview path commits.
-  contents: read
+  contents: write
   pull-requests: write
   issues: write
   actions: read
   checks: write
   deployments: write
   discussions: read
+  id-token: write
+  security-events: write
+  packages: write
   statuses: write
   repository-projects: read
-  # Kept despite being traced as unused: OIDC is not the ECR auth mechanism
-  # (cmd/launchpad/aws_ecr.go:73 uses the AWS default credential chain via
-  # LoadDefaultConfig, and there is no configure-aws-credentials step). Left in
-  # because it grants nothing over this repo, and if that trace is wrong its
-  # absence would fail the ECR push opaquely on the very first run.
-  id-token: write
-  # Omitted entirely, both traced:
-  #   packages: write — registry auth is the AWS SDK's GetAuthorizationToken
-  #     (cmd/launchpad/aws_ecr.go:73-109). Nothing touches GHCR, and ArgoCD
-  #     reads the chart from git at .deploy/helm rather than a chart registry.
-  #   security-events: write — its only consumer was the Wiz job, commented
-  #     out at launchpad-release.yaml:402-464, so nothing uploads SARIF.
 
 on:
   pull_request:
@@ -69,11 +59,12 @@ jobs:
       contains(github.event.pull_request.labels.*.name, 'launchpad-deploy-preview')
     # Pinned, unlike the other MDDS callers, which all track @main.
     #
-    # The pipeline mints a GitHub App token (`github login --set-env`,
-    # launchpad-release.yaml:522-525) whose scope comes from the App
-    # installation, not from the `permissions:` block below — so trimming
-    # permissions does not bound it. On a public repo with `secrets: inherit`
-    # that cannot be narrowed from here, pinning is the load-bearing control.
+    # Since the permission set above cannot be narrowed, and `secrets: inherit`
+    # cannot either, pinning is the only caller-side control left. It also
+    # matters more than the permissions would: the pipeline mints a GitHub App
+    # token (`github login --set-env`, launchpad-release.yaml:522-525) whose
+    # scope comes from the App installation and is not bounded by `permissions`
+    # at all.
     #
     # LaunchPad tags every release and rewrites its own internal action refs to
     # the tag, so a tag is self-consistent: at v0.0.643, setup-launchpad and
