@@ -1,0 +1,88 @@
+name: 🚀 LaunchPad PR Preview
+
+# Preview-only adoption of the shared LaunchPad pipeline. Production for this
+# repo is GitHub Pages (see publish.yml) and stays that way — there is
+# deliberately no `push: main` trigger and no workflow_dispatch to
+# test/staging/prod here, so LaunchPad can never become a second, competing
+# deploy path for the live site.
+#
+# A preview is opt-in per PR: add the `launchpad-deploy-preview` label. The
+# ArgoCD ApplicationSet that owns preview environments selects PRs by that
+# label, so without it nothing is deployed.
+
+# Must match the permission set that launchpad-release.yaml declares at its own
+# workflow level (lines 3-15), verbatim. A caller cannot grant a reusable
+# workflow FEWER permissions than it declares — GitHub rejects the run at
+# validation time as a "workflow file issue", before any job starts and with no
+# logs to read. That is why every other MDDS caller copies this list; it is a
+# requirement, not cargo cult. Narrowing has to happen upstream.
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+  checks: write
+  deployments: write
+  discussions: read
+  id-token: write
+  security-events: write
+  packages: write
+  statuses: write
+  repository-projects: read
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+
+run-name: 🚀 LaunchPad preview for PR #${{ github.event.pull_request.number }} by @${{ github.actor }}
+
+concurrency:
+  group: promote-remote-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  launchpad:
+    name: 🚀 LaunchPad
+    # Two conditions, for two different reasons.
+    #
+    # head.repo: maryland-gov/mitdp is a PUBLIC repo and LaunchPad builds on
+    # self-hosted runners. Fork PRs must not reach them — a fork's build
+    # scripts are attacker-controlled and `pull_request` checks out the head
+    # commit. Restrict to branches pushed to this repo, where the author
+    # already needed write access.
+    #
+    # labels: the ArgoCD ApplicationSet only *deploys* PRs carrying this label,
+    # but the build and the ECR push are not gated by it. Checking it here too
+    # keeps previews genuinely opt-in instead of building an image for every PR.
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      contains(github.event.pull_request.labels.*.name, 'launchpad-deploy-preview')
+    # Pinned, unlike the other MDDS callers, which all track @main.
+    #
+    # Since the permission set above cannot be narrowed, and `secrets: inherit`
+    # cannot either, pinning is the only caller-side control left. It also
+    # matters more than the permissions would: the pipeline mints a GitHub App
+    # token (`github login --set-env`, launchpad-release.yaml:522-525) whose
+    # scope comes from the App installation and is not bounded by `permissions`
+    # at all.
+    #
+    # LaunchPad tags every release and rewrites its own internal action refs to
+    # the tag, so a tag is self-consistent: at v0.0.643, setup-launchpad and
+    # notify-google-chat both resolve to @v0.0.643. Bump this deliberately —
+    # `gh api repos/mdds-engineering/launchpad/tags` for the current list.
+    uses: mdds-engineering/launchpad/.github/workflows/launchpad-release.yaml@v0.0.643
+    with:
+      environment: preview
+      strategy_type: preview
+      runner: maryland-dev-runners
+      docker_registry: "043309318770.dkr.ecr.us-east-1.amazonaws.com"
+      google_chat_webhook_secret_name: ""
+    # `launchpad-release.yaml` declares no `secrets:` block under
+    # `workflow_call`, so `inherit` is the only form that works from here.
+    # In practice the pipeline reads only the auto-provided GITHUB_TOKEN:
+    # registry auth is `aws-ecr login` against the runner's IAM role, and the
+    # DOCKER_USERNAME/DOCKER_PASSWORD path is commented out and gated on
+    # LAUNCHPAD_DOCKER_REGISTRY_TYPE == 'self-hosted', which the pipeline
+    # hardcodes to 'aws'. So this repo needs no secrets provisioned. Narrowing
+    # `inherit` anyway would need a change in mdds-engineering/launchpad.
+    secrets: inherit
