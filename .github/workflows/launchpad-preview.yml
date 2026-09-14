@@ -1,0 +1,97 @@
+name: 🚀 LaunchPad PR Preview
+
+# Preview-only adoption of the shared LaunchPad pipeline. Production for this
+# repo is GitHub Pages (see publish.yml) and stays that way — there is
+# deliberately no `push: main` trigger and no workflow_dispatch to
+# test/staging/prod here, so LaunchPad can never become a second, competing
+# deploy path for the live site.
+#
+# A preview is opt-in per PR: add the `launchpad-deploy-preview` label. The
+# ArgoCD ApplicationSet that owns preview environments selects PRs by that
+# label, so without it nothing is deployed.
+
+# Narrower than the other MDDS callers, deliberately: this is the first public
+# repo to adopt the pipeline, so the inherited GITHUB_TOKEN is worth trimming.
+# Each downgrade below was traced to the steps that would have needed it.
+permissions:
+  # read, not write: the three `update update --commit` steps and both
+  # `changelog full` steps in launchpad-release.yaml (356, 400, 541 and 350,
+  # 394, 536) are all gated on `github.ref == 'refs/heads/main'`, which never
+  # holds on a pull_request event. Nothing on the preview path commits.
+  contents: read
+  pull-requests: write
+  issues: write
+  actions: read
+  checks: write
+  deployments: write
+  discussions: read
+  statuses: write
+  repository-projects: read
+  # Kept despite being traced as unused: OIDC is not the ECR auth mechanism
+  # (cmd/launchpad/aws_ecr.go:73 uses the AWS default credential chain via
+  # LoadDefaultConfig, and there is no configure-aws-credentials step). Left in
+  # because it grants nothing over this repo, and if that trace is wrong its
+  # absence would fail the ECR push opaquely on the very first run.
+  id-token: write
+  # Omitted entirely, both traced:
+  #   packages: write — registry auth is the AWS SDK's GetAuthorizationToken
+  #     (cmd/launchpad/aws_ecr.go:73-109). Nothing touches GHCR, and ArgoCD
+  #     reads the chart from git at .deploy/helm rather than a chart registry.
+  #   security-events: write — its only consumer was the Wiz job, commented
+  #     out at launchpad-release.yaml:402-464, so nothing uploads SARIF.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+
+run-name: 🚀 LaunchPad preview for PR #${{ github.event.pull_request.number }} by @${{ github.actor }}
+
+concurrency:
+  group: promote-remote-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  launchpad:
+    name: 🚀 LaunchPad
+    # Two conditions, for two different reasons.
+    #
+    # head.repo: maryland-gov/mitdp is a PUBLIC repo and LaunchPad builds on
+    # self-hosted runners. Fork PRs must not reach them — a fork's build
+    # scripts are attacker-controlled and `pull_request` checks out the head
+    # commit. Restrict to branches pushed to this repo, where the author
+    # already needed write access.
+    #
+    # labels: the ArgoCD ApplicationSet only *deploys* PRs carrying this label,
+    # but the build and the ECR push are not gated by it. Checking it here too
+    # keeps previews genuinely opt-in instead of building an image for every PR.
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      contains(github.event.pull_request.labels.*.name, 'launchpad-deploy-preview')
+    # Pinned, unlike the other MDDS callers, which all track @main.
+    #
+    # The pipeline mints a GitHub App token (`github login --set-env`,
+    # launchpad-release.yaml:522-525) whose scope comes from the App
+    # installation, not from the `permissions:` block below — so trimming
+    # permissions does not bound it. On a public repo with `secrets: inherit`
+    # that cannot be narrowed from here, pinning is the load-bearing control.
+    #
+    # LaunchPad tags every release and rewrites its own internal action refs to
+    # the tag, so a tag is self-consistent: at v0.0.643, setup-launchpad and
+    # notify-google-chat both resolve to @v0.0.643. Bump this deliberately —
+    # `gh api repos/mdds-engineering/launchpad/tags` for the current list.
+    uses: mdds-engineering/launchpad/.github/workflows/launchpad-release.yaml@v0.0.643
+    with:
+      environment: preview
+      strategy_type: preview
+      runner: maryland-dev-runners
+      docker_registry: "043309318770.dkr.ecr.us-east-1.amazonaws.com"
+      google_chat_webhook_secret_name: ""
+    # `launchpad-release.yaml` declares no `secrets:` block under
+    # `workflow_call`, so `inherit` is the only form that works from here.
+    # In practice the pipeline reads only the auto-provided GITHUB_TOKEN:
+    # registry auth is `aws-ecr login` against the runner's IAM role, and the
+    # DOCKER_USERNAME/DOCKER_PASSWORD path is commented out and gated on
+    # LAUNCHPAD_DOCKER_REGISTRY_TYPE == 'self-hosted', which the pipeline
+    # hardcodes to 'aws'. So this repo needs no secrets provisioned. Narrowing
+    # `inherit` anyway would need a change in mdds-engineering/launchpad.
+    secrets: inherit

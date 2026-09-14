@@ -1,0 +1,65 @@
+# Base values shared by every environment. Per-environment overrides live in
+# values/values.<env>.yaml and are layered on top by ArgoCD.
+
+ingress:
+  enabled: true
+  className: traefik
+
+  # First label of the hostname (e.g. "mitdp" -> mitdp.test.maryland.dev).
+  subdomain: mitdp
+
+  # Environment this release targets (dev, test, staging, prod, preview).
+  # - "prod" omits the environment from the hostname.
+  # - "preview" prefixes previewId to build a per-PR hostname.
+  environment: dev
+
+  # Base domain for the environment.
+  hostname: maryland.dev
+
+  # Set by the pipeline for PR builds (ingress.previewId is passed as an ArgoCD
+  # parameter). Leave blank here.
+  previewId: ""
+
+# The deployment template reads .Values.replicaCount with no default, so
+# rendering the chart without a per-environment values file emits an empty
+# `replicas:` and fails validation. Set a floor here.
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+# /healthz is a static file baked into the image by .deploy/docker/Dockerfile.
+# Probing it rather than / keeps readiness independent of the built content —
+# a content regression should show up in review, not as a CrashLoop.
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: http
+readinessProbe:
+  httpGet:
+    path: /healthz
+    port: http
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector:
+  private: "true"
+
+# Set by the pipeline. Do not edit by hand.
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: ""
