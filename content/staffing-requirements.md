@@ -19,7 +19,7 @@ All projects must have staff assigned to the following roles at all times. For s
 | :---- | :---- |
 | **Project Sponsor** | Senior executive responsible for supporting the project team in clearing blockers and coordinating across stakeholder groups. |
 | **Project Lead** | Responsible for leading the project day-to-day, overseeing prioritization, staffing, contract management, budget, reporting, and risk mitigation. *For smaller projects, this role can be filled by the UX Lead, Technical Product Manager, or Technical Lead / Architect. &nbsp;[See role details](#project-lead) |
-| **Technical Product Manager** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. &nbsp;[See roles details](#product-manager) |
+| **Technical Product Manager** | Directs the work of ensuring the solution is achieving user and mission outcomes and the team is working on the highest value outcomes; prioritizes the backlog and roadmap based on user, stakeholder, and technical feedback. &nbsp;[See role details](#product-manager) |
 | **Technical Lead / Architect** | Directs the work of building and testing scalable, secure, and sustainable technology that can adapt & grow with changing user and mission needs. &nbsp;[See role details](#technical-lead) |
 | **User Experience (UX) Lead** | Directs the work of understanding what your users need and designing content, tools, and processes to meet those needs &nbsp;[See role details](#ux-lead) |
 
