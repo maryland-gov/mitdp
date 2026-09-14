@@ -70,7 +70,7 @@ jobs:
     # the tag, so a tag is self-consistent: at v0.0.643, setup-launchpad and
     # notify-google-chat both resolve to @v0.0.643. Bump this deliberately —
     # `gh api repos/mdds-engineering/launchpad/tags` for the current list.
-    uses: mdds-engineering/launchpad/.github/workflows/launchpad-release.yaml@main
+    uses: mdds-engineering/launchpad/.github/workflows/launchpad-release.yaml@v0.0.643
     with:
       environment: preview
       strategy_type: preview
