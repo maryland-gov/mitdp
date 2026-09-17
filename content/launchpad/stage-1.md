@@ -21,7 +21,7 @@ For an example of an approved submission of Stage 1 of Launchpad, [see this docu
 ## Sections {.toc}
 
 - [Understanding of User Needs](#understanding-of-user-needs)
-- [Core Problems & Definition of Success](#core-problems--definition-of-success)
+- [Core Problems & Definition of Success](#core-problems-&-definition-of-success)
 - [Product Strategy](#product-strategy)
 
 
