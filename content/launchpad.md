@@ -28,7 +28,7 @@ The Launchpad provides instructions on how to complete each section, links to th
 ### Launchpad Stage 1 {.toc-column}
 
 - [Understanding of User Needs](/mitdp/launchpad/stage-1.html#understanding-of-user-needs)
-- [Core Problems & Definition of Success](/mitdp/launchpad/stage-1.html#core-problems-&-definition-of-success)
+- [Core Problems & Definition of Success](/mitdp/launchpad/stage-1.html#core-problems--definition-of-success)
 - [Product Strategy](/mitdp/launchpad/stage-1.html#product-strategy)
 
 ### Launchpad Stage 2 {.toc-column}
