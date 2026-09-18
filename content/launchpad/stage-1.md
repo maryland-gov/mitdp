@@ -88,18 +88,18 @@ An example may help:
 
 >| # | **Primary User Needs** *(use provided format and limit to 5)* |
 >| :-: | :--- |
->| **1** | A way to submit necessary forms and materials to obtain or renew my professional license **so that** I can >continue to work in my field. |
->| **2** | A way to pay any fees associated with my license and receive proof of payment **so that** I can prove to my >clients that my license is up to date. |
->| **3** | A way to find the correct, up-to-date license forms and requirements **so that** I can fill out the application >correctly, along with all required supporting documentation. |
+>| **1** | A way to submit necessary forms and materials to obtain or renew my professional license **so that** I can continue to work in my field. |
+>| **2** | A way to pay any fees associated with my license and receive proof of payment **so that** I can prove to my clients that my license is up to date. |
+>| **3** | A way to find the correct, up-to-date license forms and requirements **so that** I can fill out the application correctly, along with all required supporting documentation. |
 >| **4** | A way to get timely notification about renewals **so that** I can manage my licenses and not have to miss work. |
 
 <br>
 
 >| # | **Pain points / Barriers** *(no limit, include at least 3)* |
 >| :-: | :--- |
->| **1** | Currently, I have to submit information to the state through the mail, which adds unnecessary delays to the >timeline and doesn’t give me confidence my materials have even been received, much less processed. |
->| **2** | Having to pay through a physical check can add an additional 3-4 days to request the check if going through a >central office. It then adds 1-2 weeks to the processing time because it goes through the state’s fiscal team before the >program receives my application. |
->| **3** | The state is often asking for information or documentation that it already has. Collecting that documentation >can sometimes be time intensive or just repetitive. |
+>| **1** | Currently, I have to submit information to the state through the mail, which adds unnecessary delays to the timeline and doesn’t give me confidence my materials have even been received, much less processed. |
+>| **2** | Having to pay through a physical check can add an additional 3-4 days to request the check if going through a central office. It then adds 1-2 weeks to the processing time because it goes through the state’s fiscal team before the program receives my application. |
+>| **3** | The state is often asking for information or documentation that it already has. Collecting that documentation can sometimes be time intensive or just repetitive. |
 
 
 Notice that the user-needs in this example speak to things that this user group needs (a way to apply/renew for a license, a way to pay, a way to find up-to-date requirements, a way to get renewal notifications) in order to achieve an outcome (securing or maintaining their status as a licensed professional). These needs and outcomes are independent of the current way the state serves these professionals today. The pain points then speak to the challenges this user group has in achieving these outcomes that stem from the specific solution the state has in place today. To reiterate: user needs are independent of the current solutions; pain points are specific to the current solution.
