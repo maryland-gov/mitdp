@@ -1,0 +1,16 @@
+# Per-PR preview overrides. image.repository, image.tag and ingress.previewId
+# are supplied by the pipeline as ArgoCD parameters, so they are deliberately
+# absent here.
+environment: preview
+
+ingress:
+  enabled: true
+  environment: preview
+  className: traefik
+  hostname: maryland.dev
+  subdomain: mitdp
+
+replicaCount: 1
+
+autoscaling:
+  enabled: false

@@ -1,0 +1,39 @@
+{{- if .Values.ingress.enabled -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "chart.fullname" . }}
+  labels:
+    {{- include "chart.labels" . | nindent 4 }}
+  {{- with .Values.ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  {{- with .Values.ingress.className }}
+  ingressClassName: {{ . }}
+  {{- end }}
+  rules:
+    ## NOTE: This is required to handle the different hostnames for different environments in the MDDS Environments
+      {{- $env := $.Values.ingress.environment }}
+      {{- $domain := $.Values.ingress.hostname }}
+
+      {{- if and (eq $env "preview") $.Values.ingress.previewId }}
+    - host: {{ $.Values.ingress.previewId }}-{{ $.Values.ingress.subdomain }}.{{ $env }}.{{ $domain }}
+      {{- else if eq $env "prod" }}
+    - host: {{ $.Values.ingress.subdomain }}.{{ $domain }}
+      {{- else }}
+    - host: {{ $.Values.ingress.subdomain }}.{{ $env }}.{{ $domain }}
+      {{- end }}
+      http:
+        paths:
+          - path:  /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ include "chart.fullname" $ }}
+                port:
+                  number: {{ $.Values.service.port }}
+{{- end }}
+

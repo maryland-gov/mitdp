@@ -1,0 +1,11 @@
+apiVersion: v2
+name: mitdp
+description: A Helm chart for the MITDP Oversight content site
+# A chart can be either an 'application' or a 'library' chart.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+version: 0.1.0
+
+# The version of the application enclosed inside of this chart.
+appVersion: "0.1.0"
